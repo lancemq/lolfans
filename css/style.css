@@ -159,16 +159,16 @@ main {
 }
 
 .game-icon {
-    font-size: 1.7rem;
-    filter: drop-shadow(0 0 9px rgba(200, 170, 110, 0.45));
+    font-size: 1.35rem;
+    filter: drop-shadow(0 0 6px rgba(200, 170, 110, 0.38));
 }
 
 .brand-logo {
-    height: 42px;
+    height: 38px;
     width: auto;
-    max-width: min(62vw, 340px);
+    max-width: min(58vw, 320px);
     object-fit: contain;
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
 }
 
 .logo h1 {
@@ -565,6 +565,55 @@ main {
     gap: 20px;
 }
 
+.strategy-hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.strategy-hero-card {
+    border-radius: 14px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(12, 28, 48, 0.95), rgba(4, 13, 24, 0.98));
+    border: 1px solid rgba(200, 170, 110, 0.2);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.strategy-hero-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(200, 170, 110, 0.72);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.42);
+}
+
+.strategy-hero-body {
+    padding: 14px;
+}
+
+.strategy-hero-lore,
+.strategy-hero-tip {
+    margin-top: 8px;
+    color: var(--text-secondary);
+    font-size: var(--fs-meta);
+    line-height: 1.65;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.strategy-hero-lore {
+    -webkit-line-clamp: 2;
+}
+
+.strategy-hero-tip {
+    -webkit-line-clamp: 3;
+}
+
+.strategy-hero-count {
+    color: var(--text-secondary);
+    font-size: var(--fs-meta);
+}
+
 .champion-card {
     border-radius: 14px;
     overflow: hidden;
@@ -759,23 +808,23 @@ main {
 .resource-icon,
 .phase-icon,
 .mode-icon {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    filter: drop-shadow(0 0 8px rgba(200, 170, 110, 0.35));
+    font-size: 1.45rem;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 0 6px rgba(200, 170, 110, 0.3));
 }
 
 .intro-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 76px;
+    min-height: 62px;
 }
 
 .intro-icon-img {
-    width: 68px;
-    height: 68px;
+    width: 54px;
+    height: 54px;
     object-fit: contain;
-    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     transition: transform 0.25s ease;
 }
 
@@ -783,29 +832,29 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 76px;
+    min-height: 62px;
 }
 
 .resource-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 76px;
+    min-height: 62px;
 }
 
 .role-icon-img {
-    width: 68px;
-    height: 68px;
+    width: 54px;
+    height: 54px;
     object-fit: contain;
-    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     transition: transform 0.25s ease;
 }
 
 .resource-icon-img {
-    width: 68px;
-    height: 68px;
+    width: 54px;
+    height: 54px;
     object-fit: contain;
-    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     transition: transform 0.25s ease;
 }
 
@@ -1164,9 +1213,9 @@ main {
 
 .ability-item {
     display: grid;
-    grid-template-columns: 72px 1fr;
-    gap: 14px;
-    padding: 16px;
+    grid-template-columns: 60px 1fr;
+    gap: 12px;
+    padding: 14px;
     border-radius: 12px;
     border: 1px solid rgba(200, 170, 110, 0.24);
     background: linear-gradient(120deg, rgba(4, 12, 22, 0.9), rgba(6, 18, 31, 0.95));
@@ -1174,12 +1223,12 @@ main {
 }
 
 .ability-icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 12px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
     display: block;
     font-family: 'Cinzel', serif;
-    font-size: 1.4rem;
+    font-size: 1.15rem;
     color: var(--lol-gold);
     background: linear-gradient(160deg, rgba(200, 170, 110, 0.24), rgba(10, 26, 50, 0.96));
     overflow: hidden;
@@ -1197,7 +1246,7 @@ main {
     inset: 0;
     display: none;
     place-items: center;
-    font-size: 1.45rem;
+    font-size: 1.2rem;
     color: var(--lol-gold-2);
     background: linear-gradient(160deg, rgba(200, 170, 110, 0.28), rgba(10, 26, 50, 0.92));
 }
@@ -1206,12 +1255,12 @@ main {
     position: absolute;
     right: 4px;
     bottom: 4px;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     display: grid;
     place-items: center;
-    font-size: 0.72rem;
+    font-size: 0.66rem;
     font-weight: 700;
     color: #091428;
     background: var(--lol-gold-2);
@@ -1496,7 +1545,7 @@ main {
 }
 
 .mode-image {
-    min-height: 140px;
+    min-height: 122px;
     background: radial-gradient(circle at 20% 20%, rgba(200, 170, 110, 0.28), rgba(9, 20, 40, 1));
     border-bottom: 1px solid rgba(200, 170, 110, 0.2);
     display: grid;
@@ -1504,10 +1553,10 @@ main {
 }
 
 .mode-icon-img {
-    width: 82px;
-    height: 82px;
+    width: 62px;
+    height: 62px;
     object-fit: contain;
-    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.38));
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.32));
     transition: transform 0.25s ease;
 }
 
@@ -1566,9 +1615,9 @@ main {
 }
 
 .brand-logo-footer {
-    height: 36px;
+    height: 32px;
     width: auto;
-    max-width: min(58vw, 300px);
+    max-width: min(54vw, 280px);
     object-fit: contain;
     opacity: 0.95;
 }
@@ -1695,7 +1744,8 @@ main {
     .knowledge-grid.three-col,
     .knowledge-grid.five-col,
     .macro-grid,
-    .visual-showcase {
+    .visual-showcase,
+    .strategy-hero-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1763,7 +1813,8 @@ main {
     .guide-cards,
     .knowledge-grid,
     .macro-grid,
-    .visual-showcase {
+    .visual-showcase,
+    .strategy-hero-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1781,10 +1832,10 @@ main {
     }
 
     .brand-logo {
-        height: 36px;
+        height: 33px;
     }
 
     .brand-logo-footer {
-        height: 30px;
+        height: 27px;
     }
 }

@@ -14,6 +14,7 @@ const heroInfoCarouselState = {
 };
 const abilityAssetsCache = {};
 const championDetailCache = {};
+let localStrategyHeroMap = null;
 const HOT_CHAMPION_IDS = [
     'yasuo',
     'ahri',
@@ -109,6 +110,9 @@ function initCurrentPage() {
             break;
         case 'guide.html':
             initGuidePage();
+            break;
+        case 'strategy-center.html':
+            initStrategyCenterPage();
             break;
     }
 }
@@ -498,6 +502,100 @@ function initGuidePage() {
         container.innerHTML = easyHeroes.map(hero => createChampionCard(hero)).join('');
         addChampionCardListeners(container);
     }
+}
+
+// 攻略中心页：热门英雄攻略专题
+async function initStrategyCenterPage() {
+    const container = document.getElementById('strategyHeroGrid');
+    if (!container) return;
+
+    const localMap = await loadLocalStrategyHeroMap();
+    const hotSet = new Set(HOT_CHAMPION_IDS);
+    const list = championsData
+        .filter(hero => hotSet.has(hero.id))
+        .map(hero => localMap.get(hero.id) ? mergeHeroData(hero, localMap.get(hero.id)) : hero)
+        .slice(0, 12);
+
+    if (list.length === 0) {
+        container.innerHTML = `
+            <div class="knowledge-card" style="grid-column: 1 / -1; text-align: center;">
+                <h3>暂无专题英雄</h3>
+                <p>请稍后刷新页面重试。</p>
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = list.map(hero => createStrategyHeroCard(hero)).join('');
+    addStrategyHeroCardListeners(container);
+}
+
+async function loadLocalStrategyHeroMap() {
+    if (localStrategyHeroMap) return localStrategyHeroMap;
+
+    localStrategyHeroMap = new Map();
+    try {
+        const response = await fetch('data/champions.json');
+        if (!response.ok) return localStrategyHeroMap;
+        const data = await response.json();
+        (data.heroes || []).forEach(hero => {
+            if (hero && hero.id) {
+                localStrategyHeroMap.set(hero.id, hero);
+            }
+        });
+    } catch (error) {
+        console.warn('本地英雄补充数据加载失败:', error);
+    }
+
+    return localStrategyHeroMap;
+}
+
+function createStrategyHeroCard(hero) {
+    const rolesHtml = hero.roles.map(role =>
+        `<span class="role-tag ${getRoleClass(role)}">${role}</span>`
+    ).join('');
+
+    const difficultyClass = getDifficultyClass(hero.difficulty);
+    const loreText = summarizeLore(hero.lore || `${hero.name} 暂无背景摘要。`, 68);
+    const tipSource = hero.playstyle?.mid || hero.playstyle?.early || hero.playstyle?.late || '围绕分路核心职责，优先提升补刀、视野和团战执行。';
+    const tipText = summarizeLore(tipSource, 76);
+    const coreBuild = Array.isArray(hero.builds?.core) ? hero.builds.core.slice(0, 3).join(' / ') : '根据对局选择核心装备';
+    const runeText = hero.runes?.keystone ? `${hero.runes.primary} · ${hero.runes.keystone}` : '根据分路选择主系符文';
+
+    return `
+        <article class="strategy-hero-card" data-id="${hero.id}">
+            <div class="champion-image">
+                ${createImageHtml(
+                    getChampionLoadingUrl(hero, 0),
+                    `${hero.name} 高清立绘`,
+                    hero.image || DEFAULT_HERO_ICON,
+                    'champion-image-img',
+                    'lazy'
+                )}
+            </div>
+            <div class="strategy-hero-body">
+                <h3 class="champion-name">${hero.name}</h3>
+                <p class="champion-title">${hero.title}</p>
+                <div class="champion-roles">
+                    ${rolesHtml}
+                    <span class="difficulty ${difficultyClass}">${hero.difficulty}</span>
+                </div>
+                <p class="strategy-hero-lore">背景：${loreText}</p>
+                <p class="strategy-hero-tip">中期打法：${tipText}</p>
+                <p class="strategy-hero-tip">核心出装：${coreBuild}</p>
+                <p class="strategy-hero-tip">推荐符文：${runeText}</p>
+            </div>
+        </article>
+    `;
+}
+
+function addStrategyHeroCardListeners(container) {
+    container.querySelectorAll('.strategy-hero-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const heroId = card.dataset.id;
+            window.location.href = `hero-detail.html?id=${heroId}`;
+        });
+    });
 }
 
 // 工具函数：平滑滚动
@@ -1176,7 +1274,7 @@ function initScrollAnimations() {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.champion-card, .intro-card, .role-card, .mode-card, .skin-card').forEach(el => {
+    document.querySelectorAll('.champion-card, .strategy-hero-card, .intro-card, .role-card, .mode-card, .skin-card').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
