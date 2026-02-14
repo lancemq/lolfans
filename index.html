@@ -3,16 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>英雄联盟爱好者 - 首页</title>
+    <title>英雄联盟爱好者 - LOL攻略、英雄资料大全</title>
+    <meta name="description" content="英雄联盟爱好者网站提供最全的英雄资料、攻略技巧、游戏模式介绍。170+英雄完整数据，新手指南、排位上分攻略，助您快速成为游戏高手。">
+    <meta name="keywords" content="英雄联盟,LOL,英雄资料,攻略中心,新手指南,游戏模式,排位上分,符文之地">
+    <meta name="author" content="英雄联盟爱好者">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lolfans.xyz/index.html">
+    
+    <meta property="og:title" content="英雄联盟爱好者 - LOL攻略、英雄资料大全">
+    <meta property="og:description" content="提供最全的英雄资料、攻略技巧、游戏模式介绍，助您快速成为游戏高手">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lolfans.xyz/index.html">
+    <meta property="og:image" content="https://www.lolfans.xyz/images/og-image.jpg">
+    <meta property="og:site_name" content="英雄联盟爱好者">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="英雄联盟爱好者 - LOL攻略、英雄资料大全">
+    <meta name="twitter:description" content="提供最全的英雄资料、攻略技巧、游戏模式介绍">
+    <meta name="twitter:image" content="https://www.lolfans.xyz/images/og-image.jpg">
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.lolfans.xyz/index.html">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "英雄联盟爱好者",
+        "url": "https://www.lolfans.xyz/",
+        "description": "英雄联盟爱好者网站提供最全的英雄资料、攻略技巧、游戏模式介绍",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.lolfans.xyz/champions.html?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "mainEntity": {
+            "@type": "VideoGame",
+            "name": "League of Legends",
+            "alternateName": "英雄联盟",
+            "description": "一款由Riot Games开发的多人在线竞技游戏"
+        }
+    }
+    </script>
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="主导航">
         <div class="container">
             <div class="logo">
-                <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" loading="eager">
+                <a href="index.html" aria-label="返回首页">
+                    <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" width="120" height="40" loading="eager">
+                </a>
             </div>
-            <ul class="nav-links">
+            <button class="hamburger" aria-label="打开导航菜单" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
                 <li><a href="index.html" class="active">首页</a></li>
                 <li><a href="champions.html">英雄列表</a></li>
                 <li><a href="game-modes.html">游戏模式</a></li>
@@ -63,13 +112,17 @@
             <p class="section-subtitle">参考官方常见栏目结构，快速进入你需要的内容</p>
             <div class="intro-grid">
                 <article class="intro-card">
-                    <div class="intro-icon">📚</div>
+                    <div class="intro-icon">
+                        <img class="intro-icon-img" src="images/intro/game-data.svg" alt="游戏资料库" loading="lazy">
+                    </div>
                     <h3>游戏资料库</h3>
                     <p>查看版本重点、地图资源、术语与装备符文思路，建立稳定知识框架。</p>
                     <a class="cta-button hub-link" href="game-data.html">查看资料</a>
                 </article>
                 <article class="intro-card">
-                    <div class="intro-icon">🧠</div>
+                    <div class="intro-icon">
+                        <img class="intro-icon-img" src="images/intro/strategy.svg" alt="攻略中心" loading="lazy">
+                    </div>
                     <h3>攻略中心</h3>
                     <p>覆盖五路打法、中期运营、团战模板与复盘清单，形成可执行上分节奏。</p>
                     <a class="cta-button hub-link" href="strategy-center.html">进入攻略</a>
@@ -193,6 +246,6 @@
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script src="js/app.js" defer></script>
 </body>
 </html>

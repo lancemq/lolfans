@@ -1,1 +1,68 @@
-<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="360" rx="24" fill="#143138"/><circle cx="320" cy="180" r="36" fill="#C8AA6E"/><circle cx="320" cy="180" r="78" stroke="#9FF6EE" stroke-width="10"/><circle cx="320" cy="180" r="122" stroke="#9FF6EE" stroke-width="8" opacity="0.7"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="pingBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1a32"/>
+      <stop offset="100%" stop-color="#041e2a"/>
+    </linearGradient>
+    <linearGradient id="pingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0e6d2"/>
+      <stop offset="50%" stop-color="#c8aa6e"/>
+      <stop offset="100%" stop-color="#8a6b33"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="24" fill="url(#pingBg)"/>
+  
+  <!-- 信号盘 -->
+  <circle cx="320" cy="180" r="80" fill="none" stroke="#c8aa6e" stroke-width="3" opacity="0.3"/>
+  <circle cx="320" cy="180" r="50" fill="none" stroke="#c8aa6e" stroke-width="2" opacity="0.5"/>
+  <circle cx="320" cy="180" r="20" fill="#c8aa6e"/>
+  
+  <!-- 信号点 - 危险 -->
+  <g transform="translate(320, 100)">
+    <circle cx="0" cy="0" r="15" fill="#ff6b6b"/>
+    <text x="0" y="5" text-anchor="middle" font-size="12" fill="#fff">!</text>
+  </g>
+  
+  <!-- 信号点 - 撤退 -->
+  <g transform="translate(260, 140)">
+    <circle cx="0" cy="0" r="12" fill="#ffd93d"/>
+    <path d="M-4 -3 L4 -3 L0 5 Z" fill="#333"/>
+  </g>
+  
+  <!-- 信号点 - 正在路上 -->
+  <g transform="translate(380, 140)">
+    <circle cx="0" cy="0" r="12" fill="#5ef5d4"/>
+    <path d="M-5 0 L5 0 M0 -5 L0 5" stroke="#333" stroke-width="2"/>
+  </g>
+  
+  <!-- 信号点 - 集合 -->
+  <g transform="translate(240, 200)">
+    <circle cx="0" cy="0" r="12" fill="#c8aa6e"/>
+    <circle cx="0" cy="0" r="6" fill="#0a1a32"/>
+  </g>
+  
+  <!-- 信号点 - 进攻 -->
+  <g transform="translate(400, 200)">
+    <circle cx="0" cy="0" r="12" fill="#ff6b6b"/>
+    <path d="M-5 5 L5 5 L0 -5 Z" fill="#fff"/>
+  </g>
+  
+  <!-- 信号点 - 消失 -->
+  <g transform="translate(320, 250)">
+    <circle cx="0" cy="0" r="12" fill="#9ff6ee"/>
+    <path d="M-4 -4 L4 4 M4 -4 L-4 4" stroke="#333" stroke-width="2"/>
+  </g>
+  
+  <!-- 外圈装饰点 -->
+  <circle cx="320" cy="50" r="4" fill="#c8aa6e" opacity="0.5"/>
+  <circle cx="200" cy="90" r="4" fill="#c8aa6e" opacity="0.5"/>
+  <circle cx="440" cy="90" r="4" fill="#c8aa6e" opacity="0.5"/>
+  <circle cx="160" cy="180" r="4" fill="#c8aa6e" opacity="0.5"/>
+  <circle cx="480" cy="180" r="4" fill="#c8aa6e" opacity="0.5"/>
+  <circle cx="200" cy="270" r="4" fill="#c8aa6e" opacity="0.5"/>
+  <circle cx="440" cy="270" r="4" fill="#c8aa6e" opacity="0.5"/>
+  <circle cx="320" cy="310" r="4" fill="#c8aa6e" opacity="0.5"/>
+  
+  <!-- 文字 -->
+  <text x="320" y="340" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#a09b8c">快捷信号系统</text>
+</svg>

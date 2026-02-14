@@ -1,1 +1,54 @@
-<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="360" rx="24" fill="#2A2114"/><path d="M320 62L376 164L488 180L404 258L424 340L320 292L216 340L236 258L152 180L264 164L320 62Z" fill="#C8AA6E"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="rankBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1420"/>
+      <stop offset="100%" stop-color="#0d0a12"/>
+    </linearGradient>
+    <linearGradient id="diamondGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5ef5d4"/>
+      <stop offset="50%" stop-color="#3dd9c7"/>
+      <stop offset="100%" stop-color="#1ab8ad"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0e6d2"/>
+      <stop offset="50%" stop-color="#c8aa6e"/>
+      <stop offset="100%" stop-color="#8a6b33"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="24" fill="url(#rankBg)"/>
+  
+  <!-- 装饰光环 -->
+  <circle cx="320" cy="180" r="140" fill="none" stroke="#c8aa6e" stroke-width="1" opacity="0.1"/>
+  <circle cx="320" cy="180" r="100" fill="none" stroke="#c8aa6e" stroke-width="1" opacity="0.15"/>
+  
+  <!-- 段位图标 - 钻石 -->
+  <g transform="translate(320, 140)">
+    <polygon points="0,-45 40,0 20,35 -20,35 -40,0" fill="url(#diamondGrad)" opacity="0.9"/>
+    <polygon points="0,-30 30,0 15,25 -15,25 -30,0" fill="#0d0a12" opacity="0.5"/>
+    <text x="0" y="5" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#fff">Diamond</text>
+  </g>
+  
+  <!-- 段位等级 -->
+  <g transform="translate(180, 240)">
+    <rect x="0" y="0" width="60" height="50" rx="8" fill="#2a2114" stroke="#c8aa6e" stroke-width="1"/>
+    <text x="30" y="30" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#f0e6d2">IV</text>
+  </g>
+  <g transform="translate(250, 240)">
+    <rect x="0" y="0" width="60" height="50" rx="8" fill="#2a2114" stroke="#c8aa6e" stroke-width="1"/>
+    <text x="30" y="30" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#c8aa6e">III</text>
+  </g>
+  <g transform="translate(320, 240)">
+    <rect x="0" y="0" width="60" height="50" rx="8" fill="#2a2114" stroke="#c8aa6e" stroke-width="1"/>
+    <text x="30" y="30" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#c8aa6e">II</text>
+  </g>
+  <g transform="translate(390, 240)">
+    <rect x="0" y="0" width="60" height="50" rx="8" fill="#2a2114" stroke="#c8aa6e" stroke-width="2"/>
+    <text x="30" y="30" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#f0e6d2">I</text>
+  </g>
+  
+  <!-- 指向箭头 -->
+  <path d="M320 295 L310 315 L330 315 Z" fill="#c8aa6e"/>
+  
+  <!-- 文字 -->
+  <text x="320" y="340" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#a09b8c">排位系统</text>
+</svg>

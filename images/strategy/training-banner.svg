@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1a32"/>
+      <stop offset="100%" stop-color="#04182a"/>
+    </linearGradient>
+    <linearGradient id="gold3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0e6d2"/>
+      <stop offset="50%" stop-color="#c8aa6e"/>
+      <stop offset="100%" stop-color="#8a6b33"/>
+    </linearGradient>
+    <linearGradient id="purple3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a56d8"/>
+      <stop offset="100%" stop-color="#5a2ea0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg3)"/>
+  <circle cx="150" cy="100" r="180" fill="url(#purple3)" opacity="0.08"/>
+  <circle cx="650" cy="380" r="200" fill="url(#gold3)" opacity="0.05"/>
+  <text x="400" y="140" text-anchor="middle" font-family="sans-serif" font-size="56" font-weight="bold" fill="url(#gold3)">14天训练模板</text>
+  <text x="400" y="195" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#a09b8c">系统化训练，快速提升实力</text>
+  <line x1="280" y1="225" x2="520" y2="225" stroke="url(#gold3)" stroke-width="2" opacity="0.5"/>
+  <g transform="translate(200, 290)">
+    <rect x="-40" y="-25" width="80" height="50" rx="8" fill="url(#gold3)" opacity="0.2"/>
+    <text x="0" y="8" text-anchor="middle" font-size="20" fill="url(#gold3)">Week 1</text>
+    <text x="0" y="45" text-anchor="middle" font-size="12" fill="#a09b8c">基础巩固</text>
+  </g>
+  <g transform="translate(400, 290)">
+    <rect x="-40" y="-25" width="80" height="50" rx="8" fill="url(#purple3)" opacity="0.2"/>
+    <text x="0" y="8" text-anchor="middle" font-size="20" fill="url(#purple3)">Week 2</text>
+    <text x="0" y="45" text-anchor="middle" font-size="12" fill="#a09b8c">意识提升</text>
+  </g>
+  <g transform="translate(600, 290)">
+    <rect x="-40" y="-25" width="80" height="50" rx="8" fill="url(#gold3)" opacity="0.2"/>
+    <text x="0" y="8" text-anchor="middle" font-size="20" fill="url(#gold3)">Goal</text>
+    <text x="0" y="45" text-anchor="middle" font-size="12" fill="#a09b8c">实战检验</text>
+  </g>
+  <text x="400" y="390" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#6b6f76">补刀 · 连招 · 意识 · 团战</text>
+  <rect x="0" y="430" width="800" height="20" fill="url(#gold3)" opacity="0.3"/>
+</svg>

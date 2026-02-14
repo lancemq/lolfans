@@ -1284,3 +1284,110 @@ function initScrollAnimations() {
 
 // 页面加载完成后初始化动画
 window.addEventListener('load', initScrollAnimations);
+
+// 攻略中心轮播功能
+function initStrategyCarousel() {
+    const track = document.getElementById('strategyCarousel');
+    const dotsContainer = document.getElementById('carouselDots');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    
+    if (!track || track.children.length === 0) return;
+    
+    const slides = track.children;
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+    let autoplayTimer = null;
+    
+    // 创建轮播点
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `跳转到第${i + 1}张`);
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+    
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // 更新轮播点
+        document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+    
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+    }
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+    }
+    
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+    
+    function startAutoplay() {
+        stopAutoplay();
+        autoplayTimer = setInterval(nextSlide, 5000);
+    }
+    
+    function stopAutoplay() {
+        if (autoplayTimer) {
+            clearInterval(autoplayTimer);
+            autoplayTimer = null;
+        }
+    }
+    
+    // 绑定按钮事件
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoplay(); });
+    
+    // 鼠标悬停停止自动播放
+    track.addEventListener('mouseenter', stopAutoplay);
+    track.addEventListener('mouseleave', startAutoplay);
+    
+    // 触摸滑动支持
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoplay();
+    }, { passive: true });
+    
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+        startAutoplay();
+    }, { passive: true });
+    
+    function handleSwipe() {
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) nextSlide();
+            else prevSlide();
+        }
+    }
+    
+    // 键盘支持
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+    });
+    
+    // 开始自动播放
+    startAutoplay();
+}
+
+// 在initCurrentPage中调用
+const originalInitCurrentPage = initCurrentPage;
+initCurrentPage = function() {
+    originalInitCurrentPage();
+    initStrategyCarousel();
+};

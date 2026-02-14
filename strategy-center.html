@@ -3,16 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>英雄联盟爱好者 - 攻略中心</title>
+    <title>攻略中心 - 英雄联盟爱好者</title>
+    <meta name="description" content="英雄联盟最全攻略，涵盖五路打法、对线技巧、团战思路、排位上分指南。版本强势英雄推荐，阵容搭配分析，助您快速提升水平。">
+    <meta name="keywords" content="英雄联盟攻略,LOL攻略,上分指南,对线技巧,团战思路,阵容搭配,排位教学">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lolfans.xyz/strategy-center.html">
+    
+    <meta property="og:title" content="攻略中心 - 英雄联盟爱好者">
+    <meta property="og:description" content="最全的英雄联盟攻略技巧">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lolfans.xyz/strategy-center.html">
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.lolfans.xyz/strategy-center.html">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="主导航">
         <div class="container">
             <div class="logo">
-                <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" loading="eager">
+                <a href="index.html" aria-label="返回首页">
+                    <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" width="120" height="40" loading="eager">
+                </a>
             </div>
-            <ul class="nav-links">
+            <button class="hamburger" aria-label="打开导航菜单" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
                 <li><a href="index.html">首页</a></li>
                 <li><a href="champions.html">英雄列表</a></li>
                 <li><a href="game-modes.html">游戏模式</a></li>
@@ -31,6 +51,11 @@
     <main class="strategy-page">
         <div class="container">
             <div class="page-header">
+                <nav class="breadcrumb" aria-label="面包屑导航">
+                    <a href="index.html">首页</a>
+                    <span class="separator">/</span>
+                    <span class="current">攻略中心</span>
+                </nav>
                 <h1 class="page-title">攻略中心</h1>
                 <p class="page-subtitle">从对线到团战，从运营到复盘，建立可执行的上分体系</p>
                 <div class="pill-list strategy-tags">
@@ -43,18 +68,28 @@
                 </div>
             </div>
 
-            <section class="visual-showcase">
-                <div class="visual-card">
-                    <img src="images/strategy/draft.svg" alt="阵容搭配展示图" loading="lazy">
-                    <div class="visual-caption">阵容搭配思路</div>
-                </div>
-                <div class="visual-card">
-                    <img src="images/strategy/macro.svg" alt="中期运营展示图" loading="lazy">
-                    <div class="visual-caption">中期运营路线</div>
-                </div>
-                <div class="visual-card">
-                    <img src="images/strategy/training.svg" alt="训练计划展示图" loading="lazy">
-                    <div class="visual-caption">7 天训练模板</div>
+            <section class="strategy-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="strategyCarousel">
+                        <div class="carousel-slide">
+                            <a href="draft.html" class="carousel-card-link">
+                                <img src="images/strategy/draft-banner.svg" alt="阵容搭配思路" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="carousel-slide">
+                            <a href="macro.html" class="carousel-card-link">
+                                <img src="images/strategy/macro-banner.svg" alt="中期运营路线" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="carousel-slide">
+                            <a href="training.html" class="carousel-card-link">
+                                <img src="images/strategy/training-banner.svg" alt="14天训练模板" loading="lazy">
+                            </a>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="上一页">‹</button>
+                    <button class="carousel-btn next" aria-label="下一页">›</button>
+                    <div class="carousel-dots" id="carouselDots"></div>
                 </div>
             </section>
 
@@ -66,169 +101,417 @@
             </section>
 
             <section class="knowledge-section">
-                <h2 class="section-title">本期版本热门方向</h2>
-                <div class="knowledge-grid three-col">
+                <h2 class="section-title">版本强势英雄榜</h2>
+                <p class="section-subtitle">基于当前版本数据整理的各位置强势英雄排行，助您快速找到上分首选</p>
+                
+                <div class="knowledge-grid two-col">
                     <article class="knowledge-card">
-                        <h3>前中期滚雪球阵容</h3>
-                        <p>强调前 15 分钟线权和先锋节奏，适合有强开点与高机动中野的队伍。</p>
+                        <h3>上单 T0/T1 梯队</h3>
                         <ul class="checklist">
-                            <li>打野优先争夺上半区河道</li>
-                            <li>中路必须具备先手或反打能力</li>
-                            <li>上单能承担开团与边线压力</li>
+                            <li><strong>T0：</strong>狗头、鳄鱼、诺手、剑魔、亚索</li>
+                            <li><strong>T1：</strong>腕豪、格温、永恩、武器、刀妹</li>
+                            <li><strong>核心思路：</strong>狗头因强度过高必上ban位，推荐优先选择诺手和剑魔。亚索操作难度较高，需熟练后再使用。</li>
                         </ul>
                     </article>
                     <article class="knowledge-card">
-                        <h3>双核后期阵容</h3>
-                        <p>围绕射手与法师双核心发育，利用辅助与打野保障团战阵型。</p>
+                        <h3>打野 T0/T1 梯队</h3>
                         <ul class="checklist">
-                            <li>下路优先稳健发育减少失误</li>
-                            <li>中期通过视野防守拖到 2-3 件套</li>
-                            <li>大龙团强调整体拉扯与保护</li>
+                            <li><strong>T0：</strong>瞎子、螳螂、男枪、小鱼人</li>
+                            <li><strong>T1：</strong>雪人、寡妇、赵信、奥拉夫、锐雯、剑圣</li>
+                            <li><strong>核心思路：</strong>小鱼人需注重前期发育，中后期可实现秒杀效果，适合运营型玩家。</li>
                         </ul>
                     </article>
                     <article class="knowledge-card">
-                        <h3>抓单分带阵容</h3>
-                        <p>通过边线兵线与绕后视野形成多打少，适配高机动刺客或战士体系。</p>
+                        <h3>中单 T0/T1 梯队</h3>
                         <ul class="checklist">
-                            <li>边线推进与中路压塔同步</li>
-                            <li>控制河道与野区入口眼位</li>
-                            <li>抓到关键目标后立刻转资源</li>
+                            <li><strong>T0：</strong>劫、刀妹、永恩、狗头、天使</li>
+                            <li><strong>T1：</strong>卡牌、阿狸、皎月、卡特、小法</li>
+                            <li><strong>核心思路：</strong>优先选择狗头，若无法获得则推荐天使，其前期需猥琐发育，后期远程爆发极强。</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>射手 T0/T1 梯队</h3>
+                        <ul class="checklist">
+                            <li><strong>T0：</strong>卡莎、维鲁斯、EZ、飞机、女警</li>
+                            <li><strong>T1：</strong>VN、金克斯、奥巴马、德莱文、小炮</li>
+                            <li><strong>核心思路：</strong>射手强度差异较小，建议根据个人熟练度选择，卡莎和维鲁斯为当前版本首选。</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>辅助 T0/T1 梯队</h3>
+                        <ul class="checklist">
+                            <li><strong>T0：</strong>锤石、机器人、日女、布隆</li>
+                            <li><strong>T1：</strong>风女、露露、娜美、泰坦</li>
+                            <li><strong>核心思路：</strong>硬辅依然是版本主流，开团能力强的辅助在团战中更具价值。</li>
                         </ul>
                     </article>
                 </div>
             </section>
 
             <section class="knowledge-section">
-                <h2 class="section-title">位置打法速查</h2>
+                <h2 class="section-title">对线进阶技巧</h2>
+                <p class="section-subtitle">掌握核心对线技巧，从细节处建立优势</p>
+                
+                <div class="knowledge-grid three-col">
+                    <article class="knowledge-card">
+                        <h3>抢二技巧</h3>
+                        <p>对线期的第一个关键节点。开场直接打后排兵，抢先到2级可打一套技能建立血量优势。注意观察敌方补刀节奏，预判其走位。</p>
+                        <ul class="checklist">
+                            <li>开场直接a最后排小兵</li>
+                            <li>保持高频普攻不贪刀</li>
+                            <li>2级瞬间学技能压血线</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>控线与推线</h3>
+                        <p>根据对线情况选择控线或推线策略。优势推线扩大镀层收益，劣势控线防止被gank。</p>
+                        <ul class="checklist">
+                            <li>优势：快速推线进塔压镀层</li>
+                            <li>均势：控线等打野gank</li>
+                            <li>劣势：保持兵线在塔前</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>换血时机</h3>
+                        <p>对线换血的核心是「赚多赔少」。利用敌方补刀间隙出手，确保技能命中全身而退。</p>
+                        <ul class="checklist">
+                            <li>敌方补刀时出手</li>
+                            <li>我方小兵仇恨间隙</li>
+                            <li>确保有位移/治疗可撤退</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">视野控制体系</h2>
+                <p class="section-subtitle">视野是高端局的胜负关键，合理布置眼位可大幅提升胜率</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>基础眼位教学</h3>
+                        <ul class="checklist">
+                            <li><strong>河道草丛：</strong>最重要的防守眼位，侦查敌方打野动向</li>
+                            <li><strong>三角草丛：</strong>防止敌方绕后gank，ADC必争之地</li>
+                            <li><strong>敌方野区入口：</strong>获取敌方打野刷野路线信息</li>
+                            <li><strong>龙坑入口：</strong>资源团前必争视野</li>
+                            <li><strong>大小龙坑：</strong>劣势局关键防守位置</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>辅助眼石策略</h3>
+                        <ul class="checklist">
+                            <li><strong>前期：</strong>保证河道视野，防gank为主</li>
+                            <li><strong>中期：</strong>跟随团队节奏，控制关键草丛</li>
+                            <li><strong>后期：</strong>劣势局做防守眼，优势局做进攻眼</li>
+                            <li><strong>扫描使用：</strong>团战前排眼，野区入侵前排眼</li>
+                            <li><strong>控制守卫：</strong>关键资源点必插，防止被排</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">兵线运营详解</h2>
+                <p class="section-subtitle">兵线处理是决定胜负的核心因素之一</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>优势局兵线</h3>
+                        <ul class="checklist">
+                            <li>推完下一塔后，双人组换至上路压制敌方弱势线</li>
+                            <li>配合峡谷先锋快速破塔，经济差可扩大40%以上</li>
+                            <li>边路带线深度要控制好，防止被敌方多人抓单</li>
+                            <li>大龙逼团时，保证三路兵线同时到达</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>劣势局兵线</h3>
+                        <ul class="checklist">
+                            <li>中单换下路支援防御，利用防御塔减伤机制</li>
+                            <li>边路带线不宜过深，一塔被破后带至二塔附近</li>
+                            <li>二塔被破后带至高地附近，避免深入</li>
+                            <li>清完兵线再支援，不可盲目接团</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">分路全面攻略</h2>
+                <p class="section-subtitle">各位置核心职责与进阶技巧</p>
+                
                 <div class="knowledge-grid five-col">
                     <article class="knowledge-card role-guide">
                         <h3>上单</h3>
-                        <p>前 8 分钟优先处理兵线与换血时机。中后期承担边线压力与开团职责。</p>
+                        <p>前8分钟优先处理兵线与换血时机。中后期承担边线压力与开团职责。</p>
+                        <ul class="checklist">
+                            <li>前期：控线发育为主</li>
+                            <li>中期：边线分带牵制</li>
+                            <li>后期：开团或保护C位</li>
+                        </ul>
                     </article>
                     <article class="knowledge-card role-guide">
                         <h3>打野</h3>
                         <p>以资源节奏为轴，优先保证关键河道视野，围绕强势线打第一波节奏。</p>
+                        <ul class="checklist">
+                            <li>前期：刷野路线规划</li>
+                            <li>中期：控龙先锋节奏</li>
+                            <li>后期：团战切后排</li>
+                        </ul>
                     </article>
                     <article class="knowledge-card role-guide">
                         <h3>中单</h3>
                         <p>中路线权决定支援效率。控制线权后与打野联动做河道与边路节奏。</p>
+                        <ul class="checklist">
+                            <li>前期：推线游走支援</li>
+                            <li>中期：辐射边路和野区</li>
+                            <li>后期：团战输出核心</li>
+                        </ul>
                     </article>
                     <article class="knowledge-card role-guide">
                         <h3>射手</h3>
                         <p>稳健补刀、控制距离、减少无效换血。团战目标是活着打满输出。</p>
+                        <ul class="checklist">
+                            <li>前期：稳健发育补刀</li>
+                            <li>中期：安全位置输出</li>
+                            <li>后期：活到最后</li>
+                        </ul>
                     </article>
                     <article class="knowledge-card role-guide">
                         <h3>辅助</h3>
                         <p>以视野和先手控制影响全图。中期负责建立关键草丛和资源点信息优势。</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="knowledge-section">
-                <h2 class="section-title">对线克制与应对</h2>
-                <div class="meta-table-wrap">
-                    <table class="meta-table">
-                        <thead>
-                            <tr>
-                                <th>对线阶段</th>
-                                <th>常见问题</th>
-                                <th>推荐处理</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1-3 级</td>
-                                <td>被对方抢 2 级后强行换血</td>
-                                <td>提前让线，等兵线回推后再换血</td>
-                            </tr>
-                            <tr>
-                                <td>4-6 级</td>
-                                <td>打野频繁连动导致塔下压力大</td>
-                                <td>保留关键位移技能，优先保命与控线</td>
-                            </tr>
-                            <tr>
-                                <td>中期转线</td>
-                                <td>边线单带被抓导致节奏断档</td>
-                                <td>先做河道和三角草视野，再推进兵线</td>
-                            </tr>
-                            <tr>
-                                <td>资源团前</td>
-                                <td>先手被反开、C 位被切</td>
-                                <td>前排先探草，后排与辅助保持保护距离</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <section class="knowledge-section">
-                <h2 class="section-title">中期运营决策</h2>
-                <div class="knowledge-grid two-col">
-                    <article class="knowledge-card">
-                        <h3>优势局</h3>
                         <ul class="checklist">
-                            <li>先做外塔，再转资源，避免盲目越高地</li>
-                            <li>控龙魂节奏，提早布置资源点视野</li>
-                            <li>逼团时先确认敌方关键技能冷却</li>
-                        </ul>
-                    </article>
-                    <article class="knowledge-card">
-                        <h3>劣势局</h3>
-                        <ul class="checklist">
-                            <li>减少无视野区域接战，优先抓单换经济</li>
-                            <li>用兵线拖节奏，逼对手分人处理边线</li>
-                            <li>争取关键资源前先让辅助做视野试探</li>
+                            <li>前期：保护ADC发育</li>
+                            <li>中期：游走做视野</li>
+                            <li>后期：开团或保护</li>
                         </ul>
                     </article>
                 </div>
             </section>
 
             <section class="knowledge-section">
-                <h2 class="section-title">阵容搭配模板</h2>
+                <h2 class="section-title">防御塔攻略</h2>
+                <p class="section-subtitle">防御塔是游戏中最重要的战略资源</p>
+                
                 <div class="knowledge-grid two-col">
                     <article class="knowledge-card">
-                        <h3>开团冲阵体系</h3>
-                        <p>核心是“先手控制 + 跟进爆发 + 前排承伤”。适用于节奏快、执行力高的五排。</p>
-                        <div class="pill-list">
-                            <span>上单：开团坦克</span>
-                            <span>打野：强开控制</span>
-                            <span>中单：跟进爆发</span>
-                            <span>下路：持续输出</span>
-                            <span>辅助：二次控制</span>
-                        </div>
+                        <h3>推塔策略</h3>
+                        <ul class="checklist">
+                            <li>中间的外一塔要比上下的外一塔加一起还重要</li>
+                            <li>推塔时在敌人塔视野边缘放眼，可扩大优势</li>
+                            <li>塔的攻击范围是以塔为中心点的圆，贴着侧边走受伤害最小</li>
+                            <li>塔永远会打在视野内第一个攻击敌方的人</li>
+                            <li>最爽的事：把塔打剩一丝血然后潇洒离开</li>
+                        </ul>
                     </article>
                     <article class="knowledge-card">
-                        <h3>保护反打体系</h3>
-                        <p>核心是“先保 C 位，再抓对手失误”。适用于发育阵容和中后期团战。</p>
-                        <div class="pill-list">
-                            <span>上单：反手前排</span>
-                            <span>打野：反蹲控图</span>
-                            <span>中单：中远程法核</span>
-                            <span>下路：后期主核</span>
-                            <span>辅助：保护/反开</span>
-                        </div>
+                        <h3>塔下反杀</h3>
+                        <ul class="checklist">
+                            <li>在塔下小道卡好位会拯救你的队友并极有机会反杀</li>
+                            <li>塔内/隔塔闪现是最佳的真人操作</li>
+                            <li>没装备/没血而去越塔杀人是典型的坑货行为</li>
+                            <li>敌方塔下1换1是值得的：他丧失两波兵线</li>
+                            <li>安妮小熊、蚂蚱宝宝等可堵住塔下通道</li>
+                        </ul>
                     </article>
                 </div>
             </section>
 
             <section class="knowledge-section">
-                <h2 class="section-title">团战流程模板</h2>
-                <div class="macro-grid">
+                <h2 class="section-title">防Gank与游走意识</h2>
+                <p class="section-subtitle">避免被抓是保持优势的关键</p>
+                
+                <div class="knowledge-grid two-col">
                     <article class="knowledge-card">
-                        <h3>1. 站位</h3>
-                        <p>确认前后排距离，避免被强开一波。</p>
+                        <h3>防Gank技巧</h3>
+                        <ul class="checklist">
+                            <li>对线期随时关注小地图，敌方打野消失立即后撤</li>
+                            <li>1分30秒是打野刷完第一组野的时间点，特别注意</li>
+                            <li>兵线过深时是敌方gank的最佳时机</li>
+                            <li>敌方兵线压进我方塔时，打野大概率在蹲</li>
+                            <li>保持河道草丛眼位，特别是在6级前</li>
+                        </ul>
                     </article>
                     <article class="knowledge-card">
-                        <h3>2. 先手</h3>
-                        <p>有控制先打关键 C 位，无控制先拉扯技能。</p>
+                        <h3>游走时机</h3>
+                        <ul class="checklist">
+                            <li>推完线后游走，不要亏兵线</li>
+                            <li>击杀敌方后，看兵线决定是否回中或继续游走</li>
+                            <li>敌方压线过深时，配合打野越塔</li>
+                            <li>资源团前确保有线权再支援</li>
+                            <li>优势方积极游走扩大优势，劣势方谨慎游走</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">团战致胜法则</h2>
+                <p class="section-subtitle">团战是决定胜负的关键时刻</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>团战前准备</h3>
+                        <ul class="checklist">
+                            <li>观察敌方阵容，分析其优势与弱点</li>
+                            <li>确认敌方关键控制技能是否冷却</li>
+                            <li>资源团前40秒提前落位</li>
+                            <li>辅助提前布置关键草丛视野</li>
+                            <li>明确团战目标和进场顺序</li>
+                        </ul>
                     </article>
                     <article class="knowledge-card">
-                        <h3>3. 集火</h3>
-                        <p>统一目标，优先处理进场刺客或前排关键点。</p>
+                        <h3>团战站位</h3>
+                        <ul class="checklist">
+                            <li>坦克/战士站在最前排，吸收第一波伤害</li>
+                            <li>法师/射手保持安全距离，在辅助保护范围内</li>
+                            <li>刺客从侧翼或后方切入敌方后排</li>
+                            <li>前后排保持适当距离，避免被AOE波及</li>
+                            <li>被先手时保持阵型，不要盲目后撤</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">段位体系与上分策略</h2>
+                <p class="section-subtitle">了解段位机制，制定针对性上分策略</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>七大段位详解</h3>
+                        <ul class="checklist">
+                            <li><strong>黑铁/青铜：</strong>基础操作阶段，专注补刀和走位</li>
+                            <li><strong>白银：</strong>开始有团队意识，学习基础配合</li>
+                            <li><strong>黄金：</strong>稳定对线期，学习资源争夺</li>
+                            <li><strong>铂金：</strong>意识提升期，需要更多大局观</li>
+                            <li><strong>翡翠：</strong>高黄金到钻石的过渡，隐藏分权重高</li>
+                            <li><strong>钻石：</strong>操作与意识并重，阵容配合关键</li>
+                            <li><strong>大师/宗师/王者：</strong>顶尖对决，细节决定成败</li>
+                        </ul>
                     </article>
                     <article class="knowledge-card">
-                        <h3>4. 转资源</h3>
-                        <p>团战结束后第一时间转龙、先锋、大龙或推塔。</p>
+                        <h3>上分核心建议</h3>
+                        <ul class="checklist">
+                            <li>主练1-2个版本强势英雄，建立熟练度优势</li>
+                            <li>每周只练2个英雄，熟练度达到精通</li>
+                            <li>使用训练模式模拟前3分钟节奏</li>
+                            <li>固定位置，避免补位导致熟练度下降</li>
+                            <li>每输3局复盘一次操作失误</li>
+                            <li>连胜后容易匹配劣势局，适当休息</li>
+                            <li>心态最重要，输赢都保持平常心</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">连招技巧与英雄操作</h2>
+                <p class="section-subtitle">掌握核心连招，提升操作上限</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>连招核心要素</h3>
+                        <ul class="checklist">
+                            <li>了解所使用英雄的所有技能及冷却时间</li>
+                            <li>善于观察敌人的走位和行动模式</li>
+                            <li>连招不是简单的按键组合，需要精确的时机把控</li>
+                            <li>练习在训练模式中反复练习连招节奏</li>
+                            <li>根据敌方阵容和装备调整连招顺序</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>常见英雄连招示例</h3>
+                        <ul class="checklist">
+                            <li><strong>阿卡丽：</strong>R接近 → W隐身 → E标记 → R回撤</li>
+                            <li><strong>锐雯：</strong>光速QA：A+Q取消后摇</li>
+                            <li><strong>亚索：</strong>E兵线接近 → Q击飞 → R跟进</li>
+                            <li><strong>劫：</strong>W影分身 → E技能减速 → Q输出 → R收割</li>
+                            <li><strong>安妮：</strong>叠晕眩 → W晕眩 → Q输出 → R完美开团</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">资源争夺优先级</h2>
+                <p class="section-subtitle">了解资源刷新时间，合理规划节奏</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>关键时间节点</h3>
+                        <ul class="checklist">
+                            <li><strong>1分30秒：</strong>打野刷完第一组野，重点防gank</li>
+                            <li><strong>2分30秒：</strong>河道蟹刷新，争夺河道视野</li>
+                            <li><strong>5分钟：</strong>峡谷先锋刷新，第一波大节奏</li>
+                            <li><strong>6分钟：</strong>小龙刷新，资源团第一波</li>
+                            <li><strong>14分钟：</strong>镀层脱落，注意推塔节奏</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>资源优先级</h3>
+                        <ul class="checklist">
+                            <li><strong>优势局：</strong>先锋 > 小龙 > 大龙 > 塔 > 经济</li>
+                            <li><strong>劣势局：</strong>防御塔 > 大龙 > 小龙 > 经济</li>
+                            <li><strong>1分30秒首小龙必争，控下团队胜率高达68.3%</li>
+                            <li><strong>大龙buff：</strong>适合41分推逼团</li>
+                            <li><strong>远古龙：</strong>后期尽量不要放给对方</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">训练计划（14 天）</h2>
+                <p class="section-subtitle">系统化训练，快速提升实力</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>第一周：基础巩固</h3>
+                        <ol class="ordered-list">
+                            <li><strong>Day1-2：</strong>固定2个主练英雄，专注补刀与对线基础</li>
+                            <li><strong>Day3：</strong>练习技能连招，在训练模式中反复练习</li>
+                            <li><strong>Day4：</strong>学习眼位布置，了解关键草丛位置</li>
+                            <li><strong>Day5：</strong>练习打野刷野路线和Gank时机</li>
+                            <li><strong>Day6-7：</strong>实战练习，重点总结对线优缺点</li>
+                        </ol>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>第二周：意识提升</h3>
+                        <ol class="ordered-list">
+                            <li><strong>Day8-9：</strong>强化中期运营，围绕龙先锋做决策</li>
+                            <li><strong>Day10：</strong>学习团战站位和进场时机</li>
+                            <li><strong>Day11：</strong>练习视野控制和扫描使用</li>
+                            <li><strong>Day12-13：</strong>复盘团战站位、目标选择、转资源效率</li>
+                            <li><strong>Day14：</strong>整周总结，修正下周训练目标</li>
+                        </ol>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">数据目标清单</h2>
+                <p class="section-subtitle">可量化的提升指标</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>对线期目标</h3>
+                        <ul class="checklist">
+                            <li>10分钟补刀达到对应分路基准（上路80刀，中路85刀，下路90刀）</li>
+                            <li>每局至少3次有效换血（赚取血量优势）</li>
+                            <li>对线期死亡不超过2次</li>
+                            <li>补刀误差控制在5刀以内</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>团战期目标</h3>
+                        <ul class="checklist">
+                            <li>资源团前40秒提前落位做视野</li>
+                            <li>团战输出占比达到20%以上（输出位）</li>
+                            <li>每局复盘1次「可避免死亡」与1次「可复制决策」</li>
+                            <li>连续3局保持同一战术思路验证效果</li>
+                        </ul>
                     </article>
                 </div>
             </section>
@@ -335,11 +618,13 @@
                 <h2 class="section-title">参考来源</h2>
                 <div class="knowledge-card">
                     <ul class="checklist source-links">
-                        <li><a href="https://101.qq.com/#/hero" target="_blank" rel="noopener noreferrer">腾讯英雄联盟 101 - 英雄资料（参考结构）</a></li>
-                        <li><a href="https://ddragon.leagueoflegends.com/cdn/14.1.1/data/zh_CN/champion.json" target="_blank" rel="noopener noreferrer">Riot Data Dragon - Champion List（官方数据源）</a></li>
-                        <li><a href="https://www.leagueoflegends.com/en-us/how-to-play/" target="_blank" rel="noopener noreferrer">League of Legends - How to Play（官方）</a></li>
-                        <li><a href="https://support-leagueoflegends.riotgames.com/hc/en-us/articles/4406004330643-Ranked-Tiers-Divisions-and-Queues" target="_blank" rel="noopener noreferrer">Riot Support - Ranked Tiers, Divisions and Queues（官方）</a></li>
-                        <li><a href="https://support-leagueoflegends.riotgames.com/hc/en-us/articles/7094910087955-Smart-Ping-Wheel-and-Quickbinds" target="_blank" rel="noopener noreferrer">Riot Support - Smart Ping Wheel（官方）</a></li>
+                        <li><a href="https://lolm.qq.com/act/a20220818raider/index.html" target="_blank" rel="noopener noreferrer">英雄联盟手游官网 - 国服数据</a></li>
+                        <li><a href="https://101.qq.com/#/hero" target="_blank" rel="noopener noreferrer">腾讯英雄联盟 101 - 英雄资料</a></li>
+                        <li><a href="https://ddragon.leagueoflegends.com/cdn/14.1.1/data/zh_CN/champion.json" target="_blank" rel="noopener noreferrer">Riot Data Dragon - 官方英雄数据</a></li>
+                        <li><a href="https://www.leagueoflegends.com/en-us/how-to-play/" target="_blank" rel="noopener noreferrer">League of Legends 官方新手教程</a></li>
+                        <li><a href="https://support-leagueoflegends.riotgames.com/hc/en-us/articles/4406004330643-Ranked-Tiers-Divisions-and-Queues" target="_blank" rel="noopener noreferrer">Riot Support - 排位系统说明</a></li>
+                        <li><a href="https://support-leagueoflegends.riotgames.com/hc/en-us/articles/7094910087955-Smart-Ping-Wheel-and-Quickbinds" target="_blank" rel="noopener noreferrer">Riot Support - 快捷信号系统</a></li>
+                        <li><a href="https://www.leagueoflegends.com/zh-cn/how-to-play/" target="_blank" rel="noopener noreferrer">英雄联盟中文官网 - 玩法指南</a></li>
                     </ul>
                 </div>
             </section>
@@ -368,6 +653,6 @@
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script src="js/app.js" defer></script>
 </body>
 </html>

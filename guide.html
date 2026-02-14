@@ -3,16 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>英雄联盟爱好者 - 新手指南</title>
+    <title>新手指南 - 英雄联盟爱好者</title>
+    <meta name="description" content="英雄联盟新手指南，从零开始学习游戏基础、操作技巧、英雄推荐。快速了解游戏规则，顺利完成新手任务，开启你的LOL之旅。">
+    <meta name="keywords" content="英雄联盟新手指南,LOL新手教程,游戏入门,操作技巧,英雄推荐,新手任务,召唤师峡谷">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lolfans.xyz/guide.html">
+    
+    <meta property="og:title" content="新手指南 - 英雄联盟爱好者">
+    <meta property="og:description" content="从零开始，成为召唤师峡谷的传奇">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lolfans.xyz/guide.html">
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.lolfans.xyz/guide.html">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="主导航">
         <div class="container">
             <div class="logo">
-                <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" loading="eager">
+                <a href="index.html" aria-label="返回首页">
+                    <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" width="120" height="40" loading="eager">
+                </a>
             </div>
-            <ul class="nav-links">
+            <button class="hamburger" aria-label="打开导航菜单" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
                 <li><a href="index.html">首页</a></li>
                 <li><a href="champions.html">英雄列表</a></li>
                 <li><a href="game-modes.html">游戏模式</a></li>
@@ -20,169 +40,549 @@
                 <li><a href="game-data.html">游戏资料</a></li>
                 <li><a href="strategy-center.html">攻略中心</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
-    <main class="guide-page">
+    <main class="strategy-page">
         <div class="container">
+            <nav class="breadcrumb" aria-label="面包屑导航">
+                <a href="index.html">首页</a>
+                <span class="separator">/</span>
+                <span class="current">新手指南</span>
+            </nav>
+
             <div class="page-header">
                 <h1 class="page-title">新手指南</h1>
                 <p class="page-subtitle">从零开始，成为召唤师峡谷的传奇</p>
+                <div class="pill-list strategy-tags">
+                    <span>游戏基础</span>
+                    <span>操作技巧</span>
+                    <span>英雄推荐</span>
+                    <span>资源争夺</span>
+                    <span>团队配合</span>
+                </div>
             </div>
 
-            <section class="visual-showcase">
-                <div class="visual-card">
-                    <img src="images/guide/newbie-path.svg" alt="新手路线指引" loading="lazy">
-                    <div class="visual-caption">对线-转线-团战节奏</div>
-                </div>
-                <div class="visual-card">
-                    <img src="images/guide/warding-guide.svg" alt="新手视野教学" loading="lazy">
-                    <div class="visual-caption">关键眼位与防 Gank</div>
-                </div>
-                <div class="visual-card">
-                    <img src="images/guide/objective-control.svg" alt="地图资源争夺" loading="lazy">
-                    <div class="visual-caption">小龙先锋与男爵决策</div>
+            <section class="knowledge-section">
+                <h2 class="section-title">什么是英雄联盟</h2>
+                <p class="section-subtitle">了解这款全球最受欢迎的MOBA游戏</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>游戏概述</h3>
+                        <p>《英雄联盟》（League of Legends，简称LOL）是由美国Riot Games开发的一款5v5多人在线竞技游戏。玩家将扮演独特的英雄角色，与队友并肩作战，摧毁敌方基地水晶枢纽。</p>
+                        <ul class="checklist">
+                            <li>全球拥有数亿玩家</li>
+                            <li>完善的电竞赛事体系</li>
+                            <li>170+独特英雄可供选择</li>
+                            <li>持续更新的游戏内容</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>核心目标</h3>
+                        <p>游戏的最终目标是摧毁敌方<strong>水晶枢纽（Nexus）</strong>。这需要玩家通过推塔、击杀敌人、获取资源来积累优势，最终突破敌方防线。</p>
+                        <ul class="checklist">
+                            <li>摧毁三条线路上的防御塔</li>
+                            <li>击破水晶召唤出超级兵</li>
+                            <li>最终摧毁水晶枢纽获得胜利</li>
+                        </ul>
+                    </article>
                 </div>
             </section>
 
-            <div class="guide-content">
-                <!-- 游戏基础 -->
-                <section class="guide-section">
-                    <h2 class="section-title">🎮 游戏基础</h2>
-                    <div class="guide-cards">
-                        <div class="guide-card">
-                            <h3>游戏目标</h3>
-                            <p>英雄联盟是一款5v5团队竞技游戏。你的目标是与队友合作，摧毁敌方的<strong>基地水晶（Nexus）</strong>。率先摧毁敌方基地的一方获胜。</p>
-                        </div>
-                        <div class="guide-card">
-                            <h3>三条路线</h3>
-                            <p>地图有三条主要路线：</p>
-                            <ul>
-                                <li><strong>上路（Top）</strong>：通常由战士或坦克英雄走</li>
-                                <li><strong>中路（Mid）</strong>：通常由法师或刺客英雄走</li>
-                                <li><strong>下路（Bot）</strong>：通常由射手和辅助英雄走</li>
-                            </ul>
-                        </div>
-                        <div class="guide-card">
-                            <h3>野区（Jungle）</h3>
-                            <p>路线之间的区域称为野区，有中立野怪。打野英雄在这里发育，并帮助各条路线建立优势。</p>
-                        </div>
-                    </div>
-                </section>
+            <section class="knowledge-section">
+                <h2 class="section-title">游戏基础机制</h2>
+                <p class="section-subtitle">掌握这些基础概念，助你快速入门</p>
+                
+                <div class="knowledge-grid three-col">
+                    <article class="knowledge-card">
+                        <h3>三条兵线</h3>
+                        <p>召唤师峡谷有上、中、下三条主要路线，每条路线都有防御塔保护。</p>
+                        <ul class="checklist">
+                            <li><strong>上路（Top）</strong>：单人线，战士/坦克</li>
+                            <li><strong>中路（Mid）</strong>：单人线，法师/刺客</li>
+                            <li><strong>下路（Bot）</strong>：双人线，ADC+辅助</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>野区</h3>
+                        <p>连接三条线路的区域是野区，包含中立野怪和草丛。</p>
+                        <ul class="checklist">
+                            <li>打野英雄在此发育</li>
+                            <li>获取额外经济来源</li>
+                            <li>控制地图资源</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>经济系统</h3>
+                        <p>通过多种途径获取金币购买装备。</p>
+                        <ul class="checklist">
+                            <li>补刀击杀小兵</li>
+                            <li>击杀/助攻敌方英雄</li>
+                            <li>摧毁防御塔获得金币</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
 
-                <!-- 游戏流程 -->
-                <section class="guide-section">
-                    <h2 class="section-title">⏱️ 游戏流程</h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-marker">1</div>
-                            <div class="timeline-content">
-                                <h3>开局（0-15分钟）</h3>
-                                <p>对线期，专注于补刀、发育和与对手换血。打野会游走帮助建立优势。第一个重要目标是争夺第一条<strong>峡谷先锋</strong>或<strong>小龙</strong>。</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker">2</div>
-                            <div class="timeline-content">
-                                <h3>中期（15-30分钟）</h3>
-                                <p>开始频繁团战，争夺地图资源。推倒敌方外塔，控制视野。这时候个人发育开始转向团队配合。</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker">3</div>
-                            <div class="timeline-content">
-                                <h3>后期（30分钟+）</h3>
-                                <p>团战决定胜负。争夺<strong>大龙</strong>和<strong>远古龙</strong>等高级资源。一波团战失误可能导致游戏结束。</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            <section class="knowledge-section">
+                <h2 class="section-title">五个位置详解</h2>
+                <p class="section-subtitle">了解各位置的职责与特点</p>
+                
+                <div class="knowledge-grid five-col">
+                    <article class="knowledge-card role-guide">
+                        <h3>上单</h3>
+                        <p>单人线，负责前排抗压和分带牵制</p>
+                        <ul class="checklist">
+                            <li>对线发育</li>
+                            <li>团战开团</li>
+                            <li>边路分推</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card role-guide">
+                        <h3>打野</h3>
+                        <p>野区发育，负责节奏发起和资源控制</p>
+                        <ul class="checklist">
+                            <li>刷野升级</li>
+                            <li>Gank线上</li>
+                            <li>控龙先锋</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card role-guide">
+                        <h3>中单</h3>
+                        <p>单人线，负责输出爆发和游走支援</p>
+                        <ul class="checklist">
+                            <li>对线压制</li>
+                            <li>游走边路</li>
+                            <li>团战输出</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card role-guide">
+                        <h3>ADC</h3>
+                        <p>下路核心，负责持续物理输出</p>
+                        <ul class="checklist">
+                            <li>补刀发育</li>
+                            <li>团战输出</li>
+                            <li>推塔主力</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card role-guide">
+                        <h3>辅助</h3>
+                        <p>下路辅助，负责保护和控制视野</p>
+                        <ul class="checklist">
+                            <li>保护ADC</li>
+                            <li>提供视野</li>
+                            <li>开团控制</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
 
-                <!-- 重要资源 -->
-                <section class="guide-section">
-                    <h2 class="section-title">重要资源</h2>
-                    <div class="resources-grid">
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <img class="resource-icon-img" src="images/guide/dragon-icon.svg" alt="元素龙图标" loading="lazy">
-                            </div>
-                            <h3>元素龙</h3>
-                            <p>击杀后全队获得属性加成。集齐四条同类型龙可以召唤<strong>龙魂</strong>，获得强大增益。</p>
-                        </div>
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <img class="resource-icon-img" src="images/guide/herald-icon.svg" alt="峡谷先锋图标" loading="lazy">
-                            </div>
-                            <h3>峡谷先锋</h3>
-                            <p>强大的中立野怪，可以召唤来协助推塔。通常在游戏前20分钟出现两次。</p>
-                        </div>
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <img class="resource-icon-img" src="images/guide/baron-icon.svg" alt="纳什男爵图标" loading="lazy">
-                            </div>
-                            <h3>纳什男爵</h3>
-                            <p>游戏中最强大的野怪，20分钟后刷新。击杀后全队获得强力buff，大幅提升推塔能力。</p>
-                        </div>
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <img class="resource-icon-img" src="images/guide/elder-icon.svg" alt="远古巨龙图标" loading="lazy">
-                            </div>
-                            <h3>远古巨龙</h3>
-                            <p>40分钟后出现，击杀后获得斩杀效果，对低生命值敌人造成额外真实伤害。</p>
-                        </div>
-                    </div>
-                </section>
+            <section class="knowledge-section">
+                <h2 class="section-title">英雄定位与类型</h2>
+                <p class="section-subtitle">了解英雄分类，找到适合自己的类型</p>
+                
+                <div class="knowledge-grid three-col">
+                    <article class="knowledge-card">
+                        <h3>战士（Fighter）</h3>
+                        <p>近战物理英雄，兼具输出与生存能力</p>
+                        <p style="color: var(--text-muted); margin-top: 8px;">代表英雄：德莱厄斯、盖伦、锐雯</p>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>刺客（Assassin）</h3>
+                        <p>高爆发伤害，擅长快速击杀敌方后排</p>
+                        <p style="color: var(--text-muted); margin-top: 8px;">代表英雄：劫、泰隆、卡特琳娜</p>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>法师（Mage）</h3>
+                        <p>远程魔法伤害，具备控制与爆发能力</p>
+                        <p style="color: var(--text-muted); margin-top: 8px;">代表英雄：安妮、艾妮薇亚、拉克丝</p>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>射手（Marksman）</h3>
+                        <p>远程物理输出，后期团队核心伤害</p>
+                        <p style="color: var(--text-muted); margin-top: 8px;">代表英雄：艾希、女警、卡莎</p>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>辅助（Support）</h3>
+                        <p>保护队友，提供控制与增益效果</p>
+                        <p style="color: var(--text-muted); margin-top: 8px;">代表英雄：风女、锤石、索拉卡</p>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>坦克（Tank）</h3>
+                        <p>高额防御属性，团队前排与控制来源</p>
+                        <p style="color: var(--text-muted); margin-top: 8px;">代表英雄：波比、茂凯、加里奥</p>
+                    </article>
+                </div>
+            </section>
 
-                <!-- 新手建议 -->
-                <section class="guide-section">
-                    <h2 class="section-title">💡 新手建议</h2>
-                    <div class="tips-grid">
-                        <div class="tip-card">
-                            <div class="tip-number">01</div>
-                            <h3>选择简单英雄</h3>
-                            <p>新手推荐从<strong>盖伦、艾希、安妮</strong>等操作简单的英雄开始。先理解游戏机制，再挑战高难度英雄。</p>
-                        </div>
-                        <div class="tip-card">
-                            <div class="tip-number">02</div>
-                            <h3>专注补刀</h3>
-                            <p>补刀（击杀小兵获得金币）是基础收入来源。尽量不漏刀，10分钟60刀以上为及格水平。</p>
-                        </div>
-                        <div class="tip-card">
-                            <div class="tip-number">03</div>
-                            <h3>注意小地图</h3>
-                            <p>养成频繁看小地图的习惯。了解敌方英雄位置可以避免被gank，也能找到支援机会。</p>
-                        </div>
-                        <div class="tip-card">
-                            <div class="tip-number">04</div>
-                            <h3>控制视野</h3>
-                            <p>购买控制守卫（75金币）插在关键位置。视野是获取信息和避免被偷袭的关键。</p>
-                        </div>
-                        <div class="tip-card">
-                            <div class="tip-number">05</div>
-                            <h3>团队配合</h3>
-                            <p>英雄联盟是团队游戏。多和队友沟通，不要单打独斗。团战时注意自己的定位和职责。</p>
-                        </div>
-                        <div class="tip-card">
-                            <div class="tip-number">06</div>
-                            <h3>保持学习</h3>
-                            <p>观看高手直播、比赛视频，学习他们的操作和意识。每局游戏后反思自己的失误，持续进步。</p>
-                        </div>
-                    </div>
-                </section>
+            <section class="knowledge-section">
+                <h2 class="section-title">新手推荐英雄</h2>
+                <p class="section-subtitle">适合新手玩家入门的英雄，技能机制简单易上手</p>
+                
+                <div class="knowledge-grid three-col">
+                    <article class="knowledge-card">
+                        <h3>上单推荐</h3>
+                        <ul class="checklist">
+                            <li><strong>盖伦</strong> - 操作简单，坦度极高</li>
+                            <li><strong>德莱厄斯</strong> - 伤害可观，滚雪球能力强</li>
+                            <li><strong>内瑟斯</strong> - 后期超强，简单粗暴</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>中单推荐</h3>
+                        <ul class="checklist">
+                            <li><strong>安妮</strong> - 爆发高，控制稳定</li>
+                            <li><strong>拉克丝</strong> - 远程消耗，手长安全</li>
+                            <li><strong>艾妮薇亚</strong> - 灵活位移，持续输出</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>ADC推荐</h3>
+                        <ul class="checklist">
+                            <li><strong>艾希</strong> - 简单易学，大招开团</li>
+                            <li><strong>女警</strong> - 手长优势，发育周期短</li>
+                            <li><strong>麦林炮手</strong> - 推塔快，后期强势</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>辅助推荐</h3>
+                        <ul class="checklist">
+                            <li><strong>风女</strong> - 保护能力极强</li>
+                            <li><strong>索拉卡</strong> - 简单粗暴的回血</li>
+                            <li><strong>锤石</strong> - 全能辅助，进阶必学</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>打野推荐</h3>
+                        <ul class="checklist">
+                            <li><strong>易大师</strong> - 无脑刷野，发育成型</li>
+                            <li><strong>努努</strong> - 简单控图，易于上手</li>
+                            <li><strong>沃里克</strong> - 续航强，滚雪球能力</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
 
-                <!-- 推荐英雄 -->
-                <section class="guide-section">
-                    <h2 class="section-title">🌟 新手推荐英雄</h2>
-                    <div class="recommended-champions" id="recommendedChampions">
-                        <!-- 动态生成 -->
-                    </div>
-                </section>
-            </div>
+            <section class="knowledge-section">
+                <h2 class="section-title">基础操作技巧</h2>
+                <p class="section-subtitle">掌握这些操作技巧，提升游戏体验</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>补刀技巧</h3>
+                        <ul class="checklist">
+                            <li><strong>最后一下：</strong>在小兵残血时用普攻击杀，获取全额金币</li>
+                            <li><strong>练习方法：</strong>在训练模式中只补刀，不攻击敌方英雄</li>
+                            <li><strong>目标：</strong>10分钟达到60-80刀为及格</li>
+                            <li><strong>卡刀：</strong>在兵线进塔时卡好塔攻击间隔进行补刀</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>走位与拉扯</h3>
+                        <ul class="checklist">
+                            <li><strong>保持距离：</strong>与敌人保持安全距离，避免被消耗</li>
+                            <li><strong>技能取消：</strong>普攻后加入移动取消后摇</li>
+                            <li><strong>走A：</strong>边走边A，取消攻击后摇</li>
+                            <li><strong>拉扯：</strong>边打边退，消耗敌人血量</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>技能释放</h3>
+                        <ul class="checklist">
+                            <li><strong>指向性技能：</strong>自动锁定目标，如盖伦Q</li>
+                            <li><strong>非指向性技能：</strong>需要预判走位，如艾希W</li>
+                            <li><strong>连招顺序：</strong>先手控制→输出→追击/撤退</li>
+                            <li><strong>技能取消：</strong>部分技能可取消普攻后摇</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>视野控制</h3>
+                        <ul class="checklist">
+                            <li><strong>控制守卫：</strong>75金币一个，提供持续视野</li>
+                            <li><strong>扫描透镜：</strong>扫描并拆除敌方眼位</li>
+                            <li><strong>关键位置：</strong>河道草丛、三角草丛、龙坑</li>
+                            <li><strong>防Gank：</strong>对线时注意敌方打野位置</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">游戏进程详解</h2>
+                <p class="section-subtitle">了解游戏中各阶段的重点</p>
+                
+                <div class="meta-table-wrap">
+                    <table class="meta-table">
+                        <thead>
+                            <tr>
+                                <th>阶段</th>
+                                <th>时间</th>
+                                <th>核心目标</th>
+                                <th>注意事项</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>开局对线</td>
+                                <td>0-10分钟</td>
+                                <td>补刀发育，建立对线优势</td>
+                                <td>注意防Gank，不要压线过深</td>
+                            </tr>
+                            <tr>
+                                <td>资源争夺</td>
+                                <td>10-20分钟</td>
+                                <td>峡谷先锋、小龙团战</td>
+                                <td>先锋撞塔扩大优势</td>
+                            </tr>
+                            <tr>
+                                <td>中期运营</td>
+                                <td>20-30分钟</td>
+                                <td>大龙逼团，推塔转线</td>
+                                <td>兵线运营是关键</td>
+                            </tr>
+                            <tr>
+                                <td>后期团战</td>
+                                <td>30分钟+</td>
+                                <td>远古龙、大龙决策</td>
+                                <td>一波团战决定胜负</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">地图资源详解</h2>
+                <p class="section-subtitle">了解地图资源，获取战斗优势</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>元素龙（小龙）</h3>
+                        <ul class="checklist">
+                            <li><strong>火龙：</strong>增加攻击力和法强</li>
+                            <li><strong>水龙：</strong>提供生命值和生命回复</li>
+                            <li><strong>风龙：</strong>提供技能加速和移动速度</li>
+                            <li><strong>土龙：</strong>增加护甲和魔抗</li>
+                            <li><strong>龙魂：</strong>集齐4条同属性龙获得强大增益</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>峡谷先锋</h3>
+                        <ul class="checklist">
+                            <li>5分钟首次刷新，持续至20分钟</li>
+                            <li>击杀后可召唤协助推塔</li>
+                            <li>通常撞中塔或上塔</li>
+                            <li>先锋击杀提供团队经济</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>纳什男爵（大龙）</h3>
+                        <ul class="checklist">
+                            <li>20分钟后刷新</li>
+                            <li>击杀后全队获得强化小兵</li>
+                            <li>提升推塔能力和视野范围</li>
+                            <li>大龙buff持续3分钟</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>远古巨龙</h3>
+                        <ul class="checklist">
+                            <li>40分钟后替代小龙刷新</li>
+                            <li>提供额外真实伤害加成</li>
+                            <li>对低血量敌人有斩杀效果</li>
+                            <li>远古龙buff非常强力</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">装备系统入门</h2>
+                <p class="section-subtitle">了解装备选择的基本思路</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>装备选择原则</h3>
+                        <ul class="checklist">
+                            <li><strong>根据定位出装：</strong>坦克堆护盾魔抗，ADC堆攻击攻速</li>
+                            <li><strong>根据对局调整：</strong>敌方AP多出魔抗，AD多出护甲</li>
+                            <li><strong>核心装备优先：</strong>每个英雄有核心三件套</li>
+                            <li><strong>鞋子很重要：</strong>根据敌方阵容选择合适鞋</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>基础装备分类</h3>
+                        <ul class="checklist">
+                            <li><strong>攻击装备：</strong>无尽之刃、幻影之舞、破败王者</li>
+                            <li><strong>法术装备：</strong>卢登的回声、灭世者的死亡之帽</li>
+                            <li><strong>防御装备：</strong>兰顿之兆、守护天使、自然之力</li>
+                            <li><strong>辅助装备：</strong>飞升护符、基克的聚合</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">符文系统入门</h2>
+                <p class="section-subtitle">了解符文系统，提升英雄能力</p>
+                
+                <div class="knowledge-grid three-col">
+                    <article class="knowledge-card">
+                        <h3>精密系</h3>
+                        <p>强化攻击和持续伤害，适合依赖普攻的英雄</p>
+                        <ul class="checklist">
+                            <li>征服者</li>
+                            <li>致命节奏</li>
+                            <li>强攻</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>主宰系</h3>
+                        <p>注重爆发和击杀能力，适合刺客英雄</p>
+                        <ul class="checklist">
+                            <li>电刑</li>
+                            <li>丛刃</li>
+                            <li>掠食者</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>巫术系</h3>
+                        <p>增强技能控制和法术伤害，适合法师</p>
+                        <ul class="checklist">
+                            <li>艾黎</li>
+                            <li>相位猛冲</li>
+                            <li>奥术彗星</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>坚决系</h3>
+                        <p>倾向耐久和防御能力，适合坦克辅助</p>
+                        <ul class="checklist">
+                            <li>余震</li>
+                            <li>守护者</li>
+                            <li>不灭之握</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>启迪系</h3>
+                        <p>富有创造性，提供冷却缩减和额外金币</p>
+                        <ul class="checklist">
+                            <li>冰川增幅</li>
+                            <li>启封的秘籍</li>
+                            <li>全能石</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">高效练习方法</h2>
+                <p class="section-subtitle">科学的练习方法助你快速提升</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>分阶段练习</h3>
+                        <ol class="ordered-list">
+                            <li><strong>第一阶段：</strong>人机对战，熟悉英雄技能和地图</li>
+                            <li><strong>第二阶段：</strong>匹配模式，练习补刀和走位</li>
+                            <li><strong>第三阶段：</strong>排位赛，体验竞技氛围</li>
+                        </ol>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>专项训练</h3>
+                        <ol class="ordered-list">
+                            <li><strong>补刀训练：</strong>训练模式10分钟不攻击敌人只补刀</li>
+                            <li><strong>连招练习：</strong>训练模式反复练习技能连招</li>
+                            <li><strong>视野训练：</strong>自定义模式练习插眼位置</li>
+                        </ol>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">游戏模式介绍</h2>
+                <p class="section-subtitle">多种游戏模式，总有一款适合你</p>
+                
+                <div class="knowledge-grid three-col">
+                    <article class="knowledge-card">
+                        <h3>召唤师峡谷</h3>
+                        <p>经典5v5地图，最主要的竞技模式</p>
+                        <ul class="checklist">
+                            <li>排位赛</li>
+                            <li>匹配模式</li>
+                            <li>自定义模式</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>极地大乱斗</h3>
+                        <p>5v5随机英雄，中路纯对抗模式</p>
+                        <ul class="checklist">
+                            <li>随机英雄</li>
+                            <li>只有一条路</li>
+                            <li>快节奏战斗</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>人机对战</h3>
+                        <p>与AI练习，适合新手入门</p>
+                        <ul class="checklist">
+                            <li>简单/中等/困难</li>
+                            <li>熟悉英雄技能</li>
+                            <li>练习新英雄</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">常见问题FAQ</h2>
+                
+                <div class="meta-table-wrap">
+                    <table class="meta-table">
+                        <thead>
+                            <tr>
+                                <th>问题</th>
+                                <th>解答</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>如何快速获得英雄？</td>
+                                <td>完成每周任务、参与活动、购买金币/点券</td>
+                            </tr>
+                            <tr>
+                                <td>排位赛什么时候开放？</td>
+                                <td>需要达到30级才能参与排位赛</td>
+                            </tr>
+                            <tr>
+                                <td>什么是补位？</td>
+                                <td>系统自动分配你到需要的位置，建议练多个位置</td>
+                            </tr>
+                            <tr>
+                                <td>如何避免被举报？</td>
+                                <td>不挂机、不送人头、积极沟通、正常游戏</td>
+                            </tr>
+                            <tr>
+                                <td>什么是ELO机制？</td>
+                                <td>隐藏分系统，胜率接近50%时说明在正确段位</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">参考来源</h2>
+                <div class="knowledge-card">
+                    <ul class="checklist source-links">
+                        <li><a href="https://www.leagueoflegends.com/zh-cn/how-to-play/" target="_blank" rel="noopener noreferrer">英雄联盟官方网站 - 游戏指南</a></li>
+                        <li><a href="https://lol.qq.com/v3/newbie-lb.shtml" target="_blank" rel="noopener noreferrer">英雄联盟官网 - 新手指引</a></li>
+                        <li><a href="https://support-leagueoflegends.riotgames.com/hc/en-us" target="_blank" rel="noopener noreferrer">Riot Support - 官方支持</a></li>
+                        <li><a href="https://101.qq.com/" target="_blank" rel="noopener noreferrer">腾讯英雄联盟101 - 英雄资料</a></li>
+                    </ul>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -208,6 +608,6 @@
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script src="js/app.js" defer></script>
 </body>
 </html>

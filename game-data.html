@@ -3,16 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>英雄联盟爱好者 - 游戏资料</title>
+    <title>游戏资料库 - 英雄联盟爱好者</title>
+    <meta name="description" content="英雄联盟游戏资料库，查看装备物品、符文天赋、野怪刷新时间、地图资源等完整数据。了解版本更新内容，掌握游戏核心机制。">
+    <meta name="keywords" content="英雄联盟游戏资料,LOL装备物品,符文天赋,野怪刷新,地图资源,版本更新,召唤师峡谷">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lolfans.xyz/game-data.html">
+    
+    <meta property="og:title" content="游戏资料库 - 英雄联盟爱好者">
+    <meta property="og:description" content="完整的英雄联盟游戏资料库">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lolfans.xyz/game-data.html">
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.lolfans.xyz/game-data.html">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="主导航">
         <div class="container">
             <div class="logo">
-                <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" loading="eager">
+                <a href="index.html" aria-label="返回首页">
+                    <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" width="120" height="40" loading="eager">
+                </a>
             </div>
-            <ul class="nav-links">
+            <button class="hamburger" aria-label="打开导航菜单" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
                 <li><a href="index.html">首页</a></li>
                 <li><a href="champions.html">英雄列表</a></li>
                 <li><a href="game-modes.html">游戏模式</a></li>
@@ -20,99 +40,189 @@
                 <li><a href="game-data.html" class="active">游戏资料</a></li>
                 <li><a href="strategy-center.html">攻略中心</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
-    <main class="knowledge-page">
+    <main class="strategy-page">
         <div class="container">
+            <nav class="breadcrumb" aria-label="面包屑导航">
+                <a href="index.html">首页</a>
+                <span class="separator">/</span>
+                <span class="current">游戏资料库</span>
+            </nav>
+
             <div class="page-header">
                 <h1 class="page-title">游戏资料库</h1>
-                <p class="page-subtitle">整合版本机制、地图资源、术语与实战基础，便于快速查阅</p>
+                <p class="page-subtitle">整合版本机制、地图资源、装备符文与实战数据，便于快速查阅</p>
+                <div class="pill-list strategy-tags">
+                    <span>地图资源</span>
+                    <span>装备系统</span>
+                    <span>符文系统</span>
+                    <span>野怪数据</span>
+                    <span>版本机制</span>
+                </div>
             </div>
 
-            <section class="visual-showcase">
-                <div class="visual-card">
-                    <img src="images/knowledge/map-data.svg" alt="地图与资源信息图" loading="lazy">
-                    <div class="visual-caption">地图资源路线</div>
-                </div>
-                <div class="visual-card">
-                    <img src="images/knowledge/ranked-data.svg" alt="排位段位信息图" loading="lazy">
-                    <div class="visual-caption">排位分段目标</div>
-                </div>
-                <div class="visual-card">
-                    <img src="images/knowledge/ping-data.svg" alt="沟通信号信息图" loading="lazy">
-                    <div class="visual-caption">Smart Ping 协同</div>
-                </div>
-            </section>
-
             <section class="knowledge-section">
-                <h2 class="section-title">版本速览</h2>
+                <h2 class="section-title">2025/2026赛季重大更新</h2>
+                <p class="section-subtitle">了解最新赛季的核心变化</p>
+                
                 <div class="knowledge-grid two-col">
                     <article class="knowledge-card">
-                        <h3>版本关注优先级</h3>
+                        <h3>诺克萨斯主题季</h3>
+                        <p>2025年推出全新主题季「诺克萨斯」，包含全新地图外观、史诗级野怪「亚塔坎」及新系统「武力壮举」。</p>
                         <ul class="checklist">
-                            <li>先看系统级改动：防御塔、野区、经济规则</li>
-                            <li>再看位置核心：中路游走、下路对线、打野路线</li>
-                            <li>最后看英雄与装备：主流英雄强弱与出装变化</li>
+                            <li>全新史诗野怪「亚塔坎」：20分钟刷新</li>
+                            <li>血玫瑰机制：英雄阵亡处产出增益道具</li>
+                            <li>男爵刷新时间调整至25分钟</li>
+                            <li>传送技能效果翻新</li>
                         </ul>
                     </article>
                     <article class="knowledge-card">
-                        <h3>每次更新后的准备</h3>
+                        <h3>战略点系统</h3>
+                        <p>26.1版本引入全新战略点机制，游戏战略从围绕史诗级野怪转向更加注重推塔。</p>
                         <ul class="checklist">
-                            <li>练习 2-3 个版本强势英雄</li>
-                            <li>准备 1 套稳定阵容和 1 套反制阵容</li>
-                            <li>对线先保守 3 局，确认版本节奏再提速</li>
+                            <li>全新晶化增生加入</li>
+                            <li>每个位置加入全新分路任务</li>
+                            <li>精灵视界：全新视野机制</li>
+                            <li>基础暴击伤害提升至200%</li>
                         </ul>
                     </article>
                 </div>
             </section>
 
             <section class="knowledge-section">
-                <h2 class="section-title">地图与资源</h2>
-                <div class="knowledge-grid three-col">
+                <h2 class="section-title">召唤师峡谷地图</h2>
+                <p class="section-subtitle">了解地图结构与关键位置</p>
+                
+                <div class="knowledge-grid two-col">
                     <article class="knowledge-card">
-                        <h3>元素龙</h3>
-                        <p>控制小龙是中期节奏核心。龙魂点前优先布局视野与线权，避免被抢关键资源。</p>
+                        <h3>地图概述</h3>
+                        <p>召唤师峡谷是英雄联盟的主要对战地图，包含三条兵线、野区、河道和多种中立资源。</p>
+                        <ul class="checklist">
+                            <li><strong>三条兵线：</strong>上路、中路、下路</li>
+                            <li><strong>野区：</strong>红方野区、蓝方野区</li>
+                            <li><strong>河道：</strong>贯穿地图的河道区域</li>
+                            <li><strong>草丛：</strong>多个关键草丛位置</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>防御塔布局</h3>
+                        <p>每条线路有3座防御塔和1座水晶枢纽。</p>
+                        <ul class="checklist">
+                            <li><strong>外塔：</strong>游戏前期保护</li>
+                            <li><strong>内塔：</strong>中期防守关键</li>
+                            <li><strong>高地塔：</strong>保护水晶的最后防线</li>
+                            <li><strong>水晶枢纽：</strong>游戏核心目标</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">中立资源详解</h2>
+                <p class="section-subtitle">掌握地图资源，获取战斗优势</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>元素龙（小龙）</h3>
+                        <ul class="checklist">
+                            <li><strong>刷新时间：</strong>首条5分钟刷新，之后每5分钟</li>
+                            <li><strong>火龙：</strong>+8%攻击力和法强（可叠加）</li>
+                            <li><strong>水龙：</strong>+8%生命值和生命回复</li>
+                            <li><strong>风龙：</strong>+8技能加速和脱战移速</li>
+                            <li><strong>土龙：</strong>+8护甲和魔抗</li>
+                            <li><strong>龙魂：</strong>4条同属性龙获得强大增益</li>
+                        </ul>
                     </article>
                     <article class="knowledge-card">
                         <h3>峡谷先锋</h3>
-                        <p>先锋用于加速推塔与滚雪球。通常在上中路有线权时收益最高。</p>
+                        <ul class="checklist">
+                            <li><strong>刷新时间：</strong>5:00-19:45</li>
+                            <li><strong>刷新次数：</strong>每局2只</li>
+                            <li><strong>效果：</strong>召唤后撞击防御塔造成伤害</li>
+                            <li><strong>刷新位置：</strong>上路河道草丛</li>
+                            <li><strong>击杀奖励：</strong>团队金钱和经验</li>
+                        </ul>
                     </article>
                     <article class="knowledge-card">
-                        <h3>纳什男爵</h3>
-                        <p>20 分钟后最关键中立资源之一。打大龙前先确认敌方关键大招与惩戒状态。</p>
+                        <h3>纳什男爵（大龙）</h3>
+                        <ul class="checklist">
+                            <li><strong>刷新时间：</strong>20:00（26.1版本改为25:00）</li>
+                            <li><strong>刷新间隔：</strong>每6分钟</li>
+                            <li><strong>击杀效果：</strong>强化小兵+推进能力</li>
+                            <li><strong>持续时间：</strong>3分钟</li>
+                            <li><strong>视野增强：</strong>显示敌方视野</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>远古巨龙</h3>
+                        <ul class="checklist">
+                            <li><strong>刷新时间：</strong>40分钟后替代小龙</li>
+                            <li><strong>击杀效果：</strong>真伤加成+斩杀效果</li>
+                            <li><strong>特殊效果：</strong>对低血量敌人造成额外真实伤害</li>
+                            <li><strong>战略价值：</strong>后期最关键资源</li>
+                        </ul>
                     </article>
                 </div>
+            </section>
 
+            <section class="knowledge-section">
+                <h2 class="section-title">野区怪物数据</h2>
+                <p class="section-subtitle">了解野区资源，打野玩家必看</p>
+                
                 <div class="meta-table-wrap">
                     <table class="meta-table">
                         <thead>
                             <tr>
-                                <th>目标</th>
-                                <th>典型收益</th>
-                                <th>常见决策点</th>
+                                <th>野怪名称</th>
+                                <th>刷新时间</th>
+                                <th>击杀奖励</th>
+                                <th>特殊效果</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>小龙</td>
-                                <td>团队长期属性与龙魂压力</td>
-                                <td>是否放边线兵线换视野先手</td>
+                                <td>红BUFF（石甲虫）</td>
+                                <td>1:30</td>
+                                <td>金币+经验</td>
+                                <td>减速效果+灼烧</td>
                             </tr>
                             <tr>
-                                <td>先锋</td>
-                                <td>镀层与一塔经济</td>
-                                <td>放中路扩大转线效率</td>
+                                <td>蓝BUFF（魔沼蛙）</td>
+                                <td>1:30</td>
+                                <td>金币+经验</td>
+                                <td>技能加速+法力回复</td>
                             </tr>
                             <tr>
-                                <td>大龙</td>
-                                <td>推进能力与兵线压制</td>
-                                <td>真假开龙逼团</td>
+                                <td>河道蟹</td>
+                                <td>2:30</td>
+                                <td>金币+经验</td>
+                                <td>河道视野</td>
+                            </tr>
+                            <tr>
+                                <td>峡谷先锋</td>
+                                <td>5:00</td>
+                                <td>团队金钱</td>
+                                <td>召唤推塔</td>
+                            </tr>
+                            <tr>
+                                <td>元素小龙</td>
+                                <td>5:00</td>
+                                <td>团队属性</td>
+                                <td>龙魂/远古龙</td>
+                            </tr>
+                            <tr>
+                                <td>纳什男爵</td>
+                                <td>20:00</td>
+                                <td>团队buff</td>
+                                <td>强化小兵</td>
+                            </tr>
+                            <tr>
+                                <td>亚塔坎（2025新增）</td>
+                                <td>20:00</td>
+                                <td>花瓣/重生</td>
+                                <td>灭尽/渴血形态</td>
                             </tr>
                         </tbody>
                     </table>
@@ -120,118 +230,284 @@
             </section>
 
             <section class="knowledge-section">
-                <h2 class="section-title">常用术语</h2>
+                <h2 class="section-title">装备系统详解</h2>
+                <p class="section-subtitle">了解装备选择的基本思路</p>
+                
                 <div class="knowledge-grid three-col">
                     <article class="knowledge-card">
-                        <h3>对线术语</h3>
-                        <div class="pill-list">
-                            <span>换血</span>
-                            <span>控线</span>
-                            <span>卡线</span>
-                            <span>回推线</span>
-                            <span>越塔</span>
-                        </div>
-                    </article>
-                    <article class="knowledge-card">
-                        <h3>打野术语</h3>
-                        <div class="pill-list">
-                            <span>反野</span>
-                            <span>控河蟹</span>
-                            <span>蹲草</span>
-                            <span>反蹲</span>
-                            <span>控惩</span>
-                        </div>
-                    </article>
-                    <article class="knowledge-card">
-                        <h3>团战术语</h3>
-                        <div class="pill-list">
-                            <span>开团</span>
-                            <span>拉扯</span>
-                            <span>前后排</span>
-                            <span>集火</span>
-                            <span>收割</span>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="knowledge-section">
-                <h2 class="section-title">装备与符文思路</h2>
-                <div class="knowledge-grid two-col">
-                    <article class="knowledge-card">
-                        <h3>出装判断顺序</h3>
-                        <ol class="ordered-list">
-                            <li>先看自己职责：开团、前排、爆发、持续输出</li>
-                            <li>再看敌方威胁：控制强度、爆发点、双 C 类型</li>
-                            <li>最后补功能位：穿透、保命、续航、反制</li>
-                        </ol>
-                    </article>
-                    <article class="knowledge-card">
-                        <h3>符文选择核心</h3>
-                        <ol class="ordered-list">
-                            <li>根据对线强度定主系（压制/发育）</li>
-                            <li>根据团战职责定副系（生存/机动/资源）</li>
-                            <li>小符文按敌方伤害构成做适配</li>
-                        </ol>
-                    </article>
-                </div>
-            </section>
-
-            <section class="knowledge-section">
-                <h2 class="section-title">官方基础机制（How to Play）</h2>
-                <div class="knowledge-grid three-col">
-                    <article class="knowledge-card">
-                        <h3>地图目标</h3>
-                        <p>召唤师峡谷核心目标是摧毁敌方水晶枢纽。推进路径通常是：外塔→内塔→高地塔→水晶。</p>
-                    </article>
-                    <article class="knowledge-card">
-                        <h3>五个位置</h3>
-                        <p>常见分工为上单、打野、中单、射手、辅助。每个位置的资源获取方式与团战职责不同。</p>
-                    </article>
-                    <article class="knowledge-card">
-                        <h3>技能与召唤师技能</h3>
-                        <p>英雄技能以 Q/W/E/R 为主，D/F 为召唤师技能。对局前建议先确认打野是否携带惩戒。</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="knowledge-section">
-                <h2 class="section-title">排位规则速记（Riot Support）</h2>
-                <div class="knowledge-grid two-col">
-                    <article class="knowledge-card">
-                        <h3>段位结构</h3>
-                        <p>排位由铁、铜、银、金、铂金、翡翠、钻石、大师、宗师、王者构成，前七个大段通常细分为四个小段。</p>
+                        <h3>攻击装备</h3>
+                        <p>适合ADC和物理刺客</p>
                         <ul class="checklist">
-                            <li>先确定主打位置与 2-3 个常用英雄池</li>
-                            <li>每次连败后至少间隔一局再继续排位</li>
-                            <li>以阶段胜率而非单局结果判断状态</li>
+                            <li>无尽之刃：暴击伤害提升</li>
+                            <li>幻影之舞：攻速+移速</li>
+                            <li>破败王者：生命偷取+减速</li>
+                            <li>饮血剑：护盾+生命偷取</li>
+                            <li>多米尼克领主的致意：护甲穿透</li>
                         </ul>
                     </article>
                     <article class="knowledge-card">
-                        <h3>排位节奏建议</h3>
-                        <ul class="ordered-list">
-                            <li>前 20 局优先稳定打法，建立基础胜率</li>
-                            <li>中段根据版本调整 1-2 个补位英雄</li>
-                            <li>后段冲分时减少高波动英雄，优先执行型阵容</li>
+                        <h3>法术装备</h3>
+                        <p>适合中单法师</p>
+                        <ul class="checklist">
+                            <li>卢登的回声：爆发+移速</li>
+                            <li>灭世者的死亡帽：法强提升</li>
+                            <li>中娅沙漏：保命神器</li>
+                            <li>瑞莱的冰晶节杖：风筝能力</li>
+                            <li>虚空之杖：魔抗穿透</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>防御装备</h3>
+                        <p>适合坦克和上单</p>
+                        <ul class="checklist">
+                            <li>兰顿之兆：减少暴击伤害</li>
+                            <li>守护天使：复活甲</li>
+                            <li>自然之力：魔抗+移速</li>
+                            <li>荆棘之甲：反伤效果</li>
+                            <li>狂徒铠甲：快速回血</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>辅助装备</h3>
+                        <p>适合辅助英雄</p>
+                        <ul class="checklist">
+                            <li>飞升护符：团队加速</li>
+                            <li>基克的聚合：团队增益</li>
+                            <li>骑士之誓：保护队友</li>
+                            <li>帝国指令：协同输出</li>
+                            <li>舒瑞亚的战歌：团队加速</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>鞋子装备</h3>
+                        <p>根据对局选择</p>
+                        <ul class="checklist">
+                            <li>狂战士胫甲：攻击速度</li>
+                            <li>法师之靴：法术穿透</li>
+                            <li>护甲之靴：减少物理伤害</li>
+                            <li>魔抗之靴：减少魔法伤害</li>
+                            <li>水银之靴：减少控制时间</li>
                         </ul>
                     </article>
                 </div>
             </section>
 
             <section class="knowledge-section">
-                <h2 class="section-title">沟通系统（Smart Ping）</h2>
+                <h2 class="section-title">符文系统详解</h2>
+                <p class="section-subtitle">了解符文搭配，提升英雄能力</p>
+                
                 <div class="knowledge-grid two-col">
                     <article class="knowledge-card">
-                        <h3>高效沟通原则</h3>
+                        <h3>精密系</h3>
+                        <p>强化攻击和持续伤害</p>
                         <ul class="checklist">
-                            <li>战斗前 10-15 秒先打资源意图信号</li>
-                            <li>对线期以“撤退/危险”替代文字争执</li>
-                            <li>团战后第一时间 ping 转目标（塔/龙/大龙）</li>
+                            <li><strong>征服者：</strong>持续战斗叠层造成额外伤害</li>
+                            <li><strong>致命节奏：</strong>攻击速度突破上限</li>
+                            <li><strong>强攻：</strong>易损目标造成额外伤害</li>
+                            <li><strong>迅捷步法：</strong>普攻回血+移速</li>
+                            <li><strong>过量治疗：</strong>溢出治疗转化为护盾</li>
                         </ul>
                     </article>
                     <article class="knowledge-card">
-                        <h3>目标投票</h3>
-                        <p>在关键资源刷新前（小龙/大龙）通过信号统一队伍意图，减少“有人打、有人撤”的分裂执行。</p>
+                        <h3>主宰系</h3>
+                        <p>注重爆发和击杀能力</p>
+                        <ul class="checklist">
+                            <li><strong>电刑：</strong>3秒内3次独立攻击触发爆发</li>
+                            <li><strong>丛刃：</strong>快速进行多次普攻</li>
+                            <li><strong>掠食者：</strong>主动技能增加移速</li>
+                            <li><strong>黑暗收割：</strong>收集灵魂增强伤害</li>
+                            <li><strong>血之滋味：</strong>伤害回复生命</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>巫术系</h3>
+                        <p>增强技能控制和法术伤害</p>
+                        <ul class="checklist">
+                            <li><strong>艾黎：</strong>攻击或技能触发护盾/伤害</li>
+                            <li><strong>相位猛冲：</strong>2秒内3次攻击触发移速</li>
+                            <li><strong>奥术彗星：</strong>技能命中触发范围伤害</li>
+                            <li><strong>无效化之法球：</strong>低血量获得魔法护盾</li>
+                            <li><strong>绝对专注：</strong>高血量获得属性加成</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>坚决系</h3>
+                        <p>倾向耐久和防御能力</p>
+                        <ul class="checklist">
+                            <li><strong>余震：</strong>控制触发防御属性提升</li>
+                            <li><strong>守护者：</strong>保护队友触发护盾</li>
+                            <li><strong>不灭之握：</strong>战斗中获得属性提升</li>
+                            <li><strong>生命源泉：</strong>移动受损敌人获得治疗</li>
+                            <li><strong>调节：</strong>游戏后期获得双抗</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">段位系统</h2>
+                <p class="section-subtitle">了解排位段位体系</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>段位等级</h3>
+                        <ul class="checklist">
+                            <li><strong>黑铁/青铜/白银：</strong>入门段位</li>
+                            <li><strong>黄金：</strong>中等水平</li>
+                            <li><strong>铂金：</strong>较强水平</li>
+                            <li><strong>翡翠：</strong>高分段入门</li>
+                            <li><strong>钻石：</strong>高手水平</li>
+                            <li><strong>大师/宗师/王者：</strong>顶尖水平</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>排位规则</h3>
+                        <ul class="checklist">
+                            <li><strong>定级赛：</strong>每赛季初10局定级</li>
+                            <li><strong>晋级赛：</strong>需要3/5局胜利晋级</li>
+                            <li><strong>补位机制：</strong>系统自动分配位置</li>
+                            <li><strong>ELO机制：</strong>隐藏分匹配系统</li>
+                            <li><strong>胜点系统：</strong>胜点累积升级</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">常用术语表</h2>
+                <p class="section-subtitle">了解游戏内常用术语</p>
+                
+                <div class="meta-table-wrap">
+                    <table class="meta-table">
+                        <thead>
+                            <tr>
+                                <th>术语</th>
+                                <th>含义</th>
+                                <th>术语</th>
+                                <th>含义</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>补刀</td>
+                                <td>击杀小兵获取金币</td>
+                                <td>Gank</td>
+                                <td>打野抓人</td>
+                            </tr>
+                            <tr>
+                                <td>推线</td>
+                                <td>快速清兵推塔</td>
+                                <td>控线</td>
+                                <td>控制兵线位置</td>
+                            </tr>
+                            <tr>
+                                <td>刷野</td>
+                                <td>击杀野区怪物</td>
+                                <td>反野</td>
+                                <td>入侵敌方野区</td>
+                            </tr>
+                            <tr>
+                                <td>越塔</td>
+                                <td>塔下击杀敌人</td>
+                                <td>偷塔</td>
+                                <td>无人时快速推塔</td>
+                            </tr>
+                            <tr>
+                                <td>开团</td>
+                                <td>主动发起团战</td>
+                                <td>接团</td>
+                                <td>响应敌方开团</td>
+                            </tr>
+                            <tr>
+                                <td>分推</td>
+                                <td>边路分兵推塔</td>
+                                <td>41分推</td>
+                                <td>4人抱团1人带线</td>
+                            </tr>
+                            <tr>
+                                <td>先手</td>
+                                <td>团战中首先出击</td>
+                                <td>后手</td>
+                                <td>等待敌方先手</td>
+                            </tr>
+                            <tr>
+                                <td>集火</td>
+                                <td>全队攻击同一目标</td>
+                                <td>收割</td>
+                                <td>团战后追击残血</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">快捷信号系统</h2>
+                <p class="section-subtitle">掌握Ping系统，高效沟通</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>进攻信号</h3>
+                        <ul class="checklist">
+                            <li><strong>正在路上：</strong>我即将前往</li>
+                            <li><strong>来帮忙：</strong>请求队友支援</li>
+                            <li><strong>集合：</strong>请求队友集合</li>
+                            <li><strong>进攻目标：</strong>攻击指定目标</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>防守信号</h3>
+                        <ul class="checklist">
+                            <li><strong>撤退：</strong>请求队友后撤</li>
+                            <li><strong>危险：</strong>前方有危险</li>
+                            <li><strong>小心：</strong>提醒队友注意</li>
+                            <li><strong>MISS：</strong>敌人消失</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>信息信号</h3>
+                        <ul class="checklist">
+                            <li><strong>敌方目标：</strong>标记敌人位置</li>
+                            <li><strong>我的目标：</strong>标记自己意图</li>
+                            <li><strong>请求协助：</strong>需要队友帮助</li>
+                            <li><strong>了解：</strong>收到/明白</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>道具信号</h3>
+                        <ul class="checklist">
+                            <li><strong>守卫指示：</strong>插眼位置</li>
+                            <li><strong>需要视野：</strong>请求插眼</li>
+                            <li><strong>扫描透镜：</strong>正在排眼</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2 class="section-title">版本更新速览</h2>
+                <p class="section-subtitle">了解最新版本的核心变化</p>
+                
+                <div class="knowledge-grid two-col">
+                    <article class="knowledge-card">
+                        <h3>26.1版本（2026.1）</h3>
+                        <ul class="checklist">
+                            <li>战略点和晶化增生加入</li>
+                            <li>全新分路任务系统</li>
+                            <li>精灵视界新视野机制</li>
+                            <li>基础暴击伤害200%</li>
+                            <li>排位模式优化</li>
+                        </ul>
+                    </article>
+                    <article class="knowledge-card">
+                        <h3>25.S1版本（2025.1）</h3>
+                        <ul class="checklist">
+                            <li>诺克萨斯主题季</li>
+                            <li>亚塔坎新史诗野怪</li>
+                            <li>血玫瑰新机制</li>
+                            <li>传送效果翻新</li>
+                            <li>排位赛一年重置一次</li>
+                        </ul>
                     </article>
                 </div>
             </section>
@@ -240,9 +516,11 @@
                 <h2 class="section-title">参考来源</h2>
                 <div class="knowledge-card">
                     <ul class="checklist source-links">
-                        <li><a href="https://www.leagueoflegends.com/en-us/how-to-play/" target="_blank" rel="noopener noreferrer">League of Legends - How to Play（官方）</a></li>
-                        <li><a href="https://support-leagueoflegends.riotgames.com/hc/en-us/articles/4406004330643-Ranked-Tiers-Divisions-and-Queues" target="_blank" rel="noopener noreferrer">Riot Support - Ranked Tiers, Divisions and Queues（官方）</a></li>
-                        <li><a href="https://support-leagueoflegends.riotgames.com/hc/en-us/articles/7094910087955-Smart-Ping-Wheel-and-Quickbinds" target="_blank" rel="noopener noreferrer">Riot Support - Smart Ping Wheel（官方）</a></li>
+                        <li><a href="https://www.leagueoflegends.com/zh-cn/how-to-play/" target="_blank" rel="noopener noreferrer">英雄联盟官方网站 - 游戏指南</a></li>
+                        <li><a href="https://lol.qq.com/gicp/news/410/37074870.html" target="_blank" rel="noopener noreferrer">26.1版本公告 - 官方</a></li>
+                        <li><a href="https://www.leagueoflegends.com/zh-tw/news/game-updates/patch-25-s1-1-notes/" target="_blank" rel="noopener noreferrer">2025.S1.1版本更新 - 官方</a></li>
+                        <li><a href="https://support-leagueoflegends.riotgames.com/hc/en-us/articles/4406004330643-Ranked-Tiers-Divisions-and-Queues" target="_blank" rel="noopener noreferrer">Riot Support - 排位系统</a></li>
+                        <li><a href="https://101.qq.com/" target="_blank" rel="noopener noreferrer">腾讯英雄联盟101 - 英雄资料</a></li>
                     </ul>
                 </div>
             </section>
@@ -265,12 +543,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 英雄联盟爱好者. 本站仅供学习交流使用.</p>
+                <p>&copy; 2024 英雄联盟爱好者.本站仅供学习交流使用.</p>
                 <p>英雄联盟是 Riot Games 的注册商标.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script src="js/app.js" defer></script>
 </body>
 </html>
