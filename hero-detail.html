@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英雄联盟爱好者 - 英雄详情</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" loading="eager">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="champions.html" class="active">英雄列表</a></li>
+                <li><a href="game-modes.html">游戏模式</a></li>
+                <li><a href="guide.html">新手指南</a></li>
+                <li><a href="game-data.html">游戏资料</a></li>
+                <li><a href="strategy-center.html">攻略中心</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="champion-detail-page">
+        <div class="container">
+            <!-- 英雄头部信息 -->
+            <div class="champion-header" id="championHeader">
+                <!-- 动态生成 -->
+            </div>
+
+            <!-- 技能介绍 -->
+            <section class="abilities-section">
+                <h2 class="section-title">技能介绍</h2>
+                <div class="abilities-list" id="abilitiesList">
+                    <!-- 动态生成 -->
+                </div>
+            </section>
+
+            <!-- 玩法建议 -->
+            <section class="playstyle-section">
+                <h2 class="section-title">玩法攻略</h2>
+                <div class="playstyle-grid">
+                    <div class="playstyle-card">
+                        <div class="phase-icon">🌅</div>
+                        <h3>前期对线</h3>
+                        <p id="earlyGame">...</p>
+                    </div>
+                    <div class="playstyle-card">
+                        <div class="phase-icon">🌇</div>
+                        <h3>中期团战</h3>
+                        <p id="midGame">...</p>
+                    </div>
+                    <div class="playstyle-card">
+                        <div class="phase-icon">🌙</div>
+                        <h3>后期团战</h3>
+                        <p id="lateGame">...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 出装推荐 -->
+            <section class="builds-section">
+                <h2 class="section-title">出装推荐</h2>
+                <div class="builds-container">
+                    <div class="build-category">
+                        <h3>核心装备</h3>
+                        <div class="items-grid" id="coreItems">
+                            <!-- 动态生成 -->
+                        </div>
+                    </div>
+                    <div class="build-category">
+                        <h3>可选装备</h3>
+                        <div class="items-grid" id="situationalItems">
+                            <!-- 动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 符文推荐 -->
+            <section class="runes-section">
+                <h2 class="section-title">符文推荐</h2>
+                <div class="runes-display" id="runesDisplay">
+                    <!-- 动态生成 -->
+                </div>
+            </section>
+
+            <!-- 皮肤展示 -->
+            <section class="skins-section">
+                <h2 class="section-title">皮肤展示</h2>
+                <p class="section-subtitle">点击皮肤查看详情</p>
+                <div class="skins-gallery" id="skinsGallery">
+                    <!-- 动态生成 -->
+                </div>
+                <div class="skin-detail-panel" id="skinDetailPanel">
+                    <div class="skin-preview">
+                        <div class="skin-image-large" id="skinImageLarge">
+                            <span id="selectedSkinEmoji">🗡️</span>
+                        </div>
+                    </div>
+                    <div class="skin-info">
+                        <h3 id="selectedSkinName">经典皮肤</h3>
+                        <div class="skin-meta">
+                            <span class="skin-tier" id="selectedSkinTier">经典</span>
+                            <span class="skin-price" id="selectedSkinPrice">免费</span>
+                        </div>
+                        <p class="skin-description" id="selectedSkinDescription">英雄的原始形态</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 相关英雄 -->
+            <section class="related-champions">
+                <h2 class="section-title">相似英雄</h2>
+                <div class="champions-grid" id="relatedChampions">
+                    <!-- 动态生成 -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img class="brand-logo-footer" src="images/logo.svg" alt="英雄联盟爱好者" loading="lazy">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">首页</a>
+                    <a href="champions.html">英雄列表</a>
+                    <a href="game-modes.html">游戏模式</a>
+                    <a href="guide.html">新手指南</a>
+                    <a href="game-data.html">游戏资料</a>
+                    <a href="strategy-center.html">攻略中心</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 英雄联盟爱好者. 本站仅供学习交流使用.</p>
+                <p>英雄联盟是 Riot Games 的注册商标.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

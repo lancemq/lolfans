@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英雄联盟爱好者 - 首页</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" loading="eager">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="champions.html">英雄列表</a></li>
+                <li><a href="game-modes.html">游戏模式</a></li>
+                <li><a href="guide.html">新手指南</a></li>
+                <li><a href="game-data.html">游戏资料</a></li>
+                <li><a href="strategy-center.html">攻略中心</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-carousel" id="heroCarousel" aria-hidden="true"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">探索符文之地</h2>
+            <p class="hero-subtitle">170+ 位独特英雄，无限可能的战斗组合</p>
+            <p class="hero-highlight" id="heroHighlight">当前聚焦：热门英雄</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">170+</span>
+                    <span class="stat-label">可玩英雄</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">游戏位置</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">无限</span>
+                    <span class="stat-label">战术可能</span>
+                </div>
+            </div>
+            <a href="champions.html" class="cta-button">查看所有英雄</a>
+        </div>
+        <div class="hero-image">
+            <div class="hero-info-carousel" id="heroInfoCarousel">
+                <!-- 动态生成 -->
+            </div>
+        </div>
+    </header>
+
+    <section class="content-hub">
+        <div class="container">
+            <h2 class="section-title">资料与攻略</h2>
+            <p class="section-subtitle">参考官方常见栏目结构，快速进入你需要的内容</p>
+            <div class="intro-grid">
+                <article class="intro-card">
+                    <div class="intro-icon">📚</div>
+                    <h3>游戏资料库</h3>
+                    <p>查看版本重点、地图资源、术语与装备符文思路，建立稳定知识框架。</p>
+                    <a class="cta-button hub-link" href="game-data.html">查看资料</a>
+                </article>
+                <article class="intro-card">
+                    <div class="intro-icon">🧠</div>
+                    <h3>攻略中心</h3>
+                    <p>覆盖五路打法、中期运营、团战模板与复盘清单，形成可执行上分节奏。</p>
+                    <a class="cta-button hub-link" href="strategy-center.html">进入攻略</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-champions">
+        <div class="container">
+            <h2 class="section-title">热门英雄</h2>
+            <p class="section-subtitle">点击查看详细玩法介绍</p>
+            <div class="champions-grid" id="featuredChampions">
+                <!-- 动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <section class="game-intro">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <img class="intro-icon-img" src="images/intro/objective.svg" alt="推塔竞技图标" loading="lazy">
+                    </div>
+                    <h3>推塔竞技</h3>
+                    <p>摧毁敌方基地水晶，与队友配合，运用策略和技巧取得胜利。</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <img class="intro-icon-img" src="images/intro/duel.svg" alt="英雄对战图标" loading="lazy">
+                    </div>
+                    <h3>英雄对战</h3>
+                    <p>每位英雄都有独特技能组合，找到适合你的风格，主宰战场。</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <img class="intro-icon-img" src="images/intro/teamwork.svg" alt="团队协作图标" loading="lazy">
+                    </div>
+                    <h3>团队协作</h3>
+                    <p>5v5团队作战，沟通配合是获胜关键，与朋友一起开黑吧！</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <img class="intro-icon-img" src="images/intro/ranked.svg" alt="排位竞技图标" loading="lazy">
+                    </div>
+                    <h3>排位竞技</h3>
+                    <p>从青铜到王者，挑战自我，在排位赛中证明自己的实力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="roles-section">
+        <div class="container">
+            <h2 class="section-title">五大位置</h2>
+            <div class="roles-grid">
+                <div class="role-card" data-role="top">
+                    <div class="role-icon">
+                        <img class="role-icon-img" src="images/roles/top.svg" alt="上单图标" loading="lazy">
+                    </div>
+                    <h3>上单</h3>
+                    <p>Top Lane</p>
+                    <span class="role-desc">坦克战士，抗压发育</span>
+                </div>
+                <div class="role-card" data-role="jungle">
+                    <div class="role-icon">
+                        <img class="role-icon-img" src="images/roles/jungle.svg" alt="打野图标" loading="lazy">
+                    </div>
+                    <h3>打野</h3>
+                    <p>Jungle</p>
+                    <span class="role-desc">游走支援，控制地图</span>
+                </div>
+                <div class="role-card" data-role="mid">
+                    <div class="role-icon">
+                        <img class="role-icon-img" src="images/roles/mid.svg" alt="中单图标" loading="lazy">
+                    </div>
+                    <h3>中单</h3>
+                    <p>Mid Lane</p>
+                    <span class="role-desc">爆发伤害，carry核心</span>
+                </div>
+                <div class="role-card" data-role="adc">
+                    <div class="role-icon">
+                        <img class="role-icon-img" src="images/roles/adc.svg" alt="射手图标" loading="lazy">
+                    </div>
+                    <h3>射手</h3>
+                    <p>ADC</p>
+                    <span class="role-desc">持续输出，后排核心</span>
+                </div>
+                <div class="role-card" data-role="support">
+                    <div class="role-icon">
+                        <img class="role-icon-img" src="images/roles/support.svg" alt="辅助图标" loading="lazy">
+                    </div>
+                    <h3>辅助</h3>
+                    <p>Support</p>
+                    <span class="role-desc">保护团队，控制视野</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img class="brand-logo-footer" src="images/logo.svg" alt="英雄联盟爱好者" loading="lazy">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">首页</a>
+                    <a href="champions.html">英雄列表</a>
+                    <a href="game-modes.html">游戏模式</a>
+                    <a href="guide.html">新手指南</a>
+                    <a href="game-data.html">游戏资料</a>
+                    <a href="strategy-center.html">攻略中心</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 英雄联盟爱好者. 本站仅供学习交流使用.</p>
+                <p>英雄联盟是 Riot Games 的注册商标.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

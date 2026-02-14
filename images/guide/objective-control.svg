@@ -1,0 +1,18 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#122740"/>
+      <stop offset="1" stop-color="#09192B"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <rect x="80" y="70" width="800" height="400" rx="24" fill="#0C2034" stroke="#C8AA6E" stroke-opacity="0.4"/>
+  <circle cx="270" cy="260" r="92" fill="#1A3A5C" stroke="#7BC7FF" stroke-width="8"/>
+  <circle cx="480" cy="260" r="92" fill="#2A4E3E" stroke="#7FE6BE" stroke-width="8"/>
+  <circle cx="690" cy="260" r="92" fill="#4B3D24" stroke="#E3C27A" stroke-width="8"/>
+  <text x="220" y="270" fill="#F2E6CF" font-size="28" font-family="Arial">小龙</text>
+  <text x="426" y="270" fill="#F2E6CF" font-size="28" font-family="Arial">先锋</text>
+  <text x="648" y="270" fill="#F2E6CF" font-size="28" font-family="Arial">男爵</text>
+  <path d="M210 392L750 392" stroke="#8DA4C7" stroke-width="4" stroke-dasharray="10 10"/>
+  <text x="255" y="430" fill="#C9D6E8" font-size="24" font-family="Arial">前中后期资源优先级与团战窗口</text>
+</svg>
