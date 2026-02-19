@@ -38,6 +38,30 @@ const HOT_CHAMPION_IDS = [
     'master-yi'
 ];
 
+// 首页Banner展示皮肤索引映射（精选高清皮肤原画）
+const HERO_BANNER_SKIN_MAP = {
+    'yasuo': 8,       // 真实伤害
+    'ahri': 8,        // 流行女王 / K/DA
+    'lee-sin': 9,     // 神龙尊者
+    'jinx': 7,        // 星之守护者
+    'ezreal': 7,      // 星之守护者
+    'thresh': 8,      // 星之守护者
+    'zed': 9,         // 源计划: 劫
+    'lux': 16,        // 大元素使
+    'kai-sa': 5,      // K/DA
+    'vayne': 9,       // 灵魂莲华
+    'caitlyn': 8,     // 未来战士
+    'irelia': 9,      // IG冠军
+    'yone': 6,        // 灵魂莲华
+    'akali': 9,       // 真实伤害
+    'darius': 6,      // 神王
+    'draven': 6,      // 灵魂莲华
+    'syndra': 5,      // 星之守护者
+    'leona': 8,       // 日蚀骑士
+    'morgana': 6,     // 星之守护者
+    'master-yi': 7    // 源计划: 易
+};
+
 // 英雄背景故事数据
 const CHAMPION_LORE = {
     'yasuo': {
@@ -941,9 +965,10 @@ function initHomeHeroCarousel() {
 
     carousel.innerHTML = `
         <div class="hero-carousel-track">
-            ${slides.map((hero, index) => `
-                <div class="hero-carousel-slide ${index === 0 ? 'active' : ''}" data-index="${index}" style="background-image: url('${getChampionSplashUrl(hero, 0)}');"></div>
-            `).join('')}
+            ${slides.map((hero, index) => {
+                const skinIndex = HERO_BANNER_SKIN_MAP[hero.id] || 0;
+                return `<div class="hero-carousel-slide ${index === 0 ? 'active' : ''}" data-index="${index}" style="background-image: url('${getChampionSplashUrl(hero, skinIndex)}');"></div>`;
+            }).join('')}
         </div>
         <div class="hero-carousel-overlay"></div>
         <div class="hero-carousel-controls">
@@ -1341,8 +1366,8 @@ function getRolePreset(roles = []) {
                 late: '后期优先限制敌方后排输出，围绕关键团战目标展开。'
             },
             builds: {
-                core: ['神话/核心战士装', '抗性装备', '续航装备'],
-                situational: ['反甲', '复活甲', '魔抗装备', '功能性装备']
+                core: ['焚天/无穷饥渴', '斯特拉克的挑战护手', '死亡之舞'],
+                situational: ['荆棘之甲', '复活甲', '自然之力', '玛莫提乌斯之噬']
             },
             runes: { primary: '精密', keystone: '征服者', secondary: '坚决' }
         },
@@ -1353,8 +1378,8 @@ function getRolePreset(roles = []) {
                 late: '后期把握进场时机，优先击杀敌方核心输出后撤离。'
             },
             builds: {
-                core: ['穿甲/法穿核心', '爆发伤害装', '保命装'],
-                situational: ['夜之锋刃/女妖', '复活甲/中娅', '功能性输出装']
+                core: ['亵渎九头蛇/幽梦之灵', '赛瑞尔达的怨恨', '中娅沙漏'],
+                situational: ['夜之锋刃', '复活甲', '魔宗', '凡性的提醒']
             },
             runes: { primary: '主宰', keystone: '电刑', secondary: '精密' }
         },
@@ -1365,8 +1390,8 @@ function getRolePreset(roles = []) {
                 late: '后期保持安全站位，持续提供控制和AOE伤害。'
             },
             builds: {
-                core: ['法强神话装', '法穿装备', '保命法装'],
-                situational: ['帽子', '虚空法杖', '女妖面纱', '功能法装']
+                core: ['卢登的伙伴', '影焰', '中娅沙漏'],
+                situational: ['灭世者的死亡之帽', '虚空之杖', '女妖面纱', '梅贾的窃魂卷']
             },
             runes: { primary: '巫术', keystone: '奥术彗星', secondary: '启迪' }
         },
@@ -1377,8 +1402,8 @@ function getRolePreset(roles = []) {
                 late: '后期是团队核心输出点，站位与保命优先级最高。'
             },
             builds: {
-                core: ['攻速暴击核心', '穿甲/破甲装备', '生存装'],
-                situational: ['复活甲', '水银弯刀', '饮血剑', '功能性输出装']
+                core: ['无尽之刃', '幻影之舞', '疾射火炮'],
+                situational: ['复活甲', '水银弯刀', '饮血剑', '多米尼克领主的致意']
             },
             runes: { primary: '精密', keystone: '致命节奏', secondary: '启迪' }
         },
@@ -1389,8 +1414,8 @@ function getRolePreset(roles = []) {
                 late: '后期以保护核心或先手控制为主，强化团队容错。'
             },
             builds: {
-                core: ['辅助装升级', '团队增益装', '功能防御装'],
-                situational: ['救赎', '钢铁烈阳', '骑士之誓', '反开团装备']
+                core: ['钢铁烈阳', '骑士之誓', '基克的聚合'],
+                situational: ['救赎', '流水法杖', '坩埚', '警觉岩石']
             },
             runes: { primary: '坚决', keystone: '余震', secondary: '启迪' }
         },
@@ -1401,8 +1426,8 @@ function getRolePreset(roles = []) {
                 late: '后期利用控制链和高坦度，为团队争取输出空间。'
             },
             builds: {
-                core: ['生命值核心', '护甲装备', '魔抗装备'],
-                situational: ['反甲', '自然之力', '团队增益防装', '复活甲']
+                core: ['日炎圣盾', '荆棘之甲', '自然之力'],
+                situational: ['深渊面具', '兰顿之兆', '石像鬼石板', '复活甲']
             },
             runes: { primary: '坚决', keystone: '不灭之握', secondary: '启迪' }
         }
