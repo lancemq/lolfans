@@ -362,17 +362,24 @@ function createFeaturedChampionCard(hero) {
     const intro = sanitizeText(hero.title || '').replace(/^the\s+/i, '');
     const loreSummary = summarizeLore(hero.lore, 64);
     const skinIndex = HERO_BANNER_SKIN_MAP[hero.id] || 0;
+    
+    const splashUrl = getChampionSplashUrl(hero, skinIndex);
+    const splashDefaultUrl = getChampionSplashUrl(hero, 0);
+    const loadingUrl = getChampionLoadingUrl(hero, 0);
+    const iconUrl = getChampionIconUrl(hero);
+    const heroImageHtml = `
+        <img class="champion-image-img" 
+             src="${splashUrl}" 
+             alt="${hero.name} 高清立绘" 
+             loading="lazy" 
+             onerror="this.onerror=null; this.src='${loadingUrl}'; this.onerror=function(){this.src='${iconUrl}';};">
+        <span class="hero-fallback">${heroImage}</span>
+    `;
 
     return `
         <div class="champion-card featured-champion-card" data-id="${hero.id}">
             <div class="champion-image">
-                ${createImageHtml(
-                    getChampionSplashUrl(hero, skinIndex),
-                    `${hero.name} 高清立绘`,
-                    heroImage,
-                    'champion-image-img',
-                    'lazy'
-                )}
+                ${heroImageHtml}
                 <span class="featured-badge">热门</span>
             </div>
             <div class="champion-info">
@@ -397,15 +404,14 @@ function createChampionCard(hero) {
 
     const difficultyClass = getDifficultyClass(hero.difficulty);
     const heroImage = hero.image || DEFAULT_HERO_ICON;
-    const tilesUrl = getChampionTilesUrl(hero, 0);
     const loadingUrl = getChampionLoadingUrl(hero, 0);
+    const iconUrl = getChampionIconUrl(hero);
     const heroImageHtml = `
         <img class="champion-image-img" 
-             src="${tilesUrl}" 
+             src="${loadingUrl}" 
              alt="${hero.name} 高清头像" 
              loading="lazy" 
-             onerror="this.onerror=null; this.src='${loadingUrl}';"
-             onerror2="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+             onerror="this.onerror=null; this.src='${iconUrl}';">
         <span class="hero-fallback">${heroImage}</span>
     `;
 
@@ -788,15 +794,14 @@ function createStrategyHeroCard(hero) {
     const runeText = hero.runes?.keystone ? `${hero.runes.primary} · ${hero.runes.keystone}` : '根据分路选择主系符文';
     
     const fallbackEmoji = hero.image || DEFAULT_HERO_ICON;
-    const tilesUrl = getChampionTilesUrl(hero, 0);
     const loadingUrl = getChampionLoadingUrl(hero, 0);
+    const iconUrl = getChampionIconUrl(hero);
     const heroImageHtml = `
         <img class="champion-image-img" 
-             src="${tilesUrl}" 
+             src="${loadingUrl}" 
              alt="${hero.name} 高清立绘" 
              loading="lazy" 
-             onerror="this.onerror=null; this.src='${loadingUrl}';"
-             onerror2="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+             onerror="this.onerror=null; this.src='${iconUrl}';">
         <span class="hero-fallback">${fallbackEmoji}</span>
     `;
 
