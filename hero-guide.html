@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英雄攻略 - 英雄联盟爱好者</title>
+    <meta name="description" content="英雄联盟英雄详细攻略，包含多种打法、技能详解、出装选择、符文搭配、对线技巧、团战思路。">
+    <meta name="keywords" content="英雄联盟攻略,英雄打法,出装推荐,符文搭配,对线技巧">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lolfans.xyz/hero-guide.html">
+    
+    <meta property="og:title" content="英雄攻略 - 英雄联盟爱好者">
+    <meta property="og:description" content="详细英雄攻略，多种打法选择">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lolfans.xyz/hero-guide.html">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.lolfans.xyz/hero-guide.html">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="主导航">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="返回首页">
+                    <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" width="120" height="40" loading="eager">
+                </a>
+            </div>
+            <button class="hamburger" aria-label="打开导航菜单" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="champions.html">英雄列表</a></li>
+                <li><a href="game-modes.html">游戏模式</a></li>
+                <li><a href="guide.html">新手指南</a></li>
+                <li><a href="game-data.html">游戏资料</a></li>
+                <li><a href="strategy-center.html" class="active">攻略中心</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="hero-guide-page">
+        <div class="container">
+            <!-- 英雄头部 -->
+            <header class="guide-hero-header" id="guideHeroHeader">
+                <div class="guide-hero-splash" id="guideHeroSplash"></div>
+                <div class="guide-hero-overlay"></div>
+                <div class="guide-hero-info">
+                    <nav class="breadcrumb" aria-label="面包屑导航">
+                        <a href="strategy-center.html">攻略中心</a>
+                        <span class="separator">/</span>
+                        <span class="current" id="guideHeroName">加载中...</span>
+                    </nav>
+                    <h1 class="guide-hero-title" id="guideHeroTitle">英雄攻略</h1>
+                    <p class="guide-hero-subtitle" id="guideHeroSubtitle">多种打法详解</p>
+                    <div class="guide-hero-roles" id="guideHeroRoles"></div>
+                </div>
+            </header>
+
+            <!-- 快速导航 -->
+            <div class="guide-quick-nav">
+                <a href="#playstyles" class="quick-nav-item">
+                    <span class="quick-nav-icon">🎮</span>
+                    <span>打法选择</span>
+                </a>
+                <a href="#abilities" class="quick-nav-item">
+                    <span class="quick-nav-icon">⚡</span>
+                    <span>技能详解</span>
+                </a>
+                <a href="#builds" class="quick-nav-item">
+                    <span class="quick-nav-icon">🎒</span>
+                    <span>出装推荐</span>
+                </a>
+                <a href="#runes" class="quick-nav-item">
+                    <span class="quick-nav-icon">🔮</span>
+                    <span>符文搭配</span>
+                </a>
+                <a href="#matchups" class="quick-nav-item">
+                    <span class="quick-nav-icon">⚔️</span>
+                    <span>对线技巧</span>
+                </a>
+                <a href="#combos" class="quick-nav-item">
+                    <span class="quick-nav-icon">🔥</span>
+                    <span>连招技巧</span>
+                </a>
+            </div>
+
+            <!-- 打法选择 -->
+            <section class="guide-section" id="playstyles">
+                <h2 class="section-title">
+                    <span class="title-icon">🎮</span>
+                    打法选择
+                </h2>
+                <p class="section-subtitle">根据阵容和对局情况选择合适的打法风格</p>
+                <div class="playstyle-tabs" id="playstyleTabs"></div>
+                <div class="playstyle-content" id="playstyleContent"></div>
+            </section>
+
+            <!-- 技能详解 -->
+            <section class="guide-section" id="abilities">
+                <h2 class="section-title">
+                    <span class="title-icon">⚡</span>
+                    技能详解
+                </h2>
+                <p class="section-subtitle">深入了解每个技能的机制与使用技巧</p>
+                <div class="abilities-guide" id="abilitiesGuide"></div>
+            </section>
+
+            <!-- 出装推荐 -->
+            <section class="guide-section" id="builds">
+                <h2 class="section-title">
+                    <span class="title-icon">🎒</span>
+                    出装推荐
+                </h2>
+                <p class="section-subtitle">根据不同打法和对局选择最佳装备组合</p>
+                <div class="builds-guide" id="buildsGuide"></div>
+            </section>
+
+            <!-- 符文搭配 -->
+            <section class="guide-section" id="runes">
+                <h2 class="section-title">
+                    <span class="title-icon">🔮</span>
+                    符文搭配
+                </h2>
+                <p class="section-subtitle">不同打法对应的最优符文配置</p>
+                <div class="runes-guide" id="runesGuide"></div>
+            </section>
+
+            <!-- 对线技巧 -->
+            <section class="guide-section" id="matchups">
+                <h2 class="section-title">
+                    <span class="title-icon">⚔️</span>
+                    对线技巧
+                </h2>
+                <p class="section-subtitle">各阶段对线要点与常见英雄应对策略</p>
+                <div class="matchups-guide" id="matchupsGuide"></div>
+            </section>
+
+            <!-- 连招技巧 -->
+            <section class="guide-section" id="combos">
+                <h2 class="section-title">
+                    <span class="title-icon">🔥</span>
+                    连招技巧
+                </h2>
+                <p class="section-subtitle">掌握核心连招，提升操作上限</p>
+                <div class="combos-guide" id="combosGuide"></div>
+            </section>
+
+            <!-- 团战思路 -->
+            <section class="guide-section" id="teamfight">
+                <h2 class="section-title">
+                    <span class="title-icon">👥</span>
+                    团战思路
+                </h2>
+                <p class="section-subtitle">各阶段团战的定位与操作要点</p>
+                <div class="teamfight-guide" id="teamfightGuide"></div>
+            </section>
+
+            <!-- 实战技巧 -->
+            <section class="guide-section" id="tips">
+                <h2 class="section-title">
+                    <span class="title-icon">💡</span>
+                    实战技巧
+                </h2>
+                <p class="section-subtitle">高手进阶必备的细节与技巧</p>
+                <div class="tips-guide" id="tipsGuide"></div>
+            </section>
+
+            <!-- 相关推荐 -->
+            <section class="guide-section">
+                <h2 class="section-title">
+                    <span class="title-icon">📚</span>
+                    相关推荐
+                </h2>
+                <div class="related-links">
+                    <a href="strategy-center.html" class="related-link-card">
+                        <span class="related-icon">📖</span>
+                        <span>返回攻略中心</span>
+                    </a>
+                    <a href="champions.html" class="related-link-card">
+                        <span class="related-icon">🏆</span>
+                        <span>英雄列表</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img class="brand-logo-footer" src="images/logo.svg" alt="英雄联盟爱好者" loading="lazy">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">首页</a>
+                    <a href="champions.html">英雄列表</a>
+                    <a href="game-modes.html">游戏模式</a>
+                    <a href="guide.html">新手指南</a>
+                    <a href="game-data.html">游戏资料</a>
+                    <a href="strategy-center.html">攻略中心</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 英雄联盟爱好者. 本站仅供学习交流使用.</p>
+                <p>英雄联盟是 Riot Games 的注册商标.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+    <script src="js/hero-guide.js" defer></script>
+</body>
+</html>

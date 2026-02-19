@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亚索攻略 疾风剑豪打法详解 - 英雄联盟爱好者</title>
+    <meta name="description" content="亚索最全攻略，包含三种打法选择、技能详解、出装推荐、符文搭配、对线技巧、连招教学。掌握亚索核心技巧，从入门到精通。">
+    <meta name="keywords" content="亚索攻略,疾风剑豪,亚索连招,亚索出装,亚索符文,对线技巧">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lolfans.xyz/yasuo.html">
+    
+    <meta property="og:title" content="亚索攻略 疾风剑豪 - 英雄联盟爱好者">
+    <meta property="og:description" content="亚索最全攻略，三种打法选择，技能连招详解">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lolfans.xyz/yasuo.html">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.lolfans.xyz/yasuo.html">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="主导航">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="返回首页">
+                    <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" width="120" height="40" loading="eager">
+                </a>
+            </div>
+            <button class="hamburger" aria-label="打开导航菜单" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="champions.html">英雄列表</a></li>
+                <li><a href="game-modes.html">游戏模式</a></li>
+                <li><a href="guide.html">新手指南</a></li>
+                <li><a href="game-data.html">游戏资料</a></li>
+                <li><a href="strategy-center.html" class="active">攻略中心</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="hero-guide-page">
+        <div class="container">
+            <!-- 英雄头部 -->
+            <header class="guide-hero-header">
+                <div class="guide-hero-splash" style="background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_8.jpg');"></div>
+                <div class="guide-hero-overlay"></div>
+                <div class="guide-hero-info">
+                    <nav class="breadcrumb" aria-label="面包屑导航">
+                        <a href="strategy-center.html">攻略中心</a>
+                        <span class="separator">/</span>
+                        <span class="current">疾风剑豪 亚索</span>
+                    </nav>
+                    <h1 class="guide-hero-title">疾风剑豪</h1>
+                    <p class="guide-hero-subtitle">亚索</p>
+                    <div class="guide-hero-roles">
+                        <span class="role-tag role-fighter">战士</span>
+                        <span class="role-tag role-assassin">刺客</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 快速导航 -->
+            <div class="guide-quick-nav">
+                <a href="#playstyles" class="quick-nav-item">
+                    <span class="quick-nav-icon">🎮</span>
+                    <span>打法选择</span>
+                </a>
+                <a href="#abilities" class="quick-nav-item">
+                    <span class="quick-nav-icon">⚡</span>
+                    <span>技能详解</span>
+                </a>
+                <a href="#combos" class="quick-nav-item">
+                    <span class="quick-nav-icon">🔥</span>
+                    <span>连招教学</span>
+                </a>
+                <a href="#matchups" class="quick-nav-item">
+                    <span class="quick-nav-icon">⚔️</span>
+                    <span>对线技巧</span>
+                </a>
+                <a href="#builds" class="quick-nav-item">
+                    <span class="quick-nav-icon">🎒</span>
+                    <span>出装符文</span>
+                </a>
+            </div>
+
+            <!-- 打法选择 -->
+            <section class="guide-section" id="playstyles">
+                <h2 class="section-title">
+                    <span class="title-icon">🎮</span>
+                    三种打法选择
+                </h2>
+                <p class="section-subtitle">根据阵容和对局情况选择合适的打法风格</p>
+                
+                <div class="playstyle-cards">
+                    <article class="playstyle-card-full">
+                        <div class="playstyle-card-header">
+                            <span class="playstyle-icon">⚔️</span>
+                            <div>
+                                <h3>中单爆发流</h3>
+                                <p>追求极致爆发，一套秒人</p>
+                            </div>
+                            <span class="difficulty-tag hard">难度较高</span>
+                        </div>
+                        <div class="playstyle-card-body">
+                            <div class="playstyle-summary">
+                                <h4>核心思路</h4>
+                                <p>以高爆发伤害为主，利用前期优势快速结束游戏。适合对自己操作有信心的玩家。</p>
+                            </div>
+                            <div class="playstyle-phases">
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌅</div>
+                                    <h4>前期 (1-6级)</h4>
+                                    <p>1级学Q快速推线抢2，2级后利用E技能消耗。3级是关键节点，风墙挡掉关键技能后可打一套。注意保持血量健康，避免被gank。</p>
+                                </div>
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌇</div>
+                                    <h4>中期 (7-14级)</h4>
+                                    <p>推线后游走边路，配合队友击杀。团战中寻找击飞机会进场秒杀后排。6级后亚索具备秒杀能力，积极寻找机会。</p>
+                                </div>
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌙</div>
+                                    <h4>后期 (15级+)</h4>
+                                    <p>后期以切后排为主，等队友先手开团或自己寻找机会E小额进。优先击杀敌方C位，注意入场时机避免被秒。</p>
+                                </div>
+                            </div>
+                            <div class="playstyle-tips">
+                                <h4>💡 核心技巧</h4>
+                                <ul>
+                                    <li>对线时保持与兵线平行，利用E位移躲避技能</li>
+                                    <li>风墙可以阻挡大多数飞行技能，关键时刻救命</li>
+                                    <li>EQ闪是亚索的核心技巧，必须熟练掌握</li>
+                                    <li>不要无脑EQ进场，保持安全血量</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="playstyle-card-full">
+                        <div class="playstyle-card-header">
+                            <span class="playstyle-icon">🛡️</span>
+                            <div>
+                                <h3>上单战士流</h3>
+                                <p>持续输出，半肉装更稳定</p>
+                            </div>
+                            <span class="difficulty-tag medium">中等难度</span>
+                        </div>
+                        <div class="playstyle-card-body">
+                            <div class="playstyle-summary">
+                                <h4>核心思路</h4>
+                                <p>偏战士出装，团战中承担更多前排职责。适合喜欢稳健打法的玩家。</p>
+                            </div>
+                            <div class="playstyle-phases">
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌅</div>
+                                    <h4>前期 (1-6级)</h4>
+                                    <p>稳健发育为主，利用Q技能补刀和消耗。不要过于激进，防止被gank。上单亚索需要更好的发育空间。</p>
+                                </div>
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌇</div>
+                                    <h4>中期 (7-14级)</h4>
+                                    <p>边路分带牵制，配合打野争夺先锋和小龙。团战中等待机会进场，不要第一时间切入。</p>
+                                </div>
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌙</div>
+                                    <h4>后期 (15级+)</h4>
+                                    <p>半肉出装可以承受更多伤害，大招用于控制敌方关键人物。团战中承担前排职责，为队友创造输出空间。</p>
+                                </div>
+                            </div>
+                            <div class="playstyle-tips">
+                                <h4>💡 核心技巧</h4>
+                                <ul>
+                                    <li>上单位置需要更好的发育空间，稳扎稳打</li>
+                                    <li>利用风墙阻挡敌方上单的关键技能</li>
+                                    <li>分带时注意小地图，防止被抓</li>
+                                    <li>逆风时利用风墙防守，保护己方后排</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="playstyle-card-full">
+                        <div class="playstyle-card-header">
+                            <span class="playstyle-icon">🎯</span>
+                            <div>
+                                <h3>辅助游走流</h3>
+                                <p>控制辅助，团队增益</p>
+                            </div>
+                            <span class="difficulty-tag hard">需要意识</span>
+                        </div>
+                        <div class="playstyle-card-body">
+                            <div class="playstyle-summary">
+                                <h4>核心思路</h4>
+                                <p>利用风墙和击飞提供团队控制，适合有大局观的玩家。</p>
+                            </div>
+                            <div class="playstyle-phases">
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌅</div>
+                                    <h4>前期 (1-6级)</h4>
+                                    <p>辅助亚索需要较强的前期对抗能力，利用风墙消耗对面ADC。注意保护己方AD，帮忙做视野。</p>
+                                </div>
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌇</div>
+                                    <h4>中期 (7-14级)</h4>
+                                    <p>游走各路，利用E技能快速支援。大招提供团队控制，配合队友击杀。</p>
+                                </div>
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌙</div>
+                                    <h4>后期 (15级+)</h4>
+                                    <p>作为辅助需要保护队友，用风墙阻挡敌方技能。团战中主要提供控制和保护。</p>
+                                </div>
+                            </div>
+                            <div class="playstyle-tips">
+                                <h4>💡 核心技巧</h4>
+                                <ul>
+                                    <li>辅助亚索需要良好的意识和游戏理解</li>
+                                    <li>W技能保护ADC非常重要</li>
+                                    <li>大招配合队友的控制技能效果最佳</li>
+                                    <li>辅助出装偏肉，保证生存能力</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 技能详解 -->
+            <section class="guide-section" id="abilities">
+                <h2 class="section-title">
+                    <span class="title-icon">⚡</span>
+                    技能详解与技巧
+                </h2>
+                <p class="section-subtitle">深入了解每个技能的机制与使用技巧</p>
+                
+                <div class="abilities-guide">
+                    <div class="ability-card">
+                        <div class="ability-key">被动</div>
+                        <div class="ability-info">
+                            <h3>浪客之道</h3>
+                            <p class="ability-desc">暴击率翻倍，但暴击伤害降低至175%。移动时会积攒剑意，满层时受到来自英雄或野怪的伤害时会获得护盾，持续1秒。</p>
+                            <div class="ability-tips">
+                                <h4>使用技巧</h4>
+                                <ul>
+                                    <li>✅ 利用移动积攒护盾，在对拼前保持移动状态</li>
+                                    <li>✅ 看到护盾触发要后撤，等待下一次护盾</li>
+                                    <li>✅ 残血时保持移动，护盾可以救命</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ability-card">
+                        <div class="ability-key">Q</div>
+                        <div class="ability-info">
+                            <h3>斩钢闪</h3>
+                            <p class="ability-desc">向前出剑，造成物理伤害。命中时会获得一层"旋风烈斩"效果。叠满两层后，下一次Q会形成击飞敌人的旋风。</p>
+                            <div class="ability-tips">
+                                <h4>使用技巧</h4>
+                                <ul>
+                                    <li>✅ Q技能可以叠加暴击率和穿甲效果</li>
+                                    <li>✅ EQ是亚索的核心连招基础</li>
+                                    <li>✅ 空中Q可以延长控制时间</li>
+                                    <li>✅ 闪现Q可以改变Q技能方向</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ability-card">
+                        <div class="ability-key">W</div>
+                        <div class="ability-info">
+                            <h3>风之障壁</h3>
+                            <p class="ability-desc">创造一堵持续4秒的风墙，可以阻挡所有敌方飞行道具。这是亚索的核心防御技能。</p>
+                            <div class="ability-tips">
+                                <h4>使用技巧</h4>
+                                <ul>
+                                    <li>✅ 风墙可以阻挡非常多的技能</li>
+                                    <li>✅ 预判敌方技能释放风墙</li>
+                                    <li>✅ 关键团战中风墙可以改变战局</li>
+                                    <li>✅ 风墙持续4秒，不要过早使用</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ability-card">
+                        <div class="ability-key">E</div>
+                        <div class="ability-info">
+                            <h3>踏前斩</h3>
+                            <p class="ability-desc">向目标敌人冲刺，造成魔法伤害。每次施放会增加下次踏前斩的伤害，最多叠加4层。对同一目标有冷却时间。</p>
+                            <div class="ability-tips">
+                                <h4>使用技巧</h4>
+                                <ul>
+                                    <li>❌ 不能对同一目标连续使用（0.5秒冷却）</li>
+                                    <li>✅ E技能可以穿墙</li>
+                                    <li>✅ 利用E技能快速接近或撤离</li>
+                                    <li>✅ E不要用来赶路，留作位移或追击</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ability-card">
+                        <div class="ability-key">R</div>
+                        <div class="ability-info">
+                            <h3>狂风绝息斩</h3>
+                            <p class="ability-desc">瞬间移动到被击飞的敌人身边，造成物理伤害并使敌人继续滞空。施放后获得50%护甲穿透，持续15秒。</p>
+                            <div class="ability-tips">
+                                <h4>使用技巧</h4>
+                                <ul>
+                                    <li>✅ 需要队友提供击飞控制</li>
+                                    <li>✅ 落地后获得50%护甲穿透</li>
+                                    <li>✅ 可以接在其他控制技能后</li>
+                                    <li>✅ 大招可以用来调整位置</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 连招教学 -->
+            <section class="guide-section" id="combos">
+                <h2 class="section-title">
+                    <span class="title-icon">🔥</span>
+                    连招技巧教学
+                </h2>
+                <p class="section-subtitle">掌握核心连招，提升操作上限</p>
+                
+                <div class="combos-grid">
+                    <article class="combo-card">
+                        <h3>基础连招</h3>
+                        <div class="combo-keys">E + Q + 空中Q + R</div>
+                        <p>最基础的连招方式。E接近目标，Q击飞，接空中Q续控制，大招收割。</p>
+                        <span class="combo-difficulty">入门级</span>
+                    </article>
+
+                    <article class="combo-card">
+                        <h3>EQ闪</h3>
+                        <div class="combo-keys">EQ + 闪现</div>
+                        <p>EQ二连瞬间改变位置，用于追击或躲避。掌握此技巧是亚索高手的标志。</p>
+                        <span class="combo-difficulty">熟练级</span>
+                    </article>
+
+                    <article class="combo-card">
+                        <h3>风墙连招</h3>
+                        <div class="combo-keys">W + E + Q + R</div>
+                        <p>风墙挡住关键技能后E近身，Q击飞接大。这是最常用的反杀连招。</p>
+                        <span class="combo-difficulty">熟练级</span>
+                    </article>
+
+                    <article class="combo-card">
+                        <h3>团战进场</h3>
+                        <div class="combo-keys">E小兵 + E英雄 + Q击飞 + R</div>
+                        <p>利用多段E位移进场，配合队友控制击杀。这是团战中的主要进场方式。</p>
+                        <span class="combo-difficulty">进阶级</span>
+                    </article>
+
+                    <article class="combo-card">
+                        <h3>R闪</h3>
+                        <div class="combo-keys">R + 闪现</div>
+                        <p>闪现改变R的位移方向，可以将敌人踢向特定位置。需要对R技能有很好的理解。</p>
+                        <span class="combo-difficulty">进阶级</span>
+                    </article>
+
+                    <article class="combo-card">
+                        <h3>双风连招</h3>
+                        <div class="combo-keys">Q + 闪现 + Q + 击飞 + R</div>
+                        <p>通过闪现刷新Q技能，快速打出双风。这是亚索的最高难度连招。</p>
+                        <span class="combo-difficulty">大师级</span>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 对线技巧 -->
+            <section class="guide-section" id="matchups">
+                <h2 class="section-title">
+                    <span class="title-icon">⚔️</span>
+                    对线技巧与克制
+                </h2>
+                <p class="section-subtitle">各阶段对线要点与常见英雄应对策略</p>
+                
+                <div class="matchups-grid">
+                    <article class="matchup-card">
+                        <div class="matchup-header">
+                            <h3>永恩</h3>
+                            <span class="difficulty-tag">均势</span>
+                        </div>
+                        <p>双方机制相似，注意躲避对方Q技能，保持距离。永恩的E技能可以返回，需要预判。</p>
+                    </article>
+
+                    <article class="matchup-card">
+                        <div class="matchup-header">
+                            <h3>锐雯</h3>
+                            <span class="difficulty-tag disadvantage">劣势</span>
+                        </div>
+                        <p>锐雯爆发高，不要硬拼。等打野支援。锐雯技能连招期间是最佳反击时机。</p>
+                    </article>
+
+                    <article class="matchup-card">
+                        <div class="matchup-header">
+                            <h3>劫</h3>
+                            <span class="difficulty-tag">均势</span>
+                        </div>
+                        <p>利用风墙阻挡劫的技能，注意不要被消耗太多。6级后注意躲避劫的大招。</p>
+                    </article>
+
+                    <article class="matchup-card">
+                        <div class="matchup-header">
+                            <h3>凯南</h3>
+                            <span class="difficulty-tag disadvantage">劣势</span>
+                        </div>
+                        <p>凯南手长难以接近，需要等待队友先手。风墙可以阻挡凯南的Q技能。</p>
+                    </article>
+
+                    <article class="matchup-card">
+                        <div class="matchup-header">
+                            <h3>薇恩</h3>
+                            <span class="difficulty-tag advantage">优势</span>
+                        </div>
+                        <p>亚索天敌，尽量在前期建立优势。薇恩后期太强，需要在前期结束游戏。</p>
+                    </article>
+
+                    <article class="matchup-card">
+                        <div class="matchup-header">
+                            <h3>诺手</h3>
+                            <span class="difficulty-tag">均势</span>
+                        </div>
+                        <p>注意躲避诺手的E技能，不要被拉到。亚索的灵活性可以风筝诺手。</p>
+                    </article>
+                </div>
+
+                <div class="matchup-tips">
+                    <h3>💡 对线通用技巧</h3>
+                    <ul>
+                        <li><strong>抢2级：</strong>开场直接打后排小兵，抢先到2级可打一套建立优势</li>
+                        <li><strong>控线：</strong>优势推线压镀层，劣势控线防gank</li>
+                        <li><strong>换血：</strong>在敌方补刀时出手，确保技能命中后全身而退</li>
+                        <li><strong>防Gank：</strong>1分30秒是打野刷完第一组野的时间点，特别注意</li>
+                        <li><strong>风墙使用：</strong>不要过早交风墙，留作反打或保命</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 出装符文 -->
+            <section class="guide-section" id="builds">
+                <h2 class="section-title">
+                    <span class="title-icon">🎒</span>
+                    出装与符文推荐
+                </h2>
+                <p class="section-subtitle">根据不同打法选择最佳装备和符文配置</p>
+                
+                <div class="builds-section">
+                    <div class="build-card-full">
+                        <h3>⚔️ 中单爆发流 出装</h3>
+                        <div class="build-items">
+                            <div class="build-item">🏆 无尽之刃</div>
+                            <div class="build-item">🏆 幻影之舞</div>
+                            <div class="build-item">🏆 饮血剑</div>
+                            <div class="build-item">⚡ 守护天使</div>
+                            <div class="build-item">⚡ 斯特拉克的挑战护手</div>
+                            <div class="build-item">👢 攻速鞋</div>
+                        </div>
+                        <div class="build-runes">
+                            <h4>符文推荐</h4>
+                            <div class="rune-row">
+                                <span class="rune-primary">精密</span>
+                                <span>征服者 → 凯旋 → 传说：欢欣 → 致命一击</span>
+                            </div>
+                            <div class="rune-row">
+                                <span class="rune-secondary">坚决</span>
+                                <span>护盾猛击 → 过度生长</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="build-card-full">
+                        <h3>🛡️ 上单战士流 出装</h3>
+                        <div class="build-items">
+                            <div class="build-item">🏆 焚天</div>
+                            <div class="build-item">🏆 斯特拉克的挑战护手</div>
+                            <div class="build-item">🏆 死亡之舞</div>
+                            <div class="build-item">⚡ 复活甲</div>
+                            <div class="build-item">⚡ 兰顿之兆</div>
+                            <div class="build-item">👢 护甲鞋/水银鞋</div>
+                        </div>
+                        <div class="build-runes">
+                            <h4>符文推荐</h4>
+                            <div class="rune-row">
+                                <span class="rune-primary">精密</span>
+                                <span>征服者 → 凯旋 → 传说：韧性 → 坚毅不倒</span>
+                            </div>
+                            <div class="rune-row">
+                                <span class="rune-secondary">坚决</span>
+                                <span>护盾猛击 → 过度生长</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 团战思路 -->
+            <section class="guide-section" id="teamfight">
+                <h2 class="section-title">
+                    <span class="title-icon">👥</span>
+                    团战思路
+                </h2>
+                
+                <div class="teamfight-content">
+                    <div class="teamfight-phases">
+                        <div class="phase-card">
+                            <div class="phase-icon">🌅</div>
+                            <h4>团战前</h4>
+                            <p>团战前先手消耗，利用Q技能poke。寻找敌方走位失误。等队友先手开团。</p>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-icon">⚔️</div>
+                            <h4>团战中</h4>
+                            <p>侧翼或绕后进场最理想。等待敌方关键控制技能交出后再进场。优先击杀敌方C位。</p>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-icon">🎯</div>
+                            <h4>进场时机</h4>
+                            <p>不要第一时间切入。等前排吸收第一波伤害后，从侧翼或后方切入敌方后排。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="teamfight-tips">
+                        <h3>💡 团战注意事项</h3>
+                        <ul>
+                            <li>逆风时保守发育，团战中等待机会</li>
+                            <li>不要执着于切前排，优先击杀敌方C位</li>
+                            <li>大招用于击杀或调整位置，不要轻易交掉</li>
+                            <li>被集火时利用风墙阻挡技能，然后E位移撤离</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 实战技巧 -->
+            <section class="guide-section">
+                <h2 class="section-title">
+                    <span class="title-icon">💡</span>
+                    高手进阶技巧
+                </h2>
+                
+                <div class="tips-content">
+                    <ul class="tips-list">
+                        <li><strong>对线经验：</strong>亚索需要对线经验和游戏理解，新手建议多练习后再排位使用</li>
+                        <li><strong>风墙timing：</strong>风墙的timing是亚索的核心技巧，需要大量实战练习</li>
+                        <li><strong>不要无脑EQ：</strong>保持安全血量，残血时容易被反杀</li>
+                        <li><strong>逆风处理：</strong>逆风时保守发育，利用风墙防守，保护己方后排</li>
+                        <li><strong>E技能留人：</strong>E技能不要用来赶路，留作位移或追击/撤离</li>
+                        <li><strong>视野控制：</strong>亚索没有硬控，需要队友提供控制才能发挥最大作用</li>
+                        <li><strong>心态管理：</strong>亚索容易上头，保持冷静，不要浪</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 相关推荐 -->
+            <section class="guide-section">
+                <h2 class="section-title">
+                    <span class="title-icon">📚</span>
+                    相关推荐
+                </h2>
+                <div class="related-links">
+                    <a href="strategy-center.html" class="related-link-card">
+                        <span class="related-icon">📖</span>
+                        <div>
+                            <span>返回攻略中心</span>
+                            <p>更多英雄攻略</p>
+                        </div>
+                    </a>
+                    <a href="champions.html" class="related-link-card">
+                        <span class="related-icon">🏆</span>
+                        <div>
+                            <span>英雄列表</span>
+                            <p>查看所有英雄</p>
+                        </div>
+                    </a>
+                    <a href="ahri.html" class="related-link-card">
+                        <span class="related-icon">🦊</span>
+                        <div>
+                            <span>阿狸攻略</span>
+                            <p>中单法师攻略</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img class="brand-logo-footer" src="images/logo.svg" alt="英雄联盟爱好者" loading="lazy">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">首页</a>
+                    <a href="champions.html">英雄列表</a>
+                    <a href="game-modes.html">游戏模式</a>
+                    <a href="guide.html">新手指南</a>
+                    <a href="game-data.html">游戏资料</a>
+                    <a href="strategy-center.html">攻略中心</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 英雄联盟爱好者. 本站仅供学习交流使用.</p>
+                <p>英雄联盟是 Riot Games 的注册商标.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>
