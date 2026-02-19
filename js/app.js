@@ -397,14 +397,17 @@ function createChampionCard(hero) {
 
     const difficultyClass = getDifficultyClass(hero.difficulty);
     const heroImage = hero.image || DEFAULT_HERO_ICON;
-    const skinIndex = HERO_BANNER_SKIN_MAP[hero.id] || 0;
-    const heroImageHtml = createImageHtml(
-        getChampionTilesUrl(hero, skinIndex),
-        `${hero.name} 高清头像`,
-        heroImage,
-        'champion-image-img',
-        'lazy'
-    );
+    const tilesUrl = getChampionTilesUrl(hero, 0);
+    const loadingUrl = getChampionLoadingUrl(hero, 0);
+    const heroImageHtml = `
+        <img class="champion-image-img" 
+             src="${tilesUrl}" 
+             alt="${hero.name} 高清头像" 
+             loading="lazy" 
+             onerror="this.onerror=null; this.src='${loadingUrl}';"
+             onerror2="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="hero-fallback">${heroImage}</span>
+    `;
 
     return `
         <div class="champion-card" data-id="${hero.id}">
@@ -783,18 +786,24 @@ function createStrategyHeroCard(hero) {
     const tipText = summarizeLore(tipSource, 76);
     const coreBuild = Array.isArray(hero.builds?.core) ? hero.builds.core.slice(0, 3).join(' / ') : '根据对局选择核心装备';
     const runeText = hero.runes?.keystone ? `${hero.runes.primary} · ${hero.runes.keystone}` : '根据分路选择主系符文';
-    const skinIndex = HERO_BANNER_SKIN_MAP[hero.id] || 0;
+    
+    const fallbackEmoji = hero.image || DEFAULT_HERO_ICON;
+    const tilesUrl = getChampionTilesUrl(hero, 0);
+    const loadingUrl = getChampionLoadingUrl(hero, 0);
+    const heroImageHtml = `
+        <img class="champion-image-img" 
+             src="${tilesUrl}" 
+             alt="${hero.name} 高清立绘" 
+             loading="lazy" 
+             onerror="this.onerror=null; this.src='${loadingUrl}';"
+             onerror2="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="hero-fallback">${fallbackEmoji}</span>
+    `;
 
     return `
         <article class="strategy-hero-card" data-id="${hero.id}">
             <div class="champion-image">
-                ${createImageHtml(
-                    getChampionTilesUrl(hero, skinIndex),
-                    `${hero.name} 高清立绘`,
-                    hero.image || DEFAULT_HERO_ICON,
-                    'champion-image-img',
-                    'lazy'
-                )}
+                ${heroImageHtml}
             </div>
             <div class="strategy-hero-body">
                 <h3 class="champion-name">${hero.name}</h3>
