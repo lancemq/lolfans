@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>劫攻略 影流之主打法详解 - 英雄联盟爱好者</title>
+    <meta name="description" content="劫最全攻略，包含两种打法选择、技能详解、出装推荐、符文搭配、对线技巧、连招教学。掌握影流之主核心技巧，从入门到精通。">
+    <meta name="keywords" content="劫攻略,影流之主,劫连招,劫出装,劫符文,对线技巧">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lolfans.xyz/zed.html">
+    
+    <meta property="og:title" content="劫攻略 影流之主 - 英雄联盟爱好者">
+    <meta property="og:description" content="劫最全攻略，两种打法选择，技能连招详解">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lolfans.xyz/zed.html">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.lolfans.xyz/zed.html">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="主导航">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="返回首页">
+                    <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" width="120" height="40" loading="eager">
+                </a>
+            </div>
+            <button class="hamburger" aria-label="打开导航菜单" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="champions.html">英雄列表</a></li>
+                <li><a href="game-modes.html">游戏模式</a></li>
+                <li><a href="guide.html">新手指南</a></li>
+                <li><a href="game-data.html">游戏资料</a></li>
+                <li><a href="strategy-center.html" class="active">攻略中心</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="hero-guide-page">
+        <div class="container">
+            <header class="guide-hero-header">
+                <div class="guide-hero-splash" style="background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_9.jpg');"></div>
+                <div class="guide-hero-overlay"></div>
+                <div class="guide-hero-info">
+                    <nav class="breadcrumb" aria-label="面包屑导航">
+                        <a href="strategy-center.html">攻略中心</a>
+                        <span class="separator">/</span>
+                        <span class="current">影流之主 劫</span>
+                    </nav>
+                    <h1 class="guide-hero-title">影流之主</h1>
+                    <p class="guide-hero-subtitle">劫</p>
+                    <div class="guide-hero-roles">
+                        <span class="role-tag role-assassin">刺客</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="guide-quick-nav">
+                <a href="#playstyles" class="quick-nav-item">
+                    <span class="quick-nav-icon">🎮</span>
+                    <span>打法选择</span>
+                </a>
+                <a href="#abilities" class="quick-nav-item">
+                    <span class="quick-nav-icon">⚡</span>
+                    <span>技能详解</span>
+                </a>
+                <a href="#combos" class="quick-nav-item">
+                    <span class="quick-nav-icon">🔥</span>
+                    <span>连招教学</span>
+                </a>
+                <a href="#matchups" class="quick-nav-item">
+                    <span class="quick-nav-icon">⚔️</span>
+                    <span>对线技巧</span>
+                </a>
+                <a href="#builds" class="quick-nav-item">
+                    <span class="quick-nav-icon">🎒</span>
+                    <span>出装符文</span>
+                </a>
+            </div>
+
+            <section class="guide-section" id="playstyles">
+                <h2 class="section-title">
+                    <span class="title-icon">🎮</span>
+                    两种打法选择
+                </h2>
+                <p class="section-subtitle">根据阵容和对局情况选择合适的打法风格</p>
+                
+                <div class="playstyle-cards">
+                    <article class="playstyle-card-full">
+                        <div class="playstyle-card-header">
+                            <span class="playstyle-icon">⚔️</span>
+                            <div>
+                                <h3>中单刺客流</h3>
+                                <p>追求极致爆发，一套秒杀</p>
+                            </div>
+                            <span class="difficulty-tag hard">难度较高</span>
+                        </div>
+                        <div class="playstyle-card-body">
+                            <div class="playstyle-summary">
+                                <h4>核心思路</h4>
+                                <p>以高爆发伤害为主，利用前期优势快速建立击杀。6级后具备秒杀能力，是脆皮的噩梦。</p>
+                            </div>
+                            <div class="playstyle-phases">
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌅</div>
+                                    <h4>前期 (1-6级)</h4>
+                                    <p>1级学Q远程消耗，2级学E配合W消耗。3级后可以利用WEQ打一套。注意保持血量，6级是劫的强势期。</p>
+                                </div>
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌇</div>
+                                    <h4>中期 (7-14级)</h4>
+                                    <p>推线后游走边路，配合队友击杀。团战中寻找机会秒杀敌方C位。注意进场和撤离时机。</p>
+                                </div>
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌙</div>
+                                    <h4>后期 (15级+)</h4>
+                                    <p>后期以切后排为主，等敌方关键技能交出后再进场。优先击杀敌方C位，注意自己的存活。</p>
+                                </div>
+                            </div>
+                            <div class="playstyle-tips">
+                                <h4>💡 核心技巧</h4>
+                                <ul>
+                                    <li>WEQ是劫的基础消耗连招</li>
+                                    <li>W-E-平A-R是秒杀连招的基础</li>
+                                    <li>大招不要用来赶路，留作击杀或撤离</li>
+                                    <li>影子和本体的技能可以叠加伤害</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="playstyle-card-full">
+                        <div class="playstyle-card-header">
+                            <span class="playstyle-icon">🎯</span>
+                            <div>
+                                <h3>中单poke流</h3>
+                                <p>远程消耗，持续压制</p>
+                            </div>
+                            <span class="difficulty-tag medium">中等难度</span>
+                        </div>
+                        <div class="playstyle-card-body">
+                            <div class="playstyle-summary">
+                                <h4>核心思路</h4>
+                                <p>利用W技能放置影子进行远程消耗，保持安全距离进行poke。适合稳健打法的玩家。</p>
+                            </div>
+                            <div class="playstyle-phases">
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌅</div>
+                                    <h4>前期 (1-6级)</h4>
+                                    <p>利用W-Q进行远程消耗，保持安全距离。不要过于激进，防止被gank。</p>
+                                </div>
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌇</div>
+                                    <h4>中期 (7-14级)</h4>
+                                    <p>保持中路线权，利用WEQ不断消耗对手。推线后可以支援边路。</p>
+                                </div>
+                                <div class="phase-card">
+                                    <div class="phase-icon">🌙</div>
+                                    <h4>后期 (15级+)</h4>
+                                    <p>团战前利用poke压低敌方血量。大招用于收割或调整位置。</p>
+                                </div>
+                            </div>
+                            <div class="playstyle-tips">
+                                <h4>💡 核心技巧</h4>
+                                <ul>
+                                    <li>W影子放在安全位置用于撤退</li>
+                                    <li>利用WEQ进行无伤消耗</li>
+                                    <li>poke流需要保持良好的走位</li>
+                                    <li>逆风时可以poke发育，等待机会</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="guide-section" id="abilities">
+                <h2 class="section-title">
+                    <span class="title-icon">⚡</span>
+                    技能详解与技巧
+                </h2>
+                <p class="section-subtitle">深入了解每个技能的机制与使用技巧</p>
+                
+                <div class="abilities-guide">
+                    <div class="ability-card">
+                        <div class="ability-key">被动</div>
+                        <div class="ability-info">
+                            <h3>暗影奥义</h3>
+                            <p class="ability-desc">对生命值低于50%的敌人，平A会造成额外魔法伤害。对同一目标有冷却时间。</p>
+                            <div class="ability-tips">
+                                <h4>使用技巧</h4>
+                                <ul>
+                                    <li>✅ 对残血敌人平A有额外伤害</li>
+                                    <li>✅ 这是劫的重要收割手段</li>
+                                    <li>✅ 配合大招收割残血敌人</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ability-card">
+                        <div class="ability-key">Q</div>
+                        <div class="ability-info">
+                            <h3>影手里剑</h3>
+                            <p class="ability-desc">向指定方向投掷手里剑，对路径上的敌人造成物理伤害。影子也会投掷手里剑。</p>
+                            <div class="ability-tips">
+                                <h4>使用技巧</h4>
+                                <ul>
+                                    <li>✅ 可以配合W和R的影子打出多段伤害</li>
+                                    <li>✅ Q技能是主要输出技能</li>
+                                    <li>✅ 预判敌人走位进行投掷</li>
+                                    <li>✅ 对线期用于消耗和补刀</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ability-card">
+                        <div class="ability-key">W</div>
+                        <div class="ability-info">
+                            <h3>影分身</h3>
+                            <p class="ability-desc">在指定位置放置影子，持续4秒。再次激活可与影子互换位置。影子会复制劫的E技能。</p>
+                            <div class="ability-tips">
+                                <h4>使用技巧</h4>
+                                <ul>
+                                    <li>✅ W是劫的核心位移技能</li>
+                                    <li>✅ 可以用来进攻或撤离</li>
+                                    <li>✅ 影子会复制E技能造成额外伤害</li>
+                                    <li>✅ W-E-Q可以打出爆发伤害</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ability-card">
+                        <div class="ability-key">E</div>
+                        <div class="ability-info">
+                            <h3>暗影奥义</h3>
+                            <p class="ability-desc">对周围敌人造成物理伤害，并减速。如果被多个影子命中，会被额外减速。</p>
+                            <div class="ability-tips">
+                                <h4>使用技巧</h4>
+                                <ul>
+                                    <li>✅ E技能是范围伤害和减速</li>
+                                    <li>✅ W和R的影子都可以触发E</li>
+                                    <li>✅ 配合影子可以打出高额伤害</li>
+                                    <li>✅ 减速效果有助于追击敌人</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ability-card">
+                        <div class="ability-key">R</div>
+                        <div class="ability-info">
+                            <h3>死亡领域</h3>
+                            <p class="ability-desc">标记目标并快速移动到其身后，留下一个影子。2秒内对目标造成大量物理伤害。</p>
+                            <div class="ability-tips">
+                                <h4>使用技巧</h4>
+                                <ul>
+                                    <li>✅ 大招是劫的核心秒杀技能</li>
+                                    <li>✅ 标记期间使用W和召唤师技能可返回</li>
+                                    <li>✅ 大招标记后有额外伤害加成</li>
+                                    <li>✅ 可以用来调整位置或追击敌人</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="guide-section" id="combos">
+                <h2 class="section-title">
+                    <span class="title-icon">🔥</span>
+                    连招技巧教学
+                </h2>
+                <p class="section-subtitle">掌握核心连招，提升操作上限</p>
+                
+                <div class="combos-grid">
+                    <article class="combo-card">
+                        <h3>基础消耗</h3>
+                        <div class="combo-keys">W + E + Q</div>
+                        <p>最基础的消耗连招。W放置影子，E减速，Q命中。</p>
+                        <span class="combo-difficulty">入门级</span>
+                    </article>
+
+                    <article class="combo-card">
+                        <h3>WEQ连招</h3>
+                        <div class="combo-keys">W + E + Q</div>
+                        <p>快速WEQ，影子复制E技能造成额外伤害和减速。</p>
+                        <span class="combo-difficulty">熟练级</span>
+                    </article>
+
+                    <article class="combo-card">
+                        <h3>秒杀连招</h3>
+                        <div class="combo-keys">W + R + 平A + E + Q</div>
+                        <p>R标记后平A触发被动，E减速，Q补伤害完成秒杀。</p>
+                        <span class="combo-difficulty">熟练级</span>
+                    </article>
+
+                    <article class="combo-card">
+                        <h3>R闪</h3>
+                        <div class="combo-keys">R + 闪现</div>
+                        <p>闪现改变R的位移方向，用于追击或调整位置。</p>
+                        <span class="combo-difficulty">进阶级</span>
+                    </article>
+
+                    <article class="combo-card">
+                        <h3>EWQ</h3>
+                        <div class="combo-keys">E + W + Q</div>
+                        <p>先E减速，再W位移跟进，最后Q命中。</p>
+                        <span class="combo-difficulty">熟练级</span>
+                    </article>
+
+                    <article class="combo-card">
+                        <h3>完美进场</h3>
+                        <div class="combo-keys">W + R + 闪现 + 平A + E + Q</div>
+                        <p>最完整的秒杀连招，需要大量练习才能掌握。</p>
+                        <span class="combo-difficulty">大师级</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="guide-section" id="matchups">
+                <h2 class="section-title">
+                    <span class="title-icon">⚔️</span>
+                    对线技巧与克制
+                </h2>
+                <p class="section-subtitle">各阶段对线要点与常见英雄应对策略</p>
+                
+                <div class="matchups-grid">
+                    <article class="matchup-card">
+                        <div class="matchup-header">
+                            <h3>亚索</h3>
+                            <span class="difficulty-tag">均势</span>
+                        </div>
+                        <p>双方都是刺客，注意躲避亚索的Q技能。利用W-E-Q消耗，不要硬拼。</p>
+                    </article>
+
+                    <article class="matchup-card">
+                        <div class="matchup-header">
+                            <h3>卡萨丁</h3>
+                            <span class="difficulty-tag advantage">优势</span>
+                        </div>
+                        <p>劫前期可以压制卡萨丁，注意6级后卡萨丁会变得强势。</p>
+                    </article>
+
+                    <article class="matchup-card">
+                        <div class="matchup-header">
+                            <h3>艾妮薇亚</h3>
+                            <span class="difficulty-tag disadvantage">劣势</span>
+                        </div>
+                        <p>对方手长难以接近，需要等待队友支援。</p>
+                    </article>
+
+                    <article class="matchup-card">
+                        <div class="matchup-header">
+                            <h3>辛德拉</h3>
+                            <span class="difficulty-tag">均势</span>
+                        </div>
+                        <p>注意躲避对方的QE二连，保持距离等待机会。</p>
+                    </article>
+
+                    <article class="matchup-card">
+                        <div class="matchup-header">
+                            <h3>玛尔扎哈</h3>
+                            <span class="difficulty-tag disadvantage">劣势</span>
+                        </div>
+                        <p>对方有沉默技能，6级后容易被压制。</p>
+                    </article>
+
+                    <article class="matchup-card">
+                        <div class="matchup-header">
+                            <h3>阿狸</h3>
+                            <span class="difficulty-tag">均势</span>
+                        </div>
+                        <p>双方都是刺客型中单，注意躲避阿狸的E技能。</p>
+                    </article>
+                </div>
+
+                <div class="matchup-tips">
+                    <h3>💡 对线通用技巧</h3>
+                    <ul>
+                        <li><strong>抢2级：</strong>2级是劫的第一个强势期，可以打一套</li>
+                        <li><strong>消耗：</strong>利用WEQ进行消耗，保持血量优势</li>
+                        <li><strong>6级爆发：</strong>6级后劫具备秒杀能力，积极寻找击杀机会</li>
+                        <li><strong>防Gank：</strong>劫没有逃生技能，线过深时要注意</li>
+                        <li><strong>推线游走：</strong>推线后积极游走，帮助队友建立优势</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="guide-section" id="builds">
+                <h2 class="section-title">
+                    <span class="title-icon">🎒</span>
+                    出装与符文推荐
+                </h2>
+                <p class="section-subtitle">根据不同打法选择最佳装备和符文配置</p>
+                
+                <div class="builds-section">
+                    <div class="build-card-full">
+                        <h3>⚔️ 中单刺客流 出装</h3>
+                        <div class="build-items">
+                            <div class="build-item">🏆 幽梦之灵</div>
+                            <div class="build-item">🏆 赛瑞尔达的怨恨</div>
+                            <div class="build-item">🏆 守护天使</div>
+                            <div class="build-item">⚡ 玛莫提乌斯之噬</div>
+                            <div class="build-item">⚡ 凡性的提醒</div>
+                            <div class="build-item">👢 穿甲鞋</div>
+                        </div>
+                        <div class="build-runes">
+                            <h4>符文推荐</h4>
+                            <div class="rune-row">
+                                <span class="rune-primary">主宰</span>
+                                <span>电刑 → 猛然冲击 → 眼球收集器 → 寻宝猎人</span>
+                            </div>
+                            <div class="rune-row">
+                                <span class="rune-secondary">精密</span>
+                                <span>凯旋 → 致命一击</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="build-card-full">
+                        <h3>🎯 中单poke流 出装</h3>
+                        <div class="build-items">
+                            <div class="build-item">🏆 黯影阔剑</div>
+                            <div class="build-item">🏆 赛瑞尔达的怨恨</div>
+                            <div class="build-item">🏆 黑色切割者</div>
+                            <div class="build-item">⚡ 守护天使</div>
+                            <div class="build-item">⚡ 玛莫提乌斯之噬</div>
+                            <div class="build-item">👢 穿甲鞋</div>
+                        </div>
+                        <div class="build-runes">
+                            <h4>符文推荐</h4>
+                            <div class="rune-row">
+                                <span class="rune-primary">主宰</span>
+                                <span>电刑 → 猛然冲击 → 眼球收集器 → 寻宝猎人</span>
+                            </div>
+                            <div class="rune-row">
+                                <span class="rune-secondary">巫术</span>
+                                <span>无效化之法球 → 灵光披风</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="guide-section" id="teamfight">
+                <h2 class="section-title">
+                    <span class="title-icon">👥</span>
+                    团战思路
+                </h2>
+                
+                <div class="teamfight-content">
+                    <div class="teamfight-phases">
+                        <div class="phase-card">
+                            <div class="phase-icon">🌅</div>
+                            <h4>团战前</h4>
+                            <p>团战前寻找机会消耗敌方C位血量。观察敌方关键技能是否交出。</p>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-icon">⚔️</div>
+                            <h4>团战中</h4>
+                            <p>等敌方关键控制技能交出后，从侧翼或后方进场。优先击杀敌方C位。</p>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-icon">🎯</div>
+                            <h4>撤离时机</h4>
+                            <p>完成击杀后利用W或R快速撤离。不要恋战，及时退出战场。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="teamfight-tips">
+                        <h3>💡 团战注意事项</h3>
+                        <ul>
+                            <li>逆风时以秒掉敌方C位为主要目标</li>
+                            <li>不要第一个进场，等队友开团</li>
+                            <li>大招用于击杀或调整位置，不要轻易交掉</li>
+                            <li>注意自己的存活，活着才能继续输出</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="guide-section">
+                <h2 class="section-title">
+                    <span class="title-icon">💡</span>
+                    高手进阶技巧
+                </h2>
+                
+                <div class="tips-content">
+                    <ul class="tips-list">
+                        <li><strong>影子运用：</strong>W影子可以放置在多个位置，用于进攻和撤退</li>
+                        <li><strong>双重伤害：</strong>影子和本体的技能可以叠加，造成巨额伤害</li>
+                        <li><strong>大招标记：</strong>大招标记期间使用W可以返回原位置</li>
+                        <li><strong>无伤消耗：</strong>利用WEQ进行无伤消耗，保持血量优势</li>
+                        <li><strong>发育能力：</strong>劫前期需要良好发育，装备成型后才能发挥作用</li>
+                        <li><strong>团战定位：</strong>劫是刺客，不要承担前排职责</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="guide-section">
+                <h2 class="section-title">
+                    <span class="title-icon">📚</span>
+                    相关推荐
+                </h2>
+                <div class="related-links">
+                    <a href="strategy-center.html" class="related-link-card">
+                        <span class="related-icon">📖</span>
+                        <div>
+                            <span>返回攻略中心</span>
+                            <p>更多英雄攻略</p>
+                        </div>
+                    </a>
+                    <a href="champions.html" class="related-link-card">
+                        <span class="related-icon">🏆</span>
+                        <div>
+                            <span>英雄列表</span>
+                            <p>查看所有英雄</p>
+                        </div>
+                    </a>
+                    <a href="yasuo.html" class="related-link-card">
+                        <span class="related-icon">⚔️</span>
+                        <div>
+                            <span>亚索攻略</span>
+                            <p>疾风剑豪攻略</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img class="brand-logo-footer" src="images/logo.svg" alt="英雄联盟爱好者" loading="lazy">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">首页</a>
+                    <a href="champions.html">英雄列表</a>
+                    <a href="game-modes.html">游戏模式</a>
+                    <a href="guide.html">新手指南</a>
+                    <a href="game-data.html">游戏资料</a>
+                    <a href="strategy-center.html">攻略中心</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 英雄联盟爱好者. 本站仅供学习交流使用.</p>
+                <p>英雄联盟是 Riot Games 的注册商标.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>
