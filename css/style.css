@@ -1862,11 +1862,38 @@ main {
     font-size: var(--fs-meta);
 }
 
+.skins-showcase {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
 .skins-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 12px;
-    margin-bottom: 16px;
+    max-height: 480px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.skins-gallery::-webkit-scrollbar {
+    width: 6px;
+}
+
+.skins-gallery::-webkit-scrollbar-track {
+    background: rgba(10, 20, 40, 0.5);
+    border-radius: 3px;
+}
+
+.skins-gallery::-webkit-scrollbar-thumb {
+    background: rgba(200, 170, 110, 0.4);
+    border-radius: 3px;
+}
+
+.skins-gallery::-webkit-scrollbar-thumb:hover {
+    background: rgba(200, 170, 110, 0.6);
 }
 
 .skin-card {
@@ -1887,7 +1914,7 @@ main {
 }
 
 .skin-thumbnail {
-    height: 112px;
+    height: 100px;
     position: relative;
     overflow: hidden;
     background: radial-gradient(circle at 20% 20%, rgba(200, 170, 110, 0.22), rgba(10, 20, 40, 1));
@@ -1932,14 +1959,15 @@ main {
 .skin-tier-限定 { background: rgba(230, 80, 80, 0.25); color: #ffc5c5; }
 
 .skin-detail-panel {
-    display: grid;
-    grid-template-columns: 300px 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 18px;
-    align-items: center;
     background: rgba(4, 12, 22, 0.9);
     border: 1px solid rgba(200, 170, 110, 0.2);
     border-radius: var(--radius-sm);
-    padding: 16px;
+    padding: 20px;
+    position: sticky;
+    top: 20px;
 }
 
 .skin-image-large {
@@ -1956,6 +1984,11 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.skin-detail-panel:hover .skin-image-large-img {
+    transform: scale(1.03);
 }
 
 .skin-info h3 {
@@ -2168,11 +2201,22 @@ main {
     }
 
     .champion-header,
-    .skin-detail-panel,
     .builds-container,
     .runes-display,
     .playstyle-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skins-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .skins-gallery {
+        max-height: none;
+    }
+
+    .skin-detail-panel {
+        position: static;
     }
 
     .champion-avatar {
