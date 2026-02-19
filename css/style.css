@@ -2334,3 +2334,547 @@ main {
         height: 27px;
     }
 }
+
+/* ==========================================
+   游戏模式页面增强样式
+   ========================================== */
+
+/* Hero区域 */
+.modes-hero {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.modes-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0a1628 0%, #1a2840 50%, #0d1a2a 100%);
+    z-index: 0;
+}
+
+.modes-hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(200, 170, 110, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(10, 200, 185, 0.1) 0%, transparent 40%);
+}
+
+.modes-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.modes-hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #f0e6d2, #c8aa6e, #8a6b33);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 16px;
+}
+
+.modes-hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.modes-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.mode-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mode-stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--lol-gold);
+}
+
+.mode-stat-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* 主推模式区域 */
+.featured-mode-section {
+    padding: 60px 0;
+    background: linear-gradient(180deg, rgba(10, 22, 40, 0.5), rgba(4, 12, 22, 0.8));
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: linear-gradient(135deg, rgba(200, 170, 110, 0.2), rgba(200, 170, 110, 0.1));
+    border: 1px solid rgba(200, 170, 110, 0.3);
+    border-radius: 20px;
+    color: var(--lol-gold);
+    font-size: 0.875rem;
+    margin-bottom: 24px;
+}
+
+.featured-mode-card {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 48px;
+    background: linear-gradient(135deg, rgba(16, 35, 57, 0.6), rgba(6, 16, 27, 0.8));
+    border: 1px solid rgba(200, 170, 110, 0.25);
+    border-radius: 24px;
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-mode-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(200, 170, 110, 0.5), transparent);
+}
+
+.featured-mode-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.featured-mode-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(200, 170, 110, 0.2) 0%, transparent 70%);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.featured-mode-img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+    animation: float 4s ease-in-out infinite;
+}
+
+.featured-mode-particles {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.featured-mode-particles span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--lol-gold);
+    border-radius: 50%;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.featured-mode-particles span:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.featured-mode-particles span:nth-child(2) { top: 30%; right: 15%; animation-delay: 0.3s; }
+.featured-mode-particles span:nth-child(3) { bottom: 25%; left: 20%; animation-delay: 0.6s; }
+.featured-mode-particles span:nth-child(4) { bottom: 40%; right: 10%; animation-delay: 0.9s; }
+.featured-mode-particles span:nth-child(5) { top: 50%; left: 5%; animation-delay: 1.2s; }
+.featured-mode-particles span:nth-child(6) { top: 60%; right: 20%; animation-delay: 1.5s; }
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
+.featured-mode-info h2 {
+    font-size: 2.5rem;
+    color: var(--lol-gold);
+    margin-bottom: 8px;
+}
+
+.featured-mode-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(10, 200, 185, 0.2);
+    border-radius: 12px;
+    color: #0ac8b9;
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+}
+
+.featured-mode-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.featured-mode-desc {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.featured-mode-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(200, 170, 110, 0.08);
+    border-radius: 12px;
+    color: var(--text-primary);
+}
+
+.feature-icon {
+    font-size: 1.25rem;
+}
+
+.featured-mode-stats {
+    display: flex;
+    gap: 32px;
+}
+
+.featured-mode-stats .stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--lol-gold);
+}
+
+.stat-name {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* 模式筛选 */
+.modes-filter-section {
+    padding: 40px 0 20px;
+}
+
+.modes-filter {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    background: rgba(200, 170, 110, 0.1);
+    border: 1px solid rgba(200, 170, 110, 0.3);
+    border-radius: 24px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: rgba(200, 170, 110, 0.2);
+    color: var(--lol-gold);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--lol-gold), #a08050);
+    color: #08131f;
+    border-color: transparent;
+}
+
+/* 增强模式网格 */
+.modes-grid-section {
+    padding: 20px 0 60px;
+}
+
+.modes-grid-enhanced {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.mode-card-enhanced {
+    background: linear-gradient(135deg, rgba(16, 35, 57, 0.5), rgba(6, 16, 27, 0.7));
+    border: 1px solid rgba(200, 170, 110, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.mode-card-enhanced::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(200, 170, 110, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.mode-card-enhanced:hover {
+    transform: translateY(-8px);
+    border-color: rgba(200, 170, 110, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.mode-card-enhanced:hover::before {
+    opacity: 1;
+}
+
+.mode-card-enhanced.archived {
+    opacity: 0.6;
+}
+
+.mode-card-header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+
+.mode-card-icon {
+    width: 72px;
+    height: 72px;
+    background: radial-gradient(circle at 30% 30%, rgba(200, 170, 110, 0.2), transparent);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mode-card-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.mode-card-enhanced:hover .mode-card-icon img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.mode-card-icon.hot::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 20px;
+    border: 2px solid #ff6b6b;
+    animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.2); opacity: 0; }
+}
+
+.mode-card-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.mode-card-badge.competitive {
+    background: rgba(10, 200, 185, 0.2);
+    color: #0ac8b9;
+}
+
+.mode-card-badge.casual {
+    background: rgba(200, 170, 110, 0.2);
+    color: var(--lol-gold);
+}
+
+.mode-card-badge.rotating {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+}
+
+.mode-card-badge.archived {
+    background: rgba(100, 100, 100, 0.2);
+    color: #888;
+}
+
+.mode-card-body {
+    padding: 0 24px 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.mode-card-body h3 {
+    font-size: 1.25rem;
+    color: var(--lol-gold);
+    margin-bottom: 4px;
+}
+
+.mode-card-subtitle {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-bottom: 12px;
+}
+
+.mode-card-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.mode-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.mode-card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.mode-card-footer {
+    padding: 16px 24px;
+    border-top: 1px solid rgba(200, 170, 110, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.mode-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.mode-tag {
+    padding: 4px 10px;
+    background: rgba(200, 170, 110, 0.1);
+    border-radius: 12px;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
+.mode-tag.hot {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+}
+
+/* 模式对比表格 */
+.modes-comparison-section {
+    padding: 60px 0;
+    background: linear-gradient(180deg, rgba(4, 12, 22, 0.5), rgba(10, 26, 50, 0.3));
+}
+
+.comparison-table-wrap {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(16, 35, 57, 0.3);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(200, 170, 110, 0.1);
+}
+
+.comparison-table th {
+    background: rgba(200, 170, 110, 0.15);
+    color: var(--lol-gold);
+    font-weight: 600;
+}
+
+.comparison-table td {
+    color: var(--text-secondary);
+}
+
+.comparison-table tr:hover td {
+    background: rgba(200, 170, 110, 0.05);
+}
+
+.difficulty-bar {
+    display: inline-block;
+    width: 80px;
+    height: 8px;
+    background: rgba(200, 170, 110, 0.2);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.difficulty-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: var(--difficulty);
+    background: linear-gradient(90deg, #0ac8b9, var(--lol-gold));
+    border-radius: 4px;
+}
+
+/* 响应式 */
+@media (max-width: 1024px) {
+    .featured-mode-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-mode-visual {
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modes-hero {
+        padding: 60px 0;
+    }
+    
+    .modes-hero-stats {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .featured-mode-card {
+        padding: 24px;
+    }
+    
+    .featured-mode-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-mode-stats {
+        flex-wrap: wrap;
+    }
+    
+    .modes-grid-enhanced {
+        grid-template-columns: 1fr;
+    }
+}
+

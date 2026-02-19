@@ -40,151 +40,348 @@
                 <li><a href="game-data.html">游戏资料</a></li>
                 <li><a href="strategy-center.html">攻略中心</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
     <main class="game-modes-page">
-        <div class="container">
-            <div class="page-header">
-                <h1 class="page-title">游戏模式</h1>
-                <p class="page-subtitle">多种玩法，无限乐趣</p>
-            </div>
-
-            <div class="modes-grid">
-                <div class="mode-card featured">
-                    <div class="mode-image">
-                        <img class="mode-icon-img" src="images/modes/rift.svg" alt="召唤师峡谷图标" loading="lazy">
+        <!-- Hero区域 -->
+        <section class="modes-hero">
+            <div class="modes-hero-bg"></div>
+            <div class="container">
+                <div class="modes-hero-content">
+                    <h1 class="modes-hero-title">选择你的战场</h1>
+                    <p class="modes-hero-subtitle">从经典竞技到快节奏娱乐，总有一种模式适合你</p>
+                    <div class="modes-hero-stats">
+                        <div class="mode-stat">
+                            <span class="mode-stat-number">8+</span>
+                            <span class="mode-stat-label">游戏模式</span>
+                        </div>
+                        <div class="mode-stat">
+                            <span class="mode-stat-number">5v5</span>
+                            <span class="mode-stat-label">经典对战</span>
+                        </div>
+                        <div class="mode-stat">
+                            <span class="mode-stat-number">24/7</span>
+                            <span class="mode-stat-label">随时开战</span>
+                        </div>
                     </div>
-                    <div class="mode-content">
+                </div>
+            </div>
+        </section>
+
+        <!-- 主推模式 -->
+        <section class="featured-mode-section">
+            <div class="container">
+                <div class="section-badge">主推模式</div>
+                <div class="featured-mode-card">
+                    <div class="featured-mode-visual">
+                        <div class="featured-mode-glow"></div>
+                        <img class="featured-mode-img" src="images/modes/rift.svg" alt="召唤师峡谷" loading="eager">
+                        <div class="featured-mode-particles">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="featured-mode-info">
+                        <div class="featured-mode-badge">经典模式</div>
                         <h2>召唤师峡谷</h2>
-                        <p class="mode-subtitle">Summoner's Rift</p>
-                        <p class="mode-desc">英雄联盟最经典的游戏模式。5v5团队对战，摧毁敌方基地获得胜利。包含匹配模式、排位模式和训练模式。</p>
-                        <div class="mode-features">
-                            <span class="feature-tag">5v5对战</span>
-                            <span class="feature-tag">三条路线</span>
-                            <span class="feature-tag">排位竞技</span>
+                        <p class="featured-mode-subtitle">Summoner's Rift</p>
+                        <p class="featured-mode-desc">英雄联盟最经典的游戏模式，5v5团队对战体验。三条兵线、丰富战术、深度策略，摧毁敌方基地水晶获得胜利。这是排位赛和职业比赛的标准模式。</p>
+                        <div class="featured-mode-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">⚔️</span>
+                                <span>5v5对战</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🗺️</span>
+                                <span>三条路线</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🏆</span>
+                                <span>排位竞技</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">⏱️</span>
+                                <span>30-45分钟</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="mode-card">
-                    <div class="mode-image">
-                        <img class="mode-icon-img" src="images/modes/aram.svg" alt="极地大乱斗图标" loading="lazy">
-                    </div>
-                    <div class="mode-content">
-                        <h2>极地大乱斗</h2>
-                        <p class="mode-subtitle">ARAM</p>
-                        <p class="mode-desc">单条路线，随机英雄，快节奏团战。没有回城，只有一条命，更适合休闲娱乐。</p>
-                        <div class="mode-features">
-                            <span class="feature-tag">5v5团战</span>
-                            <span class="feature-tag">随机英雄</span>
-                            <span class="feature-tag">单条路线</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mode-card">
-                    <div class="mode-image">
-                        <img class="mode-icon-img" src="images/modes/urf.svg" alt="无限火力图标" loading="lazy">
-                    </div>
-                    <div class="mode-content">
-                        <h2>无限火力</h2>
-                        <p class="mode-subtitle">URF</p>
-                        <p class="mode-desc">技能冷却时间大幅降低，法力无限，超高攻速。快节奏、高伤害的娱乐模式，定期轮换开放。</p>
-                        <div class="mode-features">
-                            <span class="feature-tag">80%冷却缩减</span>
-                            <span class="feature-tag">无限法力</span>
-                            <span class="feature-tag">节日限定</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mode-card">
-                    <div class="mode-image">
-                        <img class="mode-icon-img" src="images/modes/treeline.svg" alt="扭曲丛林图标" loading="lazy">
-                    </div>
-                    <div class="mode-content">
-                        <h2>扭曲丛林</h2>
-                        <p class="mode-subtitle">Twisted Treeline</p>
-                        <p class="mode-desc">3v3小规模对战，更快的游戏节奏。目前已下架，但仍是许多玩家的美好回忆。</p>
-                        <div class="mode-features">
-                            <span class="feature-tag">3v3对战</span>
-                            <span class="feature-tag">两条路线</span>
-                            <span class="feature-tag">已下架</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mode-card">
-                    <div class="mode-image">
-                        <img class="mode-icon-img" src="images/modes/doom.svg" alt="末日人机图标" loading="lazy">
-                    </div>
-                    <div class="mode-content">
-                        <h2>末日人机</h2>
-                        <p class="mode-subtitle">Doom Bots</p>
-                        <p class="mode-desc">面对拥有变态技能组合的AI敌人。定期开放的挑战模式，考验玩家的极限操作。</p>
-                        <div class="mode-features">
-                            <span class="feature-tag">PvE</span>
-                            <span class="feature-tag">变态AI</span>
-                            <span class="feature-tag">限时开放</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mode-card">
-                    <div class="mode-image">
-                        <img class="mode-icon-img" src="images/modes/tft.svg" alt="云顶之弈图标" loading="lazy">
-                    </div>
-                    <div class="mode-content">
-                        <h2>云顶之弈</h2>
-                        <p class="mode-subtitle">Teamfight Tactics</p>
-                        <p class="mode-desc">自走棋模式，8名玩家同场竞技，通过购买、升级英雄组成阵容，策略性极强。</p>
-                        <div class="mode-features">
-                            <span class="feature-tag">8人对战</span>
-                            <span class="feature-tag">自走棋</span>
-                            <span class="feature-tag">策略为王</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mode-card">
-                    <div class="mode-image">
-                        <img class="mode-icon-img" src="images/modes/blitz.svg" alt="极限闪击图标" loading="lazy">
-                    </div>
-                    <div class="mode-content">
-                        <h2>极限闪击</h2>
-                        <p class="mode-subtitle">Nexus Blitz</p>
-                        <p class="mode-desc">快节奏2v2v2v2v2模式，随机事件，丛林竞技场。15分钟内决定胜负，紧张刺激。</p>
-                        <div class="mode-features">
-                            <span class="feature-tag">多队混战</span>
-                            <span class="feature-tag">随机事件</span>
-                            <span class="feature-tag">快节奏</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mode-card">
-                    <div class="mode-image">
-                        <img class="mode-icon-img" src="images/modes/practice.svg" alt="训练模式图标" loading="lazy">
-                    </div>
-                    <div class="mode-content">
-                        <h2>训练模式</h2>
-                        <p class="mode-subtitle">Practice Tool</p>
-                        <p class="mode-desc">练习英雄技能、连招和走位。可以设置假人、调整冷却、测试装备效果。</p>
-                        <div class="mode-features">
-                            <span class="feature-tag">单人练习</span>
-                            <span class="feature-tag">技能测试</span>
-                            <span class="feature-tag">新手友好</span>
+                        <div class="featured-mode-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">170+</span>
+                                <span class="stat-name">可选英雄</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">5</span>
+                                <span class="stat-name">游戏位置</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">∞</span>
+                                <span class="stat-name">战术可能</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- 模式筛选 -->
+        <section class="modes-filter-section">
+            <div class="container">
+                <h2 class="section-title">全部模式</h2>
+                <div class="modes-filter">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="competitive">竞技模式</button>
+                    <button class="filter-btn" data-filter="casual">娱乐模式</button>
+                    <button class="filter-btn" data-filter="rotating">轮换模式</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模式网格 -->
+        <section class="modes-grid-section">
+            <div class="container">
+                <div class="modes-grid-enhanced">
+                    <!-- 极地大乱斗 -->
+                    <div class="mode-card-enhanced" data-category="casual">
+                        <div class="mode-card-header">
+                            <div class="mode-card-icon">
+                                <img src="images/modes/aram.svg" alt="极地大乱斗" loading="lazy">
+                            </div>
+                            <div class="mode-card-badge casual">娱乐</div>
+                        </div>
+                        <div class="mode-card-body">
+                            <h3>极地大乱斗</h3>
+                            <p class="mode-card-subtitle">ARAM</p>
+                            <p class="mode-card-desc">单条路线，随机英雄，快节奏团战。没有回城，只有一条命，更适合休闲娱乐。</p>
+                            <div class="mode-card-meta">
+                                <span><i>👥</i> 5v5</span>
+                                <span><i>⏱️</i> 15-25分钟</span>
+                                <span><i>🎲</i> 随机英雄</span>
+                            </div>
+                        </div>
+                        <div class="mode-card-footer">
+                            <div class="mode-tags">
+                                <span class="mode-tag">团战密集</span>
+                                <span class="mode-tag">快节奏</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 云顶之弈 -->
+                    <div class="mode-card-enhanced" data-category="competitive">
+                        <div class="mode-card-header">
+                            <div class="mode-card-icon">
+                                <img src="images/modes/tft.svg" alt="云顶之弈" loading="lazy">
+                            </div>
+                            <div class="mode-card-badge competitive">竞技</div>
+                        </div>
+                        <div class="mode-card-body">
+                            <h3>云顶之弈</h3>
+                            <p class="mode-card-subtitle">Teamfight Tactics</p>
+                            <p class="mode-card-desc">自走棋模式，8名玩家同场竞技，通过购买、升级英雄组成阵容，策略性极强。</p>
+                            <div class="mode-card-meta">
+                                <span><i>👥</i> 8人对战</span>
+                                <span><i>⏱️</i> 30-40分钟</span>
+                                <span><i>🧠</i> 策略为王</span>
+                            </div>
+                        </div>
+                        <div class="mode-card-footer">
+                            <div class="mode-tags">
+                                <span class="mode-tag">自走棋</span>
+                                <span class="mode-tag">策略</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 无限火力 -->
+                    <div class="mode-card-enhanced" data-category="rotating">
+                        <div class="mode-card-header">
+                            <div class="mode-card-icon hot">
+                                <img src="images/modes/urf.svg" alt="无限火力" loading="lazy">
+                            </div>
+                            <div class="mode-card-badge rotating">轮换</div>
+                        </div>
+                        <div class="mode-card-body">
+                            <h3>无限火力</h3>
+                            <p class="mode-card-subtitle">URF</p>
+                            <p class="mode-card-desc">技能冷却时间大幅降低，法力无限，超高攻速。快节奏、高伤害的娱乐模式。</p>
+                            <div class="mode-card-meta">
+                                <span><i>⚡</i> 80%冷却</span>
+                                <span><i>💧</i> 无限法力</span>
+                                <span><i>🔥</i> 超爽体验</span>
+                            </div>
+                        </div>
+                        <div class="mode-card-footer">
+                            <div class="mode-tags">
+                                <span class="mode-tag hot">热门</span>
+                                <span class="mode-tag">限时开放</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 极限闪击 -->
+                    <div class="mode-card-enhanced" data-category="rotating">
+                        <div class="mode-card-header">
+                            <div class="mode-card-icon">
+                                <img src="images/modes/blitz.svg" alt="极限闪击" loading="lazy">
+                            </div>
+                            <div class="mode-card-badge rotating">轮换</div>
+                        </div>
+                        <div class="mode-card-body">
+                            <h3>极限闪击</h3>
+                            <p class="mode-card-subtitle">Nexus Blitz</p>
+                            <p class="mode-card-desc">快节奏2v2v2v2v2模式，随机事件，丛林竞技场。15分钟内决定胜负，紧张刺激。</p>
+                            <div class="mode-card-meta">
+                                <span><i>👥</i> 多队混战</span>
+                                <span><i>⏱️</i> 15分钟</span>
+                                <span><i>🎪</i> 随机事件</span>
+                            </div>
+                        </div>
+                        <div class="mode-card-footer">
+                            <div class="mode-tags">
+                                <span class="mode-tag">快节奏</span>
+                                <span class="mode-tag">多队竞技</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 末日人机 -->
+                    <div class="mode-card-enhanced" data-category="rotating">
+                        <div class="mode-card-header">
+                            <div class="mode-card-icon">
+                                <img src="images/modes/doom.svg" alt="末日人机" loading="lazy">
+                            </div>
+                            <div class="mode-card-badge rotating">轮换</div>
+                        </div>
+                        <div class="mode-card-body">
+                            <h3>末日人机</h3>
+                            <p class="mode-card-subtitle">Doom Bots</p>
+                            <p class="mode-card-desc">面对拥有变态技能组合的AI敌人。定期开放的挑战模式，考验玩家的极限操作。</p>
+                            <div class="mode-card-meta">
+                                <span><i>🤖</i> PvE</span>
+                                <span><i>💀</i> 变态AI</span>
+                                <span><i>🏆</i> 挑战模式</span>
+                            </div>
+                        </div>
+                        <div class="mode-card-footer">
+                            <div class="mode-tags">
+                                <span class="mode-tag">挑战</span>
+                                <span class="mode-tag">限时开放</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 训练模式 -->
+                    <div class="mode-card-enhanced" data-category="casual">
+                        <div class="mode-card-header">
+                            <div class="mode-card-icon">
+                                <img src="images/modes/practice.svg" alt="训练模式" loading="lazy">
+                            </div>
+                            <div class="mode-card-badge casual">娱乐</div>
+                        </div>
+                        <div class="mode-card-body">
+                            <h3>训练模式</h3>
+                            <p class="mode-card-subtitle">Practice Tool</p>
+                            <p class="mode-card-desc">练习英雄技能、连招和走位。可以设置假人、调整冷却、测试装备效果。</p>
+                            <div class="mode-card-meta">
+                                <span><i>👤</i> 单人练习</span>
+                                <span><i>🎯</i> 技能测试</span>
+                                <span><i>📈</i> 新手友好</span>
+                            </div>
+                        </div>
+                        <div class="mode-card-footer">
+                            <div class="mode-tags">
+                                <span class="mode-tag">练习</span>
+                                <span class="mode-tag">新手推荐</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 扭曲丛林 -->
+                    <div class="mode-card-enhanced archived" data-category="all">
+                        <div class="mode-card-header">
+                            <div class="mode-card-icon">
+                                <img src="images/modes/treeline.svg" alt="扭曲丛林" loading="lazy">
+                            </div>
+                            <div class="mode-card-badge archived">已下架</div>
+                        </div>
+                        <div class="mode-card-body">
+                            <h3>扭曲丛林</h3>
+                            <p class="mode-card-subtitle">Twisted Treeline</p>
+                            <p class="mode-card-desc">3v3小规模对战，更快的游戏节奏。目前已下架，但仍是许多玩家的美好回忆。</p>
+                            <div class="mode-card-meta">
+                                <span><i>👥</i> 3v3</span>
+                                <span><i>🗺️</i> 两条路线</span>
+                                <span><i>⏱️</i> 20分钟</span>
+                            </div>
+                        </div>
+                        <div class="mode-card-footer">
+                            <div class="mode-tags">
+                                <span class="mode-tag">经典回忆</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模式对比 -->
+        <section class="modes-comparison-section">
+            <div class="container">
+                <h2 class="section-title">模式对比</h2>
+                <p class="section-subtitle">快速了解各模式特点</p>
+                <div class="comparison-table-wrap">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>模式</th>
+                                <th>人数</th>
+                                <th>时长</th>
+                                <th>难度</th>
+                                <th>特点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>召唤师峡谷</strong></td>
+                                <td>5v5</td>
+                                <td>30-45分钟</td>
+                                <td><span class="difficulty-bar" style="--difficulty: 80%"></span></td>
+                                <td>经典竞技</td>
+                            </tr>
+                            <tr>
+                                <td><strong>极地大乱斗</strong></td>
+                                <td>5v5</td>
+                                <td>15-25分钟</td>
+                                <td><span class="difficulty-bar" style="--difficulty: 40%"></span></td>
+                                <td>随机团战</td>
+                            </tr>
+                            <tr>
+                                <td><strong>云顶之弈</strong></td>
+                                <td>8人</td>
+                                <td>30-40分钟</td>
+                                <td><span class="difficulty-bar" style="--difficulty: 70%"></span></td>
+                                <td>策略自走棋</td>
+                            </tr>
+                            <tr>
+                                <td><strong>无限火力</strong></td>
+                                <td>5v5</td>
+                                <td>15-20分钟</td>
+                                <td><span class="difficulty-bar" style="--difficulty: 20%"></span></td>
+                                <td>爽快娱乐</td>
+                            </tr>
+                            <tr>
+                                <td><strong>训练模式</strong></td>
+                                <td>单人</td>
+                                <td>不限</td>
+                                <td><span class="difficulty-bar" style="--difficulty: 10%"></span></td>
+                                <td>练习提升</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -210,5 +407,29 @@
     </footer>
 
     <script src="js/app.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const modeCards = document.querySelectorAll('.mode-card-enhanced');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.dataset.filter;
+                    
+                    modeCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeInUp 0.5s ease forwards';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
