@@ -1304,7 +1304,16 @@ function buildSkinsFromDataDragon(skins) {
 }
 
 function mergeHeroData(baseHero, detail) {
-    if (!detail) return baseHero;
+    if (!detail) {
+        const heroId = baseHero.id || '';
+        const loreData = CHAMPION_LORE[heroId] || {};
+        return {
+            ...baseHero,
+            title: loreData.title || baseHero.title,
+            lore: loreData.lore || baseHero.lore || '暂无背景故事',
+            quote: loreData.quote || baseHero.quote || ''
+        };
+    }
     const heroId = baseHero.id || '';
     const loreData = CHAMPION_LORE[heroId] || {};
     return {
@@ -1312,7 +1321,7 @@ function mergeHeroData(baseHero, detail) {
         ...detail,
         title: loreData.title || detail.title || baseHero.title,
         lore: loreData.lore || detail.lore || baseHero.lore || '暂无背景故事',
-        quote: loreData.quote || baseHero.quote || '',
+        quote: loreData.quote || detail.quote || baseHero.quote || '',
         playstyle: detail.playstyle || baseHero.playstyle,
         builds: detail.builds || baseHero.builds,
         runes: detail.runes || baseHero.runes,
