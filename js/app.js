@@ -361,12 +361,13 @@ function createFeaturedChampionCard(hero) {
     const heroImage = hero.image || DEFAULT_HERO_ICON;
     const intro = sanitizeText(hero.title || '').replace(/^the\s+/i, '');
     const loreSummary = summarizeLore(hero.lore, 64);
+    const skinIndex = HERO_BANNER_SKIN_MAP[hero.id] || 0;
 
     return `
         <div class="champion-card featured-champion-card" data-id="${hero.id}">
             <div class="champion-image">
                 ${createImageHtml(
-                    getChampionLoadingUrl(hero, 0),
+                    getChampionSplashUrl(hero, skinIndex),
                     `${hero.name} 高清立绘`,
                     heroImage,
                     'champion-image-img',
@@ -396,9 +397,10 @@ function createChampionCard(hero) {
 
     const difficultyClass = getDifficultyClass(hero.difficulty);
     const heroImage = hero.image || DEFAULT_HERO_ICON;
+    const skinIndex = HERO_BANNER_SKIN_MAP[hero.id] || 0;
     const heroImageHtml = createImageHtml(
-        getChampionLoadingUrl(hero, 0),
-        `${hero.name} 头像`,
+        getChampionTilesUrl(hero, skinIndex),
+        `${hero.name} 高清头像`,
         heroImage,
         'champion-image-img',
         'lazy'
@@ -781,12 +783,13 @@ function createStrategyHeroCard(hero) {
     const tipText = summarizeLore(tipSource, 76);
     const coreBuild = Array.isArray(hero.builds?.core) ? hero.builds.core.slice(0, 3).join(' / ') : '根据对局选择核心装备';
     const runeText = hero.runes?.keystone ? `${hero.runes.primary} · ${hero.runes.keystone}` : '根据分路选择主系符文';
+    const skinIndex = HERO_BANNER_SKIN_MAP[hero.id] || 0;
 
     return `
         <article class="strategy-hero-card" data-id="${hero.id}">
             <div class="champion-image">
                 ${createImageHtml(
-                    getChampionLoadingUrl(hero, 0),
+                    getChampionTilesUrl(hero, skinIndex),
                     `${hero.name} 高清立绘`,
                     hero.image || DEFAULT_HERO_ICON,
                     'champion-image-img',
@@ -920,6 +923,12 @@ function getChampionLoadingUrl(hero, skinIndex = 0) {
     const championKey = getChampionKey(hero);
     const safeIndex = Number.isInteger(skinIndex) && skinIndex >= 0 ? skinIndex : 0;
     return `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${championKey}_${safeIndex}.jpg`;
+}
+
+function getChampionTilesUrl(hero, skinIndex = 0) {
+    const championKey = getChampionKey(hero);
+    const safeIndex = Number.isInteger(skinIndex) && skinIndex >= 0 ? skinIndex : 0;
+    return `https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/${championKey}_${safeIndex}.jpg`;
 }
 
 function getChampionSkinUrl(hero, skinIndex = 0) {
