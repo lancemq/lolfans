@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷克顿攻略 鳄鱼打法详解 - 英雄联盟爱好者</title>
+    <meta name="description" content="雷克顿最全攻略，包含技能详解、出装推荐、符文搭配、对线技巧、连招教学。掌握鳄鱼核心技巧，从入门到精通。">
+    <meta name="keywords" content="雷克顿攻略,鳄鱼,雷克顿连招,雷克顿出装,雷克顿符文,对线技巧">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lolfans.xyz/renekton.html">
+
+    <meta property="og:title" content="雷克顿攻略 鳄鱼 - 英雄联盟爱好者">
+    <meta property="og:description" content="雷克顿最全攻略，技能连招详解">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lolfans.xyz/renekton.html">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.lolfans.xyz/renekton.html">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="主导航">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="返回首页">
+                    <img class="brand-logo" src="images/logo.svg" alt="英雄联盟爱好者" width="120" height="40" loading="eager">
+                </a>
+            </div>
+            <button class="hamburger" aria-label="打开导航菜单" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="champions.html">英雄列表</a></li>
+                <li><a href="game-modes.html">游戏模式</a></li>
+                <li><a href="guide.html">新手指南</a></li>
+                <li><a href="game-data.html">游戏资料</a></li>
+                <li><a href="strategy-center.html" class="active">攻略中心</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="hero-guide-page">
+        <div class="container">
+            <header class="guide-hero-header">
+                <div class="guide-hero-splash" style="background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Renekton_0.jpg');"></div>
+                <div class="guide-hero-overlay"></div>
+                <div class="guide-hero-info">
+                    <nav class="breadcrumb" aria-label="面包屑导航">
+                        <a href="strategy-center.html">攻略中心</a>
+                        <span class="separator">/</span>
+                        <span class="current">荒漠屠夫 雷克顿</span>
+                    </nav>
+                    <h1 class="guide-hero-title">荒漠屠夫</h1>
+                    <p class="guide-hero-subtitle">雷克顿</p>
+                    <div class="guide-hero-roles">
+                        <span class="role-tag role-fighter">战士</span>
+                        <span class="role-tag role-tank">坦克</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="guide-quick-nav">
+                <a href="#playstyles" class="quick-nav-item">
+                    <span class="quick-nav-icon">🎮</span>
+                    <span>打法选择</span>
+                </a>
+                <a href="#abilities" class="quick-nav-item">
+                    <span class="quick-nav-icon">⚡</span>
+                    <span>技能详解</span>
+                </a>
+                <a href="#combos" class="quick-nav-item">
+                    <span class="quick-nav-icon">🔥</span>
+                    <span>连招教学</span>
+                </a>
+                <a href="#matchups" class="quick-nav-item">
+                    <span class="quick-nav-icon">⚔️</span>
+                    <span>对线技巧</span>
+                </a>
+                <a href="#builds" class="quick-nav-item">
+                    <span class="quick-nav-icon">🎒</span>
+                    <span>出装符文</span>
+                </a>
+            </div>
+
+            <section class="guide-section" id="playstyles">
+                <h2 class="section-title">
+                    <span class="title-icon">🎮</span>
+                    两种打法选择
+                </h2>
+                <p class="section-subtitle">根据阵容和对局情况选择合适的打法风格</p>
+
+                <div class="playstyle-cards">
+                    <article class="playstyle-card-full">
+                        <div class="playstyle-card-header">
+                            <h3>上单战士</h3>
+                            <span class="playstyle-difficulty">难度：简单</span>
+                        </div>
+                        <div class="playstyle-card-body">
+                            <p>主流打法，利用怒气的机制在线上建立优势。前期伤害极高，是典型的线霸英雄。</p>
+                            <ul class="checklist">
+                                <li><strong>优点：</strong>对线能力强，控制稳定，前中期强势</li>
+                                <li><strong>缺点：</strong>后期相对乏力，需要前期结束比赛</li>
+                                <li><strong>适合：</strong>新手玩家入门</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="playstyle-card-full">
+                        <div class="playstyle-card-header">
+                            <h3>半肉坦克</h3>
+                            <span class="playstyle-difficulty">难度：简单</span>
+                        </div>
+                        <div class="playstyle-card-body">
+                            <p>利用高额的生命值和护甲魔抗在团战中吸收伤害，同时保持一定的输出能力。</p>
+                            <ul class="checklist">
+                                <li><strong>优点：</strong>团战生存能力强，前排能力出色</li>
+                                <li><strong>缺点：</strong>伤害略有下降</li>
+                                <li><strong>适合：</strong>团队需要前排时</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="guide-section" id="abilities">
+                <h2 class="section-title">
+                    <span class="title-icon">⚡</span>
+                    技能详解
+                </h2>
+
+                <div class="ability-cards">
+                    <article class="ability-card">
+                        <div class="ability-header">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/passive/Renekton_P.png" alt="被动技能" class="ability-icon">
+                            <div class="ability-info">
+                                <h3>怒之领域 (被动)</h3>
+                                <span class="ability-type">被动技能</span>
+                            </div>
+                        </div>
+                        <div class="ability-details">
+                            <p>雷克顿通过攻击和击杀单位来积累怒意。怒意达到50%以上时，部分技能会获得增强效果。怒意还会提供额外的生命值回复。</p>
+                            <ul class="checklist">
+                                <li>怒气是鳄鱼的核心机制</li>
+                                <li>50怒气以上技能获得增强</li>
+                                <li>满怒时普攻有额外伤害</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="ability-card">
+                        <div class="ability-header">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/RenektonQ.png" alt="Q技能" class="ability-icon">
+                            <div class="ability-info">
+                                <h3>暴君狂击 (Q)</h3>
+                                <span class="ability-type">Q 技能</span>
+                            </div>
+                        </div>
+                        <div class="ability-details">
+                            <p>挥动武器对周围敌人造成伤害并回复生命值。50怒气以上时，伤害和回复量都会提升。</p>
+                            <ul class="checklist">
+                                <li>主要清线和消耗技能</li>
+                                <li>满怒Q伤害极高且回复可观</li>
+                                <li>对线换血的核心技能</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="ability-card">
+                        <div class="ability-header">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/RenektonW.png" alt="W技能" class="ability-icon">
+                            <div class="ability-info">
+                                <h3>冷酷捕猎 (W)</h3>
+                                <span class="ability-type">W 技能</span>
+                            </div>
+                        </div>
+                        <div class="ability-details">
+                            <p>对目标进行两次打击，造成伤害并眩晕。50怒气以上时，伤害提升且眩晕时间延长。</p>
+                            <ul class="checklist">
+                                <li>主要控制技能，稳定眩晕</li>
+                                <li>满怒W眩晕时间更长</li>
+                                <li>可重置普攻，打出更高伤害</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="ability-card">
+                        <div class="ability-header">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/RenektonE.png" alt="E技能" class="ability-icon">
+                            <div class="ability-info">
+                                <h3>横冲直撞 (E)</h3>
+                                <span class="ability-type">E 技能</span>
+                            </div>
+                        </div>
+                        <div class="ability-details">
+                            <p>向目标方向冲刺，对路径上的敌人造成伤害。50怒气以上时，获得额外护甲穿透并造成减速。</p>
+                            <ul class="checklist">
+                                <li>位移技能，可穿越小兵</li>
+                                <li>两段E可用来追击或逃跑</li>
+                                <li>满怒E有减速效果</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="ability-card">
+                        <div class="ability-header">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/RenektonR.png" alt="R技能" class="ability-icon">
+                            <div class="ability-info">
+                                <h3>终极统治 (R)</h3>
+                                <span class="ability-type">R 技能</span>
+                            </div>
+                        </div>
+                        <div class="ability-details">
+                            <p>变成巨人形态，获得额外生命值和移动速度。在巨人形态期间，每秒会消耗怒意。</p>
+                            <ul class="checklist">
+                                <li>团战入场技能，获得额外坦度</li>
+                                <li>增加移动速度便于追击</li>
+                                <li>配合Q技能可快速积累怒气</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="guide-section" id="combos">
+                <h2 class="section-title">
+                    <span class="title-icon">🔥</span>
+                    连招教学
+                </h2>
+
+                <div class="combo-cards">
+                    <article class="combo-card">
+                        <h3>基础连招：EAWAQ</h3>
+                        <p class="combo-desc">最常用的对线消耗连招</p>
+                        <div class="combo-steps">
+                            <span class="combo-step">E 接近</span>
+                            <span class="combo-step">A 普攻</span>
+                            <span class="combo-step">W 眩晕</span>
+                            <span class="combo-step">A 重置普攻</span>
+                            <span class="combo-step">Q 伤害+回复</span>
+                        </div>
+                    </article>
+
+                    <article class="combo-card">
+                        <h3>秒杀连招：EAWAQERE</h3>
+                        <p class="combo-desc">满怒完整连招</p>
+                        <div class="combo-steps">
+                            <span class="combo-step">E 接近</span>
+                            <span class="combo-step">A+W 眩晕</span>
+                            <span class="combo-step">A+Q 伤害</span>
+                            <span class="combo-step">E 追击</span>
+                            <span class="combo-step">E 第二段</span>
+                        </div>
+                    </article>
+
+                    <article class="combo-card">
+                        <h3>团战连招：REAWAQ</h3>
+                        <p class="combo-desc">团战入场连招</p>
+                        <div class="combo-steps">
+                            <span class="combo-step">R 加速入场</span>
+                            <span class="combo-step">E 接近脆皮</span>
+                            <span class="combo-step">A+W 控制</span>
+                            <span class="combo-step">A+Q 伤害+回复</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="guide-section" id="matchups">
+                <h2 class="section-title">
+                    <span class="title-icon">⚔️</span>
+                    对线技巧
+                </h2>
+
+                <div class="matchup-grid">
+                    <article class="matchup-card hard">
+                        <h3>克制英雄</h3>
+                        <ul class="checklist">
+                            <li><strong>锐雯：</strong>前期强势可压制，注意躲避连招</li>
+                            <li><strong>剑姬：</strong>对拼能力强，注意W格挡时机</li>
+                            <li><strong>诺手：</strong>需要一定操作，避免被外圈Q</li>
+                        </ul>
+                    </article>
+
+                    <article class="matchup-card difficult">
+                        <h3>劣势对线</h3>
+                        <ul class="checklist">
+                            <li><strong>VN：</strong>手长且有位移，容易被风筝</li>
+                            <li><strong>奎因：</strong>手长+爆发，注意保持血量</li>
+                            <li><strong>提莫：</strong>手长消耗能力强，需要队友Gank</li>
+                        </ul>
+                    </article>
+
+                    <article class="matchup-card neutral">
+                        <h3>均势对线</h3>
+                        <ul class="checklist">
+                            <li><strong>亚索：</strong>看谁先手，注意躲避风</li>
+                            <li><strong>刀妹：</strong>需要一定操作，保持消耗</li>
+                            <li><strong>狗头：</strong>前期强势，可直接压制</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="guide-section" id="builds">
+                <h2 class="section-title">
+                    <span class="title-icon">🎒</span>
+                    出装与符文
+                </h2>
+
+                <div class="build-section">
+                    <h3>推荐出装</h3>
+                    <div class="build-order">
+                        <div class="build-item">
+                            <span class="build-order-num">1</span>
+                            <span class="build-item-name">黑色切割者</span>
+                        </div>
+                        <div class="build-item">
+                            <span class="build-order-num">2</span>
+                            <span class="build-item-name">忍者足具</span>
+                        </div>
+                        <div class="build-item">
+                            <span class="build-order-num">3</span>
+                            <span class="build-item-name">斯特拉克的挑战护手</span>
+                        </div>
+                        <div class="build-item">
+                            <span class="build-order-num">4</span>
+                            <span class="build-item-name">死亡之舞</span>
+                        </div>
+                        <div class="build-item">
+                            <span class="build-order-num">5</span>
+                            <span class="build-item-name">兰顿之兆</span>
+                        </div>
+                        <div class="build-item">
+                            <span class="build-order-num">6</span>
+                            <span class="build-item-name">守护天使</span>
+                        </div>
+                    </div>
+                    <ul class="checklist">
+                        <li><strong>核心思路：</strong>黑切提供穿甲和CD，是鳄鱼的核心装备</li>
+                        <li><strong>可选替换：</strong>对手AP多可出水银之靴</li>
+                    </ul>
+                </div>
+
+                <div class="build-section">
+                    <h3>推荐符文</h3>
+                    <div class="rune-page">
+                        <div class="rune-tree">
+                            <h4>主系：精密</h4>
+                            <div class="rune-slots">
+                                <span class="rune-slot">征服者</span>
+                                <span class="rune-slot">凯旋</span>
+                                <span class="rune-slot">传说：欢欣</span>
+                                <span class="rune-slot">致命一击</span>
+                            </div>
+                        </div>
+                        <div class="rune-tree">
+                            <h4>副系：坚决</h4>
+                            <div class="rune-slots">
+                                <span class="rune-slot">复苏之风</span>
+                                <span class="rune-slot">复苏</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="checklist">
+                        <li><strong>符文解析：</strong>征服者提供持续作战能力，复苏增加续航</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="guide-section">
+                <h2 class="section-title">
+                    <span class="title-icon">💡</span>
+                    进阶技巧
+                </h2>
+                <ul class="checklist">
+                    <li><strong>怒气温控：</strong>保持50怒以上，技能获得增强效果</li>
+                    <li><strong>W重置：</strong>W可以重置普攻，快速打出更高伤害</li>
+                    <li><strong>E位移：</strong>E可穿越小兵和墙体，合理使用追击和逃跑</li>
+                    <li><strong>R加速：</strong>R技能提供加速，团战入场更顺畅</li>
+                    <li><strong>前期优势：</strong>鳄鱼是典型的前中期英雄，需要尽快扩大优势</li>
+                </ul>
+            </section>
+
+            <div class="guide-footer-nav">
+                <a href="strategy-center.html" class="back-link">← 返回攻略中心</a>
+                <a href="champions.html" class="back-link">查看更多英雄 →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img class="brand-logo-footer" src="images/logo.svg" alt="英雄联盟爱好者" loading="lazy">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">首页</a>
+                    <a href="champions.html">英雄列表</a>
+                    <a href="game-modes.html">游戏模式</a>
+                    <a href="guide.html">新手指南</a>
+                    <a href="game-data.html">游戏资料</a>
+                    <a href="strategy-center.html">攻略中心</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 英雄联盟爱好者. 本站仅供学习交流使用.</p>
+                <p>英雄联盟是 Riot Games 的注册商标.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>
