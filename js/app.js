@@ -12,6 +12,10 @@ const heroInfoCarouselState = {
     timer: null,
     currentIndex: 0
 };
+const itemsRunesBannerState = {
+    timer: null,
+    currentIndex: 0
+};
 const abilityAssetsCache = {};
 const championDetailCache = {};
 let localStrategyHeroMap = null;
@@ -322,7 +326,93 @@ function initCurrentPage() {
         case 'strategy-center.html':
             initStrategyCenterPage();
             break;
+        case 'items-runes.html':
+            initItemsRunesBannerCarousel();
+            break;
     }
+}
+
+function initItemsRunesBannerCarousel() {
+    const primaryLayer = document.getElementById('itemsRunesHeroBanner');
+    const secondaryLayer = document.getElementById('itemsRunesHeroBannerSecondary');
+    const dotsContainer = document.getElementById('itemsRunesBannerDots');
+    if (!primaryLayer || !secondaryLayer || !dotsContainer) return;
+
+    const slides = [
+        { name: '亚索', url: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg' },
+        { name: '阿狸', url: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg' },
+        { name: '永恩', url: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_0.jpg' },
+        { name: '劫', url: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg' },
+        { name: '薇恩', url: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vayne_0.jpg' }
+    ];
+
+    if (slides.length === 0) return;
+
+    let isAnimating = false;
+    primaryLayer.style.backgroundImage = `url('${slides[0].url}')`;
+    secondaryLayer.style.backgroundImage = '';
+
+    dotsContainer.innerHTML = slides.map((slide, index) => `
+        <button class="banner-dot ${index === 0 ? 'active' : ''}" data-index="${index}" aria-label="切换到${slide.name}背景"></button>
+    `).join('');
+
+    const dotEls = Array.from(dotsContainer.querySelectorAll('.banner-dot'));
+
+    function updateDots(nextIndex) {
+        dotEls.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === nextIndex);
+        });
+    }
+
+    function switchTo(nextIndex) {
+        if (isAnimating || nextIndex === itemsRunesBannerState.currentIndex) return;
+        isAnimating = true;
+
+        secondaryLayer.style.backgroundImage = `url('${slides[nextIndex].url}')`;
+        secondaryLayer.classList.add('active');
+
+        window.setTimeout(() => {
+            primaryLayer.style.backgroundImage = `url('${slides[nextIndex].url}')`;
+            secondaryLayer.classList.remove('active');
+            secondaryLayer.style.backgroundImage = '';
+            itemsRunesBannerState.currentIndex = nextIndex;
+            updateDots(nextIndex);
+            isAnimating = false;
+        }, 800);
+    }
+
+    function nextSlide() {
+        const nextIndex = (itemsRunesBannerState.currentIndex + 1) % slides.length;
+        switchTo(nextIndex);
+    }
+
+    function startAutoplay() {
+        stopAutoplay();
+        itemsRunesBannerState.timer = window.setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoplay() {
+        if (itemsRunesBannerState.timer) {
+            window.clearInterval(itemsRunesBannerState.timer);
+            itemsRunesBannerState.timer = null;
+        }
+    }
+
+    dotEls.forEach(dot => {
+        dot.addEventListener('click', () => {
+            const targetIndex = Number(dot.dataset.index);
+            switchTo(targetIndex);
+            startAutoplay();
+        });
+    });
+
+    const header = primaryLayer.closest('.guide-hero-header');
+    if (header) {
+        header.addEventListener('mouseenter', stopAutoplay);
+        header.addEventListener('mouseleave', startAutoplay);
+    }
+
+    startAutoplay();
 }
 
 // 首页初始化
@@ -1066,8 +1156,8 @@ function initHomeInfoCarousel() {
             label: '版本焦点',
             title: '本周上分节奏',
             desc: '优先控前两条小龙与先锋，15分钟前建立地图资源优势。',
-            link: 'game-data.html',
-            linkText: '查看游戏资料'
+            link: 'items-runes.html',
+            linkText: '查看符文装备'
         },
         {
             label: '实战攻略',
