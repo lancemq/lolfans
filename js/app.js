@@ -16,6 +16,11 @@ const itemsRunesBannerState = {
     timer: null,
     currentIndex: 0
 };
+const itemsRunesCatalogState = {
+    items: [],
+    search: '',
+    type: 'all'
+};
 const abilityAssetsCache = {};
 const championDetailCache = {};
 let localStrategyHeroMap = null;
@@ -328,6 +333,7 @@ function initCurrentPage() {
             break;
         case 'items-runes.html':
             initItemsRunesBannerCarousel();
+            initItemsRunesAllItemsCatalog();
             break;
     }
 }
@@ -413,6 +419,102 @@ function initItemsRunesBannerCarousel() {
     }
 
     startAutoplay();
+}
+
+async function initItemsRunesAllItemsCatalog() {
+    const catalogEl = document.getElementById('allItemsCatalog');
+    const summaryEl = document.getElementById('allItemsSummary');
+    const searchInput = document.getElementById('allItemsSearch');
+    const typeSelect = document.getElementById('allItemsType');
+    if (!catalogEl || !summaryEl || !searchInput || !typeSelect) return;
+
+    try {
+        const url = `https://ddragon.leagueoflegends.com/cdn/${dataDragonVersion}/data/zh_CN/item.json`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('item.json 请求失败');
+        const payload = await response.json();
+
+        const allItems = Object.entries(payload.data || {})
+            .map(([id, item]) => ({ id, ...item }))
+            .filter(item => {
+                const inSummonersRift = item.maps && item.maps['11'];
+                const purchasable = item.inStore !== false;
+                const hasGoldCost = (item.gold && item.gold.total > 0);
+                return inSummonersRift && purchasable && hasGoldCost;
+            })
+            .sort((a, b) => (a.gold.total - b.gold.total) || a.name.localeCompare(b.name, 'zh-CN'));
+
+        if (allItems.length === 0) {
+            summaryEl.textContent = '未读取到装备数据，请稍后重试。';
+            return;
+        }
+
+        itemsRunesCatalogState.items = allItems;
+        itemsRunesCatalogState.search = '';
+        itemsRunesCatalogState.type = 'all';
+
+        const render = () => {
+            const filtered = itemsRunesCatalogState.items.filter(item => {
+                const matchesSearch = item.name.includes(itemsRunesCatalogState.search.trim());
+                const category = getItemCategory(item);
+                const matchesType = itemsRunesCatalogState.type === 'all' || category === itemsRunesCatalogState.type;
+                return matchesSearch && matchesType;
+            });
+            summaryEl.textContent = `已同步 Riot 官方装备库：共 ${itemsRunesCatalogState.items.length} 件，当前筛选结果 ${filtered.length} 件（版本 ${dataDragonVersion}）。`;
+            catalogEl.innerHTML = filtered.map(item => createAllItemCard(item)).join('');
+        };
+
+        searchInput.addEventListener('input', () => {
+            itemsRunesCatalogState.search = searchInput.value || '';
+            render();
+        });
+        typeSelect.addEventListener('change', () => {
+            itemsRunesCatalogState.type = typeSelect.value;
+            render();
+        });
+
+        render();
+    } catch (error) {
+        console.error('加载官方装备数据失败:', error);
+        summaryEl.textContent = '官方装备数据加载失败，请检查网络后刷新页面。';
+        catalogEl.innerHTML = '';
+    }
+}
+
+function createAllItemCard(item) {
+    const iconUrl = `https://ddragon.leagueoflegends.com/cdn/${dataDragonVersion}/img/item/${item.image.full}`;
+    const desc = sanitizeText(item.description || '').slice(0, 90);
+    const category = getItemCategory(item);
+    const metaTags = [
+        category,
+        `总价 ${item.gold.total}`,
+        `售价 ${item.gold.sell}`,
+        ...(item.tags || []).slice(0, 2)
+    ];
+
+    return `
+        <article class="all-item-card">
+            <div class="all-item-head">
+                <img src="${iconUrl}" alt="${item.name}高清图标" loading="lazy">
+                <h3>${item.name}</h3>
+            </div>
+            <div class="all-item-meta">
+                ${metaTags.map(tag => `<span>${tag}</span>`).join('')}
+            </div>
+            <p class="all-item-desc">${desc || '该装备用于提升战斗属性与对局节奏。'}</p>
+        </article>
+    `;
+}
+
+function getItemCategory(item) {
+    const tags = item.tags || [];
+    if (tags.includes('Boots')) return '鞋子';
+    if (tags.includes('Support')) return '辅助';
+    if (tags.includes('Jungle')) return '打野';
+    if (tags.includes('Defense') || tags.includes('Health')) return '防御';
+    if (tags.includes('SpellDamage') || tags.includes('Mana') || tags.includes('ManaRegen') || tags.includes('CooldownReduction')) return '法术';
+    if (tags.includes('Damage') || tags.includes('CriticalStrike') || tags.includes('AttackSpeed') || tags.includes('ArmorPenetration') || tags.includes('LifeSteal') || tags.includes('OnHit')) return '物理';
+    return '功能';
 }
 
 // 首页初始化

@@ -89,9 +89,9 @@
                     <span class="quick-nav-icon">💡</span>
                     <span>灵感系</span>
                 </a>
-                <a href="#items" class="quick-nav-item">
+                <a href="#all-items" class="quick-nav-item">
                     <span class="quick-nav-icon">🎒</span>
-                    <span>装备系统</span>
+                    <span>全部装备</span>
                 </a>
             </div>
 
@@ -441,93 +441,28 @@
                 </div>
             </section>
 
-            <section class="guide-section" id="items">
+            <section class="guide-section" id="all-items">
                 <h2 class="section-title">
-                    <span class="title-icon">🎒</span>
-                    装备系统概览
+                    <span class="title-icon">🧾</span>
+                    官方全部装备图鉴
                 </h2>
-                <p class="section-subtitle">参考官方装备定位整理，含高清图标、适配英雄与购买时机</p>
-
-                <div class="item-showcase-grid">
-                    <article class="item-showcase-card">
-                        <img src="https://ddragon.leagueoflegends.com/cdn/15.4.1/img/item/3031.png" alt="无尽之刃图标" loading="lazy">
-                        <h3>无尽之刃</h3>
-                        <p>暴击核心终端装，适合薇恩、金克丝、卡莎等持续输出型射手。</p>
-                        <ul class="checklist">
-                            <li><strong>适配阵容：</strong>己方有稳定前排，能提供持续输出环境</li>
-                            <li><strong>购买时机：</strong>2-3件成型后，暴击率达到阈值再补</li>
-                        </ul>
-                    </article>
-
-                    <article class="item-showcase-card">
-                        <img src="https://ddragon.leagueoflegends.com/cdn/15.4.1/img/item/6692.png" alt="德拉克萨的暮刃图标" loading="lazy">
-                        <h3>德拉克萨的暮刃</h3>
-                        <p>刺客爆发装备，强化先手秒杀能力，常用于劫、泰隆、琪亚娜。</p>
-                        <ul class="checklist">
-                            <li><strong>适配阵容：</strong>敌方后排脆皮多、保护能力弱</li>
-                            <li><strong>购买时机：</strong>首件或第二件，快速滚起击杀节奏</li>
-                        </ul>
-                    </article>
-
-                    <article class="item-showcase-card">
-                        <img src="https://ddragon.leagueoflegends.com/cdn/15.4.1/img/item/3089.png" alt="灭世者的死亡之帽图标" loading="lazy">
-                        <h3>灭世者的死亡之帽</h3>
-                        <p>法师高额AP放大器，适用于发条、辛德拉、维克托等后期法核。</p>
-                        <ul class="checklist">
-                            <li><strong>适配阵容：</strong>团队需要中后期魔法爆发终结团战</li>
-                            <li><strong>购买时机：</strong>2-4件视经济补出，优先在有法穿后选择</li>
-                        </ul>
-                    </article>
-
-                    <article class="item-showcase-card">
-                        <img src="https://ddragon.leagueoflegends.com/cdn/15.4.1/img/item/3157.png" alt="中娅沙漏图标" loading="lazy">
-                        <h3>中娅沙漏</h3>
-                        <p>AP英雄保命关键，针对刺客突进与强开团非常有效。</p>
-                        <ul class="checklist">
-                            <li><strong>适配阵容：</strong>对面有劫、狮子狗、蔚等强突进英雄</li>
-                            <li><strong>购买时机：</strong>第三件前后补齐，团战容错显著提升</li>
-                        </ul>
-                    </article>
-
-                    <article class="item-showcase-card">
-                        <img src="https://ddragon.leagueoflegends.com/cdn/15.4.1/img/item/3075.png" alt="荆棘之甲图标" loading="lazy">
-                        <h3>荆棘之甲</h3>
-                        <p>坦克对抗高回复阵容的核心反制装，常见于前排与功能辅助。</p>
-                        <ul class="checklist">
-                            <li><strong>适配阵容：</strong>敌方有吸血战士、强回复射手或治疗辅助</li>
-                            <li><strong>购买时机：</strong>中期开团频繁阶段优先补出</li>
-                        </ul>
-                    </article>
-
-                    <article class="item-showcase-card">
-                        <img src="https://ddragon.leagueoflegends.com/cdn/15.4.1/img/item/3748.png" alt="泰坦九头蛇图标" loading="lazy">
-                        <h3>泰坦九头蛇</h3>
-                        <p>战士/前排的推线与近战AOE强化装，帮助边带与前排输出并存。</p>
-                        <ul class="checklist">
-                            <li><strong>适配阵容：</strong>需要单带牵制，同时保障前排伤害</li>
-                            <li><strong>购买时机：</strong>对线中后期，开始围绕边线运营时补</li>
-                        </ul>
-                    </article>
+                <p class="section-subtitle" id="allItemsSummary">
+                    正在从 Riot 官方 Data Dragon 加载召唤师峡谷可购买装备...
+                </p>
+                <div class="all-items-controls">
+                    <input id="allItemsSearch" type="search" placeholder="搜索装备名称..." aria-label="搜索装备名称">
+                    <select id="allItemsType" aria-label="筛选装备类型">
+                        <option value="all">全部类型</option>
+                        <option value="物理">物理输出</option>
+                        <option value="法术">法术输出</option>
+                        <option value="防御">防御坦克</option>
+                        <option value="鞋子">鞋子</option>
+                        <option value="辅助">辅助</option>
+                        <option value="打野">打野</option>
+                        <option value="功能">功能装备</option>
+                    </select>
                 </div>
-
-                <div class="knowledge-grid two-col item-notes-grid">
-                    <article class="knowledge-card">
-                        <h3>版本常见出装节奏</h3>
-                        <ul class="checklist">
-                            <li><strong>射手：</strong>攻速件→暴击核心→穿甲，最后补保命</li>
-                            <li><strong>法师：</strong>法穿/功能装起手，再补高AP终端装</li>
-                            <li><strong>战士：</strong>半肉核心两件后，按敌方伤害补双抗</li>
-                        </ul>
-                    </article>
-                    <article class="knowledge-card">
-                        <h3>对局动态调整原则</h3>
-                        <ul class="checklist">
-                            <li><strong>逆风：</strong>优先保命和清线，减少高风险输出装</li>
-                            <li><strong>顺风：</strong>扩大压制，优先提升斩杀与推进能力</li>
-                            <li><strong>均势：</strong>根据敌方核心输出类型补针对装</li>
-                        </ul>
-                    </article>
-                </div>
+                <div class="all-items-grid" id="allItemsCatalog"></div>
             </section>
 
             <section class="guide-section">

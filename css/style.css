@@ -3683,6 +3683,81 @@ main {
     margin-top: 10px;
 }
 
+.all-items-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.all-items-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.all-items-controls input,
+.all-items-controls select {
+    background: rgba(4, 12, 22, 0.72);
+    border: 1px solid rgba(200, 170, 110, 0.24);
+    color: var(--text-primary);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+}
+
+.all-items-controls input {
+    flex: 1;
+}
+
+.all-item-card {
+    background: rgba(4, 12, 22, 0.72);
+    border: 1px solid rgba(200, 170, 110, 0.2);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.all-item-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.all-item-head img {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    border: 1px solid rgba(200, 170, 110, 0.5);
+    flex-shrink: 0;
+}
+
+.all-item-head h3 {
+    color: var(--lol-gold);
+    font-size: 0.98rem;
+    line-height: 1.35;
+}
+
+.all-item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.all-item-meta span {
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: rgba(200, 170, 110, 0.14);
+    color: var(--text-secondary);
+    font-size: 0.76rem;
+}
+
+.all-item-desc {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
 @media (max-width: 1200px) {
     .featured-hero-guides {
         grid-template-columns: repeat(3, 1fr);
@@ -3690,6 +3765,10 @@ main {
 
     .item-showcase-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .all-items-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
@@ -3700,6 +3779,14 @@ main {
 
     .featured-hero-guide-card .hero-guide-img {
         height: 170px;
+    }
+
+    .all-items-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .all-items-controls {
+        flex-direction: column;
     }
 }
 
@@ -3713,6 +3800,10 @@ main {
     }
 
     .item-showcase-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .all-items-grid {
         grid-template-columns: 1fr;
     }
 }
