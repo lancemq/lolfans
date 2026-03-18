@@ -353,6 +353,9 @@ function initCurrentPage() {
         case 'guide.html':
             initGuidePage();
             break;
+        case 'game-modes.html':
+            initGameModesPage();
+            break;
         case 'strategy-center.html':
             initStrategyCenterPage();
             break;
@@ -950,6 +953,27 @@ function initGuidePage() {
         container.innerHTML = easyHeroes.map(hero => createChampionCard(hero)).join('');
         addChampionCardListeners(container);
     }
+}
+
+function initGameModesPage() {
+    const filterBtns = document.querySelectorAll('.modes-filter .filter-btn');
+    const modeCards = document.querySelectorAll('.mode-card-enhanced');
+
+    if (!filterBtns.length || !modeCards.length) return;
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(item => item.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter || 'all';
+
+            modeCards.forEach(card => {
+                const matches = filter === 'all' || card.dataset.category === filter;
+                card.style.display = matches ? 'block' : 'none';
+            });
+        });
+    });
 }
 
 // 攻略中心页：热门英雄攻略专题

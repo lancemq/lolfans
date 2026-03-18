@@ -11,17 +11,23 @@ const featuredRoutes = [
   {
     href: '/draft.html',
     image: '/images/strategy/draft-banner.svg',
-    alt: '阵容搭配思路'
+    alt: '阵容搭配思路',
+    title: '阵容搭配',
+    description: '从前排结构、伤害曲线到开团链条，先判断阵容怎么赢。'
   },
   {
     href: '/macro.html',
     image: '/images/strategy/macro-banner.svg',
-    alt: '中期运营路线'
+    alt: '中期运营路线',
+    title: '中期运营',
+    description: '围绕兵线、资源和视野，把优势转成更稳定的地图收益。'
   },
   {
     href: '/training.html',
     image: '/images/strategy/training-banner.svg',
-    alt: '14天训练模板'
+    alt: '14天训练模板',
+    title: '训练模板',
+    description: '把补刀、站位、复盘和资源决策拆成可执行的训练计划。'
   }
 ];
 
@@ -545,23 +551,20 @@ export default function StrategyCenterPage() {
               title="精选路线专题"
               subtitle="用更接近编辑策划页的方式组织阵容、运营和训练入口。"
             />
-            <div className="carousel-container">
-              <div className="carousel-track" id="strategyCarousel">
-                {featuredRoutes.map((route) => (
-                  <div className="carousel-slide" key={route.href}>
-                    <a href={route.href} className="carousel-card-link">
-                      <img src={route.image} alt={route.alt} loading="lazy" />
-                    </a>
+            <div className="featured-routes-grid">
+              {featuredRoutes.map((route) => (
+                <a href={route.href} className="featured-route-card" key={route.href}>
+                  <div className="featured-route-media">
+                    <img src={route.image} alt={route.alt} loading="lazy" />
                   </div>
-                ))}
-              </div>
-              <button className="carousel-btn prev" aria-label="上一页">
-                ‹
-              </button>
-              <button className="carousel-btn next" aria-label="下一页">
-                ›
-              </button>
-              <div className="carousel-dots" id="carouselDots"></div>
+                  <div className="featured-route-body">
+                    <span className="featured-route-tag">{route.title}</span>
+                    <h3>{route.title}</h3>
+                    <p>{route.description}</p>
+                    <span className="featured-route-link">进入专题 →</span>
+                  </div>
+                </a>
+              ))}
             </div>
           </section>
 

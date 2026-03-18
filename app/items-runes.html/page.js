@@ -4,25 +4,82 @@ import { SiteHeader } from '../../components/site-header';
 export const metadata = {
   title: '符文与装备 - 英雄联盟爱好者',
   description:
-    '英雄联盟符文与装备系统详解，符文大陆四大基石符文，AD/AP/坦克装备全解析。掌握符文装备搭配，提升游戏实力。'
+    '英雄联盟符文与装备系统详解，围绕基石符文、装备选择逻辑、对局应对与官方装备图鉴，帮助你更稳定地完成对局构筑。'
 };
 
 const quickNav = [
+  ['#overview', '◎', '构筑总览'],
   ['#runes', '⚡', '符文系统'],
+  ['#item-logic', '🧭', '出装逻辑'],
   ['#precision', '⚔️', '精密系'],
   ['#domination', '🔥', '主宰系'],
   ['#sorcery', '✨', '巫术系'],
   ['#resolve', '🛡️', '坚决系'],
-  ['#inspiration', '💡', '灵感系'],
+  ['#inspiration', '💡', '启迪系'],
   ['#all-items', '🎒', '全部装备']
 ];
 
+const overviewCards = [
+  {
+    title: '先看对局目标',
+    text: '符文决定你想怎么赢这局，装备决定你能不能把这种赢法稳定打出来。先明确自己是打对线、打爆发、打持续输出，还是补团队功能。'
+  },
+  {
+    title: '再看敌方威胁',
+    text: '对手是多控制、多回复、双前排、三刺客还是远程消耗，这些信息会直接决定你的鞋子、防御件和功能件。'
+  },
+  {
+    title: '最后做滚动修正',
+    text: '领先时补强节奏和伤害，均势时保证成型曲线，落后时优先做能让你活下来并继续清线或保人的装备。'
+  }
+];
+
 const runeOverview = [
-  ['⚔️', '精密系', '强化攻击型英雄的持续输出', '适合ADC/战士', 'easy', '精密系符文提供攻击力、攻速和暴击加成，适合依赖普攻输出的英雄。基石符文包括征服者、致命节奏、迅捷步法等。', ['基石符文：征服者、致命节奏、迅捷步法', '定位：ADC、上单战士、打野']],
-  ['🔥', '主宰系', '提升爆发伤害和击杀能力', '适合刺客', 'medium', '主宰系符文提供高爆发和穿甲效果，适合刺客型英雄。基石符文包括电刑、丛刃、掠食者等。', ['基石符文：电刑、丛刃、掠食者', '定位：中单刺客、打野']],
-  ['✨', '巫术系', '强化技能伤害和法力值', '适合法师', 'medium', '巫术系符文提供技能加速、法力和 AP 加成，适合依赖技能输出的法师。基石符文包括奥术彗星、相位猛冲、冰川增幅等。', ['基石符文：奥术彗星、相位猛冲、冰川增幅', '定位：中单法师、辅助']],
-  ['🛡️', '坚决系', '增强生存能力和团队控制', '适合坦克/辅助', 'easy', '坚决系符文提供护甲、魔抗和生命值加成，适合坦克和辅助英雄。基石符文包括不灭之握、余震、守护者等。', ['基石符文：不灭之握、余震、守护者', '定位：上单坦克、辅助']],
-  ['💡', '灵感系', '提供特殊机制和灵活选择', '适合创意玩法', 'hard', '灵感系符文提供特殊机制和全能加成，适合创意玩法和特定英雄。基石符文包括启封的秘籍、全能之石、先攻等。', ['基石符文：启封的秘籍、全能之石、先攻', '定位：辅助、特定套路']]
+  [
+    '⚔️',
+    '精密系',
+    '强化持续输出与长回合战斗',
+    '适合射手/战士',
+    'easy',
+    '精密系更适合依赖普攻、需要长时间站场或靠连续技能叠收益的英雄。常见基石会围绕持续输出、拉扯续航与收尾能力展开。',
+    ['适合定位：射手、战士、部分近战核心', '常见收益：攻速、持续伤害、斩杀或续航', '判断标准：你是否能稳定打满第二轮输出']
+  ],
+  [
+    '🔥',
+    '主宰系',
+    '强调爆发、先手与滚雪球',
+    '适合刺客/爆发打野',
+    'medium',
+    '主宰系适合短时间内完成伤害结算的英雄，尤其是刺客、中野联动和需要利用先手窗口完成击杀的对局。',
+    ['适合定位：刺客、爆发型打野、强先手中单', '常见收益：爆发、穿透、击杀后收益', '判断标准：你能否稳定找到先手秒杀窗口']
+  ],
+  [
+    '✨',
+    '巫术系',
+    '提升技能频率、消耗与拉扯能力',
+    '适合法师/消耗辅助',
+    'medium',
+    '巫术系更偏向技能命中收益、法力管理和节奏拉扯，适合依靠技能消耗、控制和中距离压制的英雄。',
+    ['适合定位：法师、消耗辅助、部分功能中单', '常见收益：技能急速、法力、消耗伤害', '判断标准：你是否靠技能节奏而非贴脸站撸赢线']
+  ],
+  [
+    '🛡️',
+    '坚决系',
+    '提升生存、抗压与团战容错',
+    '适合坦克/保护型辅助',
+    'easy',
+    '坚决系更强调换血容错、硬度和团队保护。当你要承担前排、反开、保后排或抗压对线时，优先考虑这一系。',
+    ['适合定位：坦克、功能辅助、抗压上单', '常见收益：双抗、生命、反手收益', '判断标准：你是否是队伍里要先吃技能的人']
+  ],
+  [
+    '💡',
+    '启迪系',
+    '强调经济、节奏与对局适配',
+    '适合功能玩法',
+    'hard',
+    '启迪系不是单纯提高面板，而是通过额外经济、召唤师技能变化或节奏工具，帮助你更灵活地应对局势。',
+    ['适合定位：功能中单、辅助、特定战术英雄', '常见收益：经济、冷却、节奏工具', '判断标准：你是否需要更高的局外策略空间']
+  ]
 ];
 
 const runeSections = [
@@ -30,62 +87,161 @@ const runeSections = [
     id: 'precision',
     icon: '⚔️',
     title: '精密系符文详解',
-    subtitle: '适合依赖普攻和持续输出的英雄',
+    subtitle: '适合依赖普攻、持续换血与长回合站场的英雄',
     cards: [
-      ['征服者', '攻击英雄时获得适应之力，叠满后对英雄造成伤害时会回复生命值。适合持续战斗的战士和部分 ADC。', ['上单战士：诺手、锐雯、剑魔、亚索、永恩', '打野：赵信、蔚、挖掘机', '部分 ADC：德莱文、卡莎']],
-      ['致命节奏', '攻击敌方英雄时获得攻击速度加成，可以溢出。适合需要高攻速的 ADC 和战士。', ['ADC：VN、大嘴、老鼠、金克斯', '上单：武器大师、蛮王']],
-      ['迅捷步法', '攻击和移动会积攒能量层数，层数满时下次攻击会回复生命值并获得加速。适合续航型英雄。', ['ADC：艾希、MF、赛娜', '上单：肾、慎']]
+      [
+        '强攻',
+        '更适合打短换血和前中期对拼。能够稳定连到三次攻击或技能触发时，能帮你更快建立对线主动权。',
+        ['适合射手与部分战士对线期打压制', '当你要配合辅助或打野快速集火时价值更高']
+      ],
+      [
+        '致命节奏',
+        '更适合高频普攻、拉扯站场和持续输出环境。对需要长时间保持攻击节奏的射手和部分近战核心很友好。',
+        ['适合后排持续输出英雄', '敌方前排较厚、团战时间更长时收益更稳定']
+      ],
+      [
+        '迅捷步法',
+        '偏向续航和对线容错。面对强消耗、手长压制或你需要更稳健过渡发育期时，是更适合新手的选择。',
+        ['适合对线期容易被压血的射手', '也适合需要边打边拉开的部分中上英雄']
+      ]
     ]
   },
   {
     id: 'domination',
     icon: '🔥',
     title: '主宰系符文详解',
-    subtitle: '适合高爆发的刺客英雄',
+    subtitle: '适合需要先手、爆发和滚雪球的对局',
     cards: [
-      ['电刑', '在 3 秒内用 3 个独立技能或攻击命中同一敌人时，造成额外自适应伤害。刺客的标准选择。', ['中单刺客：劫、泰隆、卡特、小鱼人', '打野：螳螂、狮子狗']],
-      ['丛刃', '对敌方英雄的前 3 次普攻获得大量攻速加成。适合依赖普攻的刺客和战士。', ['刺客：劫、狮子狗、螳螂', '战士：赵信、武器']],
-      ['掠食者', '主动激活后获得大量移动速度，下一次攻击或技能会造成额外伤害。适合游走型英雄。', ['中单：加里奥、潘森', '打野：皇子、挖掘机']]
+      [
+        '电刑',
+        '当你能在短时间内稳定打出一套技能时，电刑仍然是最直接的爆发选择。适合刺客与节奏中野。',
+        ['适合中单刺客、爆发型打野', '你的目标是抢先手并快速完成击杀']
+      ],
+      [
+        '丛刃',
+        '适合依赖前三次普攻快速起手的英雄。对需要短窗口完成一轮高频普攻的打法很有效。',
+        ['适合部分刺客与近战战士', '更强调爆发起手，而非长回合拉扯']
+      ],
+      [
+        '掠食者/节奏型方案',
+        '这类选择更看重跑图、游走和先手覆盖范围。适合喜欢用行动半径影响边路的玩家。',
+        ['适合支援型中单与节奏打野', '当对局更需要你先到场，而不是先打满伤害']
+      ]
     ]
   },
   {
     id: 'sorcery',
     icon: '✨',
     title: '巫术系符文详解',
-    subtitle: '适合依赖技能输出的法师英雄',
+    subtitle: '适合依赖技能命中、持续消耗与法力管理的英雄',
     cards: [
-      ['奥术彗星', '用技能命中敌人时召唤彗星造成额外伤害。适合 poke 型法师。', ['中单：泽拉斯、艾妮薇娅、捷拉', '上单：兰博、提莫']],
-      ['相位猛冲', '用技能命中敌人后获得爆发性移动速度。适合需要近身的法师。', ['中单：阿狸、皎月、卡萨丁', '辅助：风女、露露']]
+      [
+        '奥术彗星',
+        '适合技能射程长、命中率稳定的法师和消耗辅助。你的价值在于把对线血量慢慢拉开。',
+        ['适合远程消耗英雄', '对手缺少高机动性时命中收益更高']
+      ],
+      [
+        '召唤艾黎',
+        '在对线频繁消耗或需要保护队友时非常稳定。比起赌爆发，更强调每次技能交换都赚钱。',
+        ['适合法师、软辅、部分上单消耗位', '当你想提高每一波短换血的稳定收益']
+      ],
+      [
+        '相位猛冲',
+        '适合进出战场节奏要求高的英雄。它不是为了多打伤害，而是为了打完一轮之后还能走出危险区域。',
+        ['适合需要近身后再拉开的法师与战士', '面对黏人阵容或需要保命拉扯时很有价值']
+      ]
     ]
   },
   {
     id: 'resolve',
     icon: '🛡️',
     title: '坚决系符文详解',
-    subtitle: '适合坦克和辅助英雄',
+    subtitle: '适合承担前排、反手和保护职责的英雄',
     cards: [
-      ['不灭之握', '每 4 秒对英雄的下次普攻造成额外伤害并回复生命值。适合持续战斗的坦克。', ['上单：狗头、茂凯、塞恩', '辅助：布隆、泰坦']],
-      ['余震', '定身敌方英雄后获得双抗加成并造成范围伤害。适合开团型坦克。', ['上单：奥恩、树人、石像鬼', '辅助：日女、泰坦、机器人']],
-      ['守护者', '为附近的友军提供护盾和加速。保护型辅助的核心选择。', ['辅助：风女、露露、卡尔玛', '上单：慎、肾']]
+      [
+        '不灭之握',
+        '适合频繁短换血的近战上单。你能不断靠普攻换回状态，并逐步把对线优势变成血量与压线权。',
+        ['适合坦克或半肉上单', '面对近战对线时最容易稳定触发']
+      ],
+      [
+        '余震',
+        '当你的英雄带稳定控制，且团战职责是先手或反手时，余震能显著提高进场容错。',
+        ['适合硬辅与开团坦克', '对局越需要你先吃技能，余震越有价值']
+      ],
+      [
+        '守护者',
+        '偏保护型思路，强调保后排和抗第一轮伤害。当队友是核心输出点时，守护者的价值非常稳定。',
+        ['适合软辅与保护型前排', '双C 发育良好、需要你兜底时优先考虑']
+      ]
     ]
   },
   {
     id: 'inspiration',
     icon: '💡',
-    title: '灵感系符文详解',
-    subtitle: '适合创意玩法和特定英雄',
+    title: '启迪系符文详解',
+    subtitle: '适合看重经济与战术灵活性的英雄',
     cards: [
-      ['启封的秘籍', '可以更换召唤师技能，击杀单位获得额外经验。适合需要灵活召唤师技能的英雄。', ['中单：卡牌、时光', '辅助：赛娜、琴女']],
-      ['先攻', '对敌方英雄的第一次攻击获得额外伤害和金币。适合前期强势英雄。', ['上单：潘森、杰斯', '中单：男刀、劫']]
+      [
+        '先攻',
+        '当你能稳定先手打到对方，先攻能把消耗和爆发都转化成经济。适合有中距离压制能力的英雄。',
+        ['适合部分中单、长手上单与节奏打野', '你需要能稳定先手，而不是被迫后手反打']
+      ],
+      [
+        '启封的秘籍',
+        '更偏战术型选择。它提高的是召唤师技能应对面而不是伤害面板，适合熟悉对局节奏后再使用。',
+        ['适合功能中单、辅助', '更适合已经理解对局节点的玩家']
+      ]
     ]
   }
 ];
 
+const decisionCards = [
+  {
+    title: '先做哪一件',
+    steps: ['你要先抢线权，就做战力最直接的组件', '你要稳住对线，就优先续航、鞋子或解控', '你要打第一波资源团，就保证第一件能在那之前成型']
+  },
+  {
+    title: '鞋子怎么选',
+    steps: ['对面控制和普攻威胁高，优先提高容错', '技能型消耗多，优先补机动和法术抗性思路', '领先局也不要无脑贪输出鞋，先看谁能切到你']
+  },
+  {
+    title: '什么时候补功能件',
+    steps: ['敌方回复高，尽早考虑重伤', '敌方前排厚，尽早安排破甲或法穿', '敌方刺客强，第二或第三件就要开始考虑保命']
+  }
+];
+
+const itemPrinciples = [
+  ['爆发型构筑', '适合刺客、爆发法师和需要抢先手的阵容。目标是在第一轮技能里完成击杀，不把战斗拖长。'],
+  ['持续输出构筑', '适合射手、站场战士和部分法核。优先保证攻速、技能循环或站场续航，让你在第二轮、第三轮输出里继续强势。'],
+  ['抗压容错构筑', '适合坦克、保护型辅助以及发育偏慢的核心位。目标不是打最高伤害，而是保证自己能活到关键团并完成职责。'],
+  ['功能反制构筑', '包括减治疗、破盾、解控、保排与推进。很多局输赢不在于面板高低，而在于你是否补了正确的对策件。']
+];
+
 const buildTemplates = [
-  ['ADC 通用模板', ['基石：致命节奏/迅捷步法', '出装：岚切→无尽→饮血→多米尼克', '符文：欢欣+致命一击+血之滋味']],
-  ['中单刺客 通用模板', ['基石：电刑', '出装：暮刃→幽梦→夜之锋刃→巨蛇之牙', '符文：猛然冲击+眼球收集器+寻宝猎人']],
-  ['上单战士 通用模板', ['基石：征服者', '出装：黑切→血手→死亡之舞→板甲', '符文：凯旋+欢欣+致命一击']],
-  ['辅助 通用模板', ['基石：守护者/余震', '出装：监视残物→基克的聚合→骑士之誓', '符文：生命源泉+复苏+坚定']]
+  {
+    title: '射手通用判断模板',
+    summary: '核心不是死记某 3 件套，而是判断这局更需要站得住、打得穿还是先活下来。',
+    items: ['顺风：优先扩大中期输出曲线', '均势：平衡伤害、攻速与生存', '逆风：先保证团战存活和清线效率'],
+    notes: ['面对双前排，尽早安排穿透', '面对强开阵容，保命件与鞋子优先级会上升']
+  },
+  {
+    title: '法师通用判断模板',
+    summary: '法师出装要在伤害、法力和生存之间找平衡。先看你是打对线压制、先手爆发还是团战持续消耗。',
+    items: ['压线型：优先法力与技能频率', '爆发型：优先法强与穿透', '功能型：优先控制、保命或减速类收益'],
+    notes: ['敌方刺客多时，不要把保命件拖得太后', '敌方魔抗堆得快，法穿收益会更明显']
+  },
+  {
+    title: '战士与坦克判断模板',
+    summary: '这类英雄最容易被“只顾面板”带偏。很多时候你需要的是能扛住第一波再继续打，而不是只堆伤害。',
+    items: ['战士：在伤害与韧性之间找平衡', '坦克：根据敌方主输出类型补双抗', '功能前排：优先团队需要的反手或保护能力'],
+    notes: ['对线能不能活过第一轮是关键', '团战要先想清楚自己是开团还是保后排']
+  },
+  {
+    title: '辅助判断模板',
+    summary: '辅助的构筑围绕视野、开团、保人和团队增益展开。越早明确职责，出装越不会乱。',
+    items: ['硬辅：优先开团容错和功能主动装', '软辅：优先保护、回复或强化队友输出', '游走辅助：优先机动与节奏工具'],
+    notes: ['对局拖得越久，主动功能件越值钱', '如果双 C 是主要赢点，优先围绕他们出装']
+  }
 ];
 
 function SectionTitle({ icon, title, subtitle }) {
@@ -107,7 +263,7 @@ export default function ItemsRunesPage() {
 
       <main className="hero-guide-page">
         <div className="container">
-          <header className="guide-hero-header">
+          <header className="guide-hero-header guide-hero-header-rich">
             <div
               className="guide-hero-splash"
               id="itemsRunesHeroBanner"
@@ -121,19 +277,34 @@ export default function ItemsRunesPage() {
               id="itemsRunesHeroBannerSecondary"
             ></div>
             <div className="guide-hero-overlay"></div>
+            <div className="guide-hero-overlay guide-hero-overlay-mesh"></div>
             <div className="guide-hero-info">
               <nav className="breadcrumb" aria-label="面包屑导航">
                 <a href="/">首页</a>
                 <span className="separator">/</span>
                 <span className="current">符文与装备</span>
               </nav>
-              <h1 className="guide-hero-title">符文与装备系统</h1>
-              <p className="guide-hero-subtitle">符文大陆的核心机制</p>
-              <div className="guide-hero-roles">
-                <span className="role-tag role-fighter">符文系统</span>
-                <span className="role-tag role-mage">装备系统</span>
+              <div className="guide-hero-grid">
+                <div className="guide-hero-copy">
+                  <span className="guide-kicker">Build Intelligence Desk</span>
+                  <h1 className="guide-hero-title">符文与装备系统</h1>
+                  <p className="guide-hero-subtitle">不是背答案，而是学会在每一局里做对构筑判断。</p>
+                  <div className="guide-hero-roles">
+                    <span className="role-tag role-fighter">符文系统</span>
+                    <span className="role-tag role-mage">装备系统</span>
+                    <span className="role-tag role-support">对局适配</span>
+                  </div>
+                  <div className="banner-dots" id="itemsRunesBannerDots" aria-label="英雄背景轮播"></div>
+                </div>
+                <aside className="guide-hero-panel">
+                  <span className="guide-panel-tag">构筑顺序</span>
+                  <ol className="guide-panel-list">
+                    <li>先判断自己这局的赢法</li>
+                    <li>再判断敌方主要威胁</li>
+                    <li>最后做滚动修正与功能补件</li>
+                  </ol>
+                </aside>
               </div>
-              <div className="banner-dots" id="itemsRunesBannerDots" aria-label="英雄背景轮播"></div>
             </div>
           </header>
 
@@ -146,11 +317,23 @@ export default function ItemsRunesPage() {
             ))}
           </div>
 
+          <section className="guide-section" id="overview">
+            <SectionTitle icon="◎" title="构筑总览" subtitle="把“选符文”和“出装备”放进同一个决策框架里理解。" />
+            <div className="editorial-grid editorial-grid-3">
+              {overviewCards.map((card) => (
+                <article className="editorial-card" key={card.title}>
+                  <span className="editorial-card-index">{card.title}</span>
+                  <p>{card.text}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
           <section className="guide-section" id="runes">
-            <SectionTitle icon="⚡" title="符文系统概览" subtitle="符文大陆的基石力量，分为五大主系" />
+            <SectionTitle icon="⚡" title="符文系统概览" subtitle="五大主系并不是“强弱排名”，而是五种完全不同的胜利方法。" />
             <div className="playstyle-cards">
               {runeOverview.map(([icon, title, desc, tag, difficulty, body, items]) => (
-                <article className="playstyle-card-full" key={title}>
+                <article className="playstyle-card-full editorial-surface" key={title}>
                   <div className="playstyle-card-header">
                     <span className="playstyle-icon">{icon}</span>
                     <div>
@@ -172,6 +355,30 @@ export default function ItemsRunesPage() {
             </div>
           </section>
 
+          <section className="guide-section" id="item-logic">
+            <SectionTitle icon="🧭" title="出装逻辑" subtitle="出装本质上是把金币换成你最需要的那一种胜率。" />
+            <div className="editorial-grid editorial-grid-3">
+              {decisionCards.map((card) => (
+                <article className="decision-card" key={card.title}>
+                  <h3>{card.title}</h3>
+                  <ol className="ordered-list">
+                    {card.steps.map((step) => (
+                      <li key={step}>{step}</li>
+                    ))}
+                  </ol>
+                </article>
+              ))}
+            </div>
+            <div className="editorial-grid editorial-grid-2">
+              {itemPrinciples.map(([title, text]) => (
+                <article className="knowledge-card" key={title}>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
           {runeSections.map((section) => (
             <section className="guide-section" id={section.id} key={section.id}>
               <SectionTitle icon={section.icon} title={section.title} subtitle={section.subtitle} />
@@ -183,10 +390,10 @@ export default function ItemsRunesPage() {
                       <h3>{title}</h3>
                       <p className="ability-desc">{desc}</p>
                       <div className="ability-tips">
-                        <h4>适用英雄</h4>
+                        <h4>使用提示</h4>
                         <ul>
                           {heroes.map((hero) => (
-                            <li key={hero}>✅ {hero}</li>
+                            <li key={hero}>{hero}</li>
                           ))}
                         </ul>
                       </div>
@@ -197,12 +404,30 @@ export default function ItemsRunesPage() {
             </section>
           ))}
 
+          <section className="guide-section">
+            <SectionTitle icon="📋" title="常见位置构筑模板" subtitle="给你的是判断框架，不是必须一模一样照抄的清单。" />
+            <div className="editorial-grid editorial-grid-2">
+              {buildTemplates.map((template) => (
+                <article className="build-template-card" key={template.title}>
+                  <h3>{template.title}</h3>
+                  <p>{template.summary}</p>
+                  <ul className="checklist">
+                    {template.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                  <div className="build-template-note">
+                    {template.notes.map((note) => (
+                      <span key={note}>{note}</span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
           <section className="guide-section" id="all-items">
-            <SectionTitle
-              icon="🧾"
-              title="官方全部装备图鉴"
-              subtitle="正在从 Riot 官方 Data Dragon 加载召唤师峡谷可购买装备..."
-            />
+            <SectionTitle icon="🧾" title="官方全部装备图鉴" subtitle="支持搜索与类型筛选，直接浏览官方装备图标、价格、标签与说明。" />
             <p className="section-subtitle" id="allItemsSummary">
               正在从 Riot 官方 Data Dragon 加载召唤师峡谷可购买装备...
             </p>
@@ -225,22 +450,6 @@ export default function ItemsRunesPage() {
               </select>
             </div>
             <div className="all-items-grid" id="allItemsCatalog"></div>
-          </section>
-
-          <section className="guide-section">
-            <SectionTitle icon="📋" title="常见英雄符文装备搭配" />
-            <div className="knowledge-grid two-col">
-              {buildTemplates.map(([title, items]) => (
-                <article className="knowledge-card" key={title}>
-                  <h3>{title}</h3>
-                  <ul className="checklist">
-                    {items.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
           </section>
 
           <div className="guide-footer-nav">
