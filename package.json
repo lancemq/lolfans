@@ -1,0 +1,9 @@
+{
+  "name": "league-of-legends-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static League of Legends fan site with Vercel Analytics support.",
+  "dependencies": {
+    "@vercel/analytics": "^1.6.1"
+  }
+}

@@ -80,9 +80,20 @@
     <header class="hero-section">
         <div class="hero-carousel" id="heroCarousel" aria-hidden="true"></div>
         <div class="hero-content">
-            <h2 class="hero-title">探索符文之地</h2>
-            <p class="hero-subtitle">170+ 位独特英雄，无限可能的战斗组合</p>
+            <span class="hero-eyebrow">Summoner Intelligence Hub</span>
+            <h1 class="hero-title">更系统地理解版本，更专业地组织上分路径</h1>
+            <p class="hero-subtitle">围绕英雄、符文、装备、分路与中后期运营，构建一套更清晰的 LOL 学习与实战入口。</p>
             <p class="hero-highlight" id="heroHighlight">当前聚焦：热门英雄</p>
+            <div class="hero-actions">
+                <a href="champions.html" class="cta-button">查看所有英雄</a>
+                <a href="strategy-center.html" class="cta-button cta-button-secondary">进入攻略中心</a>
+            </div>
+            <div class="hero-trustbar">
+                <span>英雄资料</span>
+                <span>出装符文</span>
+                <span>对线技巧</span>
+                <span>版本思路</span>
+            </div>
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-number">170+</span>
@@ -96,8 +107,11 @@
                     <span class="stat-number">无限</span>
                     <span class="stat-label">战术可能</span>
                 </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">核心入口</span>
+                </div>
             </div>
-            <a href="champions.html" class="cta-button">查看所有英雄</a>
         </div>
         <div class="hero-image">
             <div class="hero-info-carousel" id="heroInfoCarousel">
@@ -109,9 +123,19 @@
     <section class="content-hub">
         <div class="container">
             <h2 class="section-title">资料与攻略</h2>
-            <p class="section-subtitle">参考官方常见栏目结构，快速进入你需要的内容</p>
+            <p class="section-subtitle">按“查资料、定路线、看攻略”的使用顺序组织内容，减少信息跳转成本</p>
             <div class="intro-grid">
                 <article class="intro-card">
+                    <div class="intro-card-topline">Data</div>
+                    <div class="intro-icon">
+                        <img class="intro-icon-img" src="images/intro/strategy.svg" alt="英雄数据库" loading="lazy">
+                    </div>
+                    <h3>英雄数据库</h3>
+                    <p>快速查找英雄定位、技能机制、打法入口，适合先建立整体认知。</p>
+                    <a class="cta-button hub-link" href="champions.html">浏览英雄</a>
+                </article>
+                <article class="intro-card">
+                    <div class="intro-card-topline">Build</div>
                     <div class="intro-icon">
                         <img class="intro-icon-img" src="images/intro/game-data.svg" alt="符文装备库" loading="lazy">
                     </div>
@@ -120,6 +144,7 @@
                     <a class="cta-button hub-link" href="items-runes.html">查看符文装备</a>
                 </article>
                 <article class="intro-card">
+                    <div class="intro-card-topline">Macro</div>
                     <div class="intro-icon">
                         <img class="intro-icon-img" src="images/intro/strategy.svg" alt="攻略中心" loading="lazy">
                     </div>
@@ -131,10 +156,48 @@
         </div>
     </section>
 
+    <section class="home-briefing">
+        <div class="container">
+            <div class="briefing-shell">
+                <article class="briefing-main">
+                    <p class="briefing-label">本周作战面板</p>
+                    <h2>先建立稳定框架，再追求细节操作</h2>
+                    <p>首页现在按“英雄理解、构筑判断、运营执行”三层结构组织，更适合新玩家建立路径，也更方便老玩家快速回看重点。</p>
+                    <div class="briefing-points">
+                        <div class="briefing-point">
+                            <strong>01</strong>
+                            <span>先确定主玩位置和英雄池，再看专项攻略。</span>
+                        </div>
+                        <div class="briefing-point">
+                            <strong>02</strong>
+                            <span>遇到出装犹豫时，先回到符文装备页判断功能需求。</span>
+                        </div>
+                        <div class="briefing-point">
+                            <strong>03</strong>
+                            <span>排位前优先看中期运营、资源转换和团战执行模板。</span>
+                        </div>
+                    </div>
+                </article>
+                <div class="briefing-side">
+                    <article class="briefing-card">
+                        <span class="briefing-card-tag">Priority</span>
+                        <h3>推荐阅读顺序</h3>
+                        <p>英雄列表 → 符文装备 → 攻略中心，先搭框架再学细节。</p>
+                    </article>
+                    <article class="briefing-card">
+                        <span class="briefing-card-tag">Focus</span>
+                        <h3>首页定位</h3>
+                        <p>不是内容堆叠，而是给你一个更像专业门户的导航与决策首页。</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="featured-champions">
         <div class="container">
             <h2 class="section-title">热门英雄</h2>
-            <p class="section-subtitle">点击查看详细玩法介绍</p>
+            <p class="section-subtitle">按当前热门与学习价值优先展示，方便快速进入单英雄内容</p>
             <div class="champions-grid" id="featuredChampions">
                 <!-- 动态生成 -->
             </div>
