@@ -1,0 +1,23 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#112945"/>
+      <stop offset="1" stop-color="#091A2D"/>
+    </linearGradient>
+    <linearGradient id="lane" x1="120" y1="80" x2="840" y2="460" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E3C27A"/>
+      <stop offset="1" stop-color="#9AC8FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <rect x="60" y="60" width="840" height="420" rx="20" fill="#0F2238" stroke="#C8AA6E" stroke-opacity="0.45"/>
+  <path d="M160 400C260 360 300 280 380 250C470 215 540 235 620 185C690 142 730 110 800 110" stroke="url(#lane)" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="160" cy="400" r="16" fill="#7FE6BE"/>
+  <circle cx="380" cy="250" r="16" fill="#7FE6BE"/>
+  <circle cx="620" cy="185" r="16" fill="#7FE6BE"/>
+  <circle cx="800" cy="110" r="16" fill="#7FE6BE"/>
+  <text x="150" y="440" fill="#F2E6CF" font-size="28" font-family="Arial">对线发育</text>
+  <text x="330" y="300" fill="#F2E6CF" font-size="28" font-family="Arial">转线推塔</text>
+  <text x="560" y="235" fill="#F2E6CF" font-size="28" font-family="Arial">资源团战</text>
+  <text x="740" y="160" fill="#F2E6CF" font-size="28" font-family="Arial">终结比赛</text>
+</svg>

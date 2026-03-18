@@ -1,0 +1,19 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#10253E"/>
+      <stop offset="1" stop-color="#0A1A2C"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <rect x="70" y="70" width="820" height="400" rx="20" fill="#0D1F34" stroke="#C8AA6E" stroke-opacity="0.35"/>
+  <path d="M170 390L300 250L460 300L620 170L790 240" stroke="#8BC3FF" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="300" cy="250" r="22" fill="#7FE6BE"/>
+  <circle cx="620" cy="170" r="22" fill="#7FE6BE"/>
+  <circle cx="460" cy="300" r="18" fill="#E3C27A"/>
+  <circle cx="790" cy="240" r="18" fill="#E3C27A"/>
+  <path d="M300 228V274" stroke="#0F2238" stroke-width="5"/>
+  <path d="M620 148V194" stroke="#0F2238" stroke-width="5"/>
+  <text x="120" y="145" fill="#F2E6CF" font-size="34" font-family="Arial">关键眼位教学</text>
+  <text x="120" y="188" fill="#C9D6E8" font-size="24" font-family="Arial">河道草丛 · 龙坑入口 · 三角草防守</text>
+</svg>

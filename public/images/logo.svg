@@ -1,0 +1,31 @@
+<svg width="820" height="220" viewBox="0 0 820 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">英雄联盟爱好者</title>
+  <desc id="logoDesc">英雄联盟爱好者网站标志</desc>
+  <defs>
+    <linearGradient id="goldGrad" x1="26" y1="18" x2="182" y2="182" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0E6D2"/>
+      <stop offset="0.52" stop-color="#C8AA6E"/>
+      <stop offset="1" stop-color="#8A6B33"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="225" y1="44" x2="780" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0E6D2"/>
+      <stop offset="0.45" stop-color="#D6B676"/>
+      <stop offset="1" stop-color="#B29057"/>
+    </linearGradient>
+    <filter id="glow" x="0" y="0" width="212" height="212" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feBlend in="SourceGraphic" in2="blur" mode="screen"/>
+    </filter>
+  </defs>
+
+  <rect x="18" y="18" width="172" height="172" rx="26" fill="#08131F" stroke="url(#goldGrad)" stroke-width="4"/>
+  <g filter="url(#glow)">
+    <path d="M104 42L144.7 66V114L104 138L63.3 114V66L104 42Z" fill="url(#goldGrad)"/>
+    <path d="M104 62L127.5 75.8V104.2L104 118L80.5 104.2V75.8L104 62Z" fill="#08131F"/>
+    <path d="M104 74L115.2 80.7V94.1L104 100.8L92.8 94.1V80.7L104 74Z" fill="url(#goldGrad)"/>
+    <path d="M58 146L104 124L150 146" stroke="#C8AA6E" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <text x="224" y="106" fill="url(#textGrad)" font-size="64" font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-weight="700" letter-spacing="2">英雄联盟爱好者</text>
+  <text x="228" y="154" fill="#A09B8C" font-size="24" font-family="'Segoe UI', 'Microsoft YaHei', sans-serif" letter-spacing="6">LEAGUE OF LEGENDS FANS</text>
+</svg>

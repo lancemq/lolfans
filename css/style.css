@@ -1834,8 +1834,8 @@ main {
     color: var(--text-primary);
     outline: none;
     font-size: var(--fs-card);
-    transition: border-color 0.25s ease, box-shadow 0.25s ease,25s ease;
- background 0.}
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
 
 .search-box input::placeholder {
     color: var(--text-muted);

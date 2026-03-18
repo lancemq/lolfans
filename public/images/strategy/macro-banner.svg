@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1a32"/>
+      <stop offset="100%" stop-color="#04182a"/>
+    </linearGradient>
+    <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0e6d2"/>
+      <stop offset="50%" stop-color="#c8aa6e"/>
+      <stop offset="100%" stop-color="#8a6b33"/>
+    </linearGradient>
+    <linearGradient id="cyan2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ac8b9"/>
+      <stop offset="100%" stop-color="#059e8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg2)"/>
+  <circle cx="700" cy="80" r="200" fill="url(#cyan2)" opacity="0.08"/>
+  <circle cx="100" cy="400" r="250" fill="url(#gold2)" opacity="0.05"/>
+  <text x="400" y="150" text-anchor="middle" font-family="sans-serif" font-size="56" font-weight="bold" fill="url(#gold2)">中期运营路线</text>
+  <text x="400" y="210" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#a09b8c">掌握节奏转换，实现翻盘与扩大优势</text>
+  <line x1="280" y1="240" x2="520" y2="240" stroke="url(#gold2)" stroke-width="2" opacity="0.5"/>
+  <g transform="translate(200, 290)">
+    <circle cx="0" cy="0" r="35" fill="none" stroke="url(#cyan2)" stroke-width="2"/>
+    <text x="0" y="8" text-anchor="middle" font-size="24" fill="url(#cyan2)">10'</text>
+  </g>
+  <g transform="translate(400, 290)">
+    <circle cx="0" cy="0" r="35" fill="none" stroke="url(#gold2)" stroke-width="2"/>
+    <text x="0" y="8" text-anchor="middle" font-size="24" fill="url(#gold2)">20'</text>
+  </g>
+  <g transform="translate(600, 290)">
+    <circle cx="0" cy="0" r="35" fill="none" stroke="url(#cyan2)" stroke-width="2"/>
+    <text x="0" y="8" text-anchor="middle" font-size="24" fill="url(#cyan2)">30'</text>
+  </g>
+  <text x="400" y="380" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#6b6f76">优势运营 · 劣势翻盘 · 资源争夺</text>
+  <rect x="0" y="430" width="800" height="20" fill="url(#gold2)" opacity="0.3"/>
+</svg>
