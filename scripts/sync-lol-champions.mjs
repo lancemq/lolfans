@@ -15,6 +15,7 @@ import {
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const OUTPUT_FILE = path.join(ROOT, 'public', 'data', 'champions.json');
+const SITE_META_FILE = path.join(ROOT, 'public', 'data', 'site-meta.json');
 
 async function fetchJson(url) {
   const response = await fetch(url, {
@@ -89,6 +90,20 @@ async function main() {
   };
 
   await writeFile(OUTPUT_FILE, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+  await writeFile(
+    SITE_META_FILE,
+    `${JSON.stringify(
+      {
+        championVersion: latestVersion,
+        championUpdatedAt: new Date().toISOString(),
+        championCount: heroes.length,
+        source: 'Riot Data Dragon'
+      },
+      null,
+      2
+    )}\n`,
+    'utf8'
+  );
   console.log(`Synced ${heroes.length} champions from Riot Data Dragon ${latestVersion}`);
 }
 

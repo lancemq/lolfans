@@ -1,11 +1,15 @@
 import { SiteFooter } from '../components/site-footer';
 import { SiteHeader } from '../components/site-header';
+import { HomeFeaturedChampions, HomeHeroExperience, HomeInfoCarousel } from '../components/home-page-client';
+import { getLocalChampions } from '../lib/local-champions';
+import { buildPageMetadata } from '../lib/site-config';
 
-export const metadata = {
-  title: '英雄联盟爱好者 - LOL攻略、英雄资料大全',
+export const metadata = buildPageMetadata({
+  title: 'LOL攻略、英雄资料大全',
   description:
-    '英雄联盟爱好者网站提供最全的英雄资料、攻略技巧、游戏模式介绍。170+英雄完整数据，新手指南、排位上分攻略，助您快速成为游戏高手。'
-};
+    '英雄联盟爱好者网站提供最全的英雄资料、攻略技巧、游戏模式介绍。170+英雄完整数据、新手指南与排位进阶内容一站查看。',
+  path: '/'
+});
 
 const contentCards = [
   {
@@ -72,22 +76,21 @@ const roles = [
   { id: 'support', icon: '/images/roles/support.svg', alt: '辅助图标', title: '辅助', en: 'Support', desc: '保护团队，控制视野' }
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const heroes = await getLocalChampions();
+
   return (
     <>
       <SiteHeader active="home" />
 
       <header className="hero-section">
-        <div className="hero-carousel" id="heroCarousel" aria-hidden="true"></div>
         <div className="hero-content">
           <span className="hero-eyebrow">Summoner Intelligence Hub</span>
           <h1 className="hero-title">更系统地理解版本，更专业地组织上分路径</h1>
           <p className="hero-subtitle">
             围绕英雄、符文、装备、分路与中后期运营，构建一套更清晰的 LOL 学习与实战入口。
           </p>
-          <p className="hero-highlight" id="heroHighlight">
-            当前聚焦：热门英雄
-          </p>
+          <HomeHeroExperience heroes={heroes} />
           <div className="hero-actions">
             <a href="/champions.html" className="cta-button">
               查看所有英雄
@@ -122,7 +125,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="hero-image">
-          <div className="hero-info-carousel" id="heroInfoCarousel"></div>
+          <HomeInfoCarousel />
         </div>
       </header>
 
@@ -194,7 +197,7 @@ export default function HomePage() {
         <div className="container">
           <h2 className="section-title">热门英雄</h2>
           <p className="section-subtitle">按当前热门与学习价值优先展示，方便快速进入单英雄内容</p>
-          <div className="champions-grid" id="featuredChampions"></div>
+          <HomeFeaturedChampions heroes={heroes} />
         </div>
       </section>
 

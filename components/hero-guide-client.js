@@ -19,7 +19,7 @@ function LoadingCard({ title, text }) {
   );
 }
 
-export function HeroGuideClient({ initialHeroes = [] }) {
+export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
   const searchParams = useSearchParams();
   const heroId = searchParams.get('id') || 'yasuo';
   const [state, setState] = useState({ loading: true, hero: null, catalog: [], version: '14.1.1' });
@@ -55,7 +55,7 @@ export function HeroGuideClient({ initialHeroes = [] }) {
     return <LoadingCard title="未找到攻略数据" text="请从攻略中心重新进入，或检查当前链接中的英雄参数。" />;
   }
 
-  const guide = buildHeroGuideModel(state.hero);
+  const guide = buildHeroGuideModel(state.hero, siteMeta);
   const hero = guide.hero;
   const version = state.version;
   const activeStyle = guide.playstyles[activeStyleIndex] || guide.playstyles[0];

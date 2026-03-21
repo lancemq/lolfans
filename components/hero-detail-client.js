@@ -21,7 +21,7 @@ function LoadingCard({ title, text }) {
   );
 }
 
-export function HeroDetailClient({ initialHeroes = [] }) {
+export function HeroDetailClient({ initialHeroes = [], siteMeta = null }) {
   const searchParams = useSearchParams();
   const heroId = searchParams.get('id') || 'yasuo';
   const [state, setState] = useState({ loading: true, hero: null, catalog: [], version: '14.1.1' });
@@ -111,7 +111,10 @@ export function HeroDetailClient({ initialHeroes = [] }) {
         <article className="detail-summary-card">
           <span className="detail-summary-label">资料来源</span>
           <strong>本地资料 + 官方 Data Dragon</strong>
-          <p>皮肤与技能图标优先使用官方资源，玩法结构保留长期稳定的训练价值。</p>
+          <p>
+            皮肤与技能图标优先使用官方资源，玩法结构保留长期稳定的训练价值。
+            {siteMeta?.championUpdatedAt ? ` 最近同步：${siteMeta.championUpdatedAt}。` : ''}
+          </p>
         </article>
       </section>
 

@@ -4608,6 +4608,24 @@ main {
     cursor: pointer;
 }
 
+.search-page-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.search-box-wide {
+    max-width: 760px;
+    width: 100%;
+}
+
+.search-result-card small {
+    display: block;
+    margin-top: 6px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
 @media (max-width: 1200px) {
     .featured-routes-grid {
         grid-template-columns: 1fr;

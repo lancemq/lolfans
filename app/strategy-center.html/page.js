@@ -1,11 +1,13 @@
 import { SiteFooter } from '../../components/site-footer';
 import { SiteHeader } from '../../components/site-header';
+import { buildPageMetadata } from '../../lib/site-config';
 
-export const metadata = {
-  title: '攻略中心 - 英雄联盟爱好者',
+export const metadata = buildPageMetadata({
+  title: '攻略中心',
   description:
-    '英雄联盟最全攻略，涵盖五路打法、对线技巧、团战思路、排位上分指南。版本强势英雄推荐，阵容搭配分析，助您快速提升水平。'
-};
+    '英雄联盟最全攻略，涵盖五路打法、对线技巧、团战思路、排位上分指南。版本强势英雄推荐，阵容搭配分析，助您快速提升水平。',
+  path: '/strategy-center.html'
+});
 
 const featuredRoutes = [
   {

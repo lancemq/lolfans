@@ -1,4 +1,10 @@
+'use client';
+
+import { useState } from 'react';
+
 export function SiteHeader({ active = 'home' }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="navbar" role="navigation" aria-label="主导航">
       <div className="container">
@@ -13,12 +19,18 @@ export function SiteHeader({ active = 'home' }) {
             />
           </a>
         </div>
-        <button className="hamburger" aria-label="打开导航菜单" aria-expanded="false">
+        <button
+          className={`hamburger ${isOpen ? 'active' : ''}`}
+          aria-label="打开导航菜单"
+          aria-expanded={isOpen}
+          onClick={() => setIsOpen((value) => !value)}
+          type="button"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <ul className="nav-links" role="menubar">
+        <ul className={`nav-links ${isOpen ? 'active' : ''}`} role="menubar">
           <li>
             <a href="/" className={active === 'home' ? 'active' : undefined}>
               首页
@@ -52,12 +64,12 @@ export function SiteHeader({ active = 'home' }) {
               攻略中心
             </a>
           </li>
+          <li>
+            <a href="/search.html" className={active === 'search' ? 'active' : undefined}>
+              全站搜索
+            </a>
+          </li>
         </ul>
-        <div className="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </div>
     </nav>
   );

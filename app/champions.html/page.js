@@ -1,11 +1,15 @@
+import { ChampionDirectoryClient } from '../../components/champion-directory-client';
 import { SiteFooter } from '../../components/site-footer';
 import { SiteHeader } from '../../components/site-header';
+import { getLocalChampions } from '../../lib/local-champions';
+import { buildPageMetadata } from '../../lib/site-config';
 
-export const metadata = {
-  title: '英雄列表 - 英雄联盟爱好者',
+export const metadata = buildPageMetadata({
+  title: '英雄列表',
   description:
-    '浏览英雄联盟全部英雄，按定位、难度和关键词筛选，快速找到适合自己的英雄池与学习入口。'
-};
+    '浏览英雄联盟全部英雄，按定位、难度和关键词筛选，快速找到适合自己的英雄池与学习入口。',
+  path: '/champions.html'
+});
 
 const heroPillars = [
   {
@@ -31,7 +35,9 @@ const roleCards = [
   ['自由选择', '按玩法偏好补位', '如果还没想好主位置，可以先按自己喜欢的风格搜索。']
 ];
 
-export default function ChampionsPage() {
+export default async function ChampionsPage() {
+  const heroes = await getLocalChampions();
+
   return (
     <>
       <SiteHeader active="champions" />
@@ -120,49 +126,7 @@ export default function ChampionsPage() {
               </div>
               <p className="section-subtitle">按定位、难度和关键词交叉筛选，快速缩小选择范围。</p>
             </div>
-
-            <div className="filter-section">
-              <div className="search-box">
-                <input type="text" id="searchInput" placeholder="搜索英雄名称..." />
-                <button className="search-btn" aria-label="搜索英雄">
-                  🔍
-                </button>
-              </div>
-              <div className="filter-tags">
-                <button className="filter-btn active" data-filter="all">
-                  全部
-                </button>
-                <button className="filter-btn" data-filter="战士">
-                  战士
-                </button>
-                <button className="filter-btn" data-filter="刺客">
-                  刺客
-                </button>
-                <button className="filter-btn" data-filter="法师">
-                  法师
-                </button>
-                <button className="filter-btn" data-filter="射手">
-                  射手
-                </button>
-                <button className="filter-btn" data-filter="辅助">
-                  辅助
-                </button>
-                <button className="filter-btn" data-filter="坦克">
-                  坦克
-                </button>
-              </div>
-              <div className="difficulty-filter">
-                <label htmlFor="difficultySelect">难度:</label>
-                <select id="difficultySelect">
-                  <option value="all">全部难度</option>
-                  <option value="简单">简单</option>
-                  <option value="中等">中等</option>
-                  <option value="困难">困难</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="champions-list" id="championsList"></div>
+            <ChampionDirectoryClient heroes={heroes} />
           </section>
         </div>
       </main>

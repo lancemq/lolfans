@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "sync:champions": "node scripts/sync-lol-champions.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",

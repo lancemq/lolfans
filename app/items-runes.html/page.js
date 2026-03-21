@@ -1,11 +1,14 @@
+import { ItemsRunesCatalog, ItemsRunesHeroHeader } from '../../components/items-runes-interactive';
 import { SiteFooter } from '../../components/site-footer';
 import { SiteHeader } from '../../components/site-header';
+import { buildPageMetadata } from '../../lib/site-config';
 
-export const metadata = {
-  title: '符文与装备 - 英雄联盟爱好者',
+export const metadata = buildPageMetadata({
+  title: '符文与装备',
   description:
-    '英雄联盟符文与装备系统详解，围绕基石符文、装备选择逻辑、对局应对与官方装备图鉴，帮助你更稳定地完成对局构筑。'
-};
+    '英雄联盟符文与装备系统详解，围绕基石符文、装备选择逻辑、对局应对与官方装备图鉴，帮助你更稳定地完成对局构筑。',
+  path: '/items-runes.html'
+});
 
 const quickNav = [
   ['#overview', '◎', '构筑总览'],
@@ -263,50 +266,7 @@ export default function ItemsRunesPage() {
 
       <main className="hero-guide-page">
         <div className="container">
-          <header className="guide-hero-header guide-hero-header-rich">
-            <div
-              className="guide-hero-splash"
-              id="itemsRunesHeroBanner"
-              style={{
-                backgroundImage:
-                  "url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg')"
-              }}
-            ></div>
-            <div
-              className="guide-hero-splash guide-hero-splash-secondary"
-              id="itemsRunesHeroBannerSecondary"
-            ></div>
-            <div className="guide-hero-overlay"></div>
-            <div className="guide-hero-overlay guide-hero-overlay-mesh"></div>
-            <div className="guide-hero-info">
-              <nav className="breadcrumb" aria-label="面包屑导航">
-                <a href="/">首页</a>
-                <span className="separator">/</span>
-                <span className="current">符文与装备</span>
-              </nav>
-              <div className="guide-hero-grid">
-                <div className="guide-hero-copy">
-                  <span className="guide-kicker">Build Intelligence Desk</span>
-                  <h1 className="guide-hero-title">符文与装备系统</h1>
-                  <p className="guide-hero-subtitle">不是背答案，而是学会在每一局里做对构筑判断。</p>
-                  <div className="guide-hero-roles">
-                    <span className="role-tag role-fighter">符文系统</span>
-                    <span className="role-tag role-mage">装备系统</span>
-                    <span className="role-tag role-support">对局适配</span>
-                  </div>
-                  <div className="banner-dots" id="itemsRunesBannerDots" aria-label="英雄背景轮播"></div>
-                </div>
-                <aside className="guide-hero-panel">
-                  <span className="guide-panel-tag">构筑顺序</span>
-                  <ol className="guide-panel-list">
-                    <li>先判断自己这局的赢法</li>
-                    <li>再判断敌方主要威胁</li>
-                    <li>最后做滚动修正与功能补件</li>
-                  </ol>
-                </aside>
-              </div>
-            </div>
-          </header>
+          <ItemsRunesHeroHeader />
 
           <div className="guide-quick-nav">
             {quickNav.map(([href, icon, label]) => (
@@ -426,31 +386,7 @@ export default function ItemsRunesPage() {
             </div>
           </section>
 
-          <section className="guide-section" id="all-items">
-            <SectionTitle icon="🧾" title="官方全部装备图鉴" subtitle="支持搜索与类型筛选，直接浏览官方装备图标、价格、标签与说明。" />
-            <p className="section-subtitle" id="allItemsSummary">
-              正在从 Riot 官方 Data Dragon 加载召唤师峡谷可购买装备...
-            </p>
-            <div className="all-items-controls">
-              <input
-                id="allItemsSearch"
-                type="search"
-                placeholder="搜索装备名称..."
-                aria-label="搜索装备名称"
-              />
-              <select id="allItemsType" aria-label="筛选装备类型">
-                <option value="all">全部类型</option>
-                <option value="物理">物理输出</option>
-                <option value="法术">法术输出</option>
-                <option value="防御">防御坦克</option>
-                <option value="鞋子">鞋子</option>
-                <option value="辅助">辅助</option>
-                <option value="打野">打野</option>
-                <option value="功能">功能装备</option>
-              </select>
-            </div>
-            <div className="all-items-grid" id="allItemsCatalog"></div>
-          </section>
+          <ItemsRunesCatalog />
 
           <div className="guide-footer-nav">
             <a href="/" className="back-link">

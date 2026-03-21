@@ -1,11 +1,13 @@
 import { SiteFooter } from '../../components/site-footer';
 import { SiteHeader } from '../../components/site-header';
+import { buildPageMetadata } from '../../lib/site-config';
 
-export const metadata = {
-  title: '游戏模式 - 英雄联盟爱好者',
+export const metadata = buildPageMetadata({
+  title: '游戏模式',
   description:
-    '查看英雄联盟常见游戏模式，包括召唤师峡谷、极地大乱斗、训练模式与轮换玩法，快速判断哪种模式更适合你。'
-};
+    '查看英雄联盟常见游戏模式，包括召唤师峡谷、极地大乱斗、训练模式与轮换玩法，快速判断哪种模式更适合你。',
+  path: '/game-modes.html'
+});
 
 const modeGuides = [
   {

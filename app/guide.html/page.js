@@ -1,11 +1,13 @@
 import { SiteFooter } from '../../components/site-footer';
 import { SiteHeader } from '../../components/site-header';
+import { buildPageMetadata } from '../../lib/site-config';
 
-export const metadata = {
-  title: '新手指南 - 英雄联盟爱好者',
+export const metadata = buildPageMetadata({
+  title: '新手指南',
   description:
-    '面向新玩家的英雄联盟入门手册，覆盖地图目标、五个位置、基础操作、对局节奏、推荐英雄与训练计划，帮助你更快建立正确的游戏框架。'
-};
+    '面向新玩家的英雄联盟入门手册，覆盖地图目标、五个位置、基础操作、对局节奏、推荐英雄与训练计划，帮助你更快建立正确的游戏框架。',
+  path: '/guide.html'
+});
 
 const quickNav = [
   ['#basics', '◎', '入门全景'],
