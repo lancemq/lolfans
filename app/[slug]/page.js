@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import { LegacyHtml } from '../../components/legacy-html';
 import { hasLegacyPage, listLegacyHtmlPages, readLegacyPage } from '../../lib/legacy-pages';
@@ -29,14 +28,5 @@ export default async function LegacyPage({ params }) {
   }
 
   const page = await readLegacyPage(slug);
-  const needsHeroGuideScript = slug === 'hero-guide.html';
-
-  return (
-    <>
-      <LegacyHtml html={page.bodyHtml} />
-      {needsHeroGuideScript ? (
-        <Script src="/js/hero-guide.js" strategy="afterInteractive" />
-      ) : null}
-    </>
-  );
+  return <LegacyHtml html={page.bodyHtml} />;
 }

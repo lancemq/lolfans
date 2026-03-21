@@ -2,7 +2,7 @@
 
 // 英雄数据存储
 let championsData = [];
-let dataDragonVersion = '14.1.1';
+let dataDragonVersion = '16.6.1';
 const DEFAULT_HERO_ICON = '⚔️';
 const heroCarouselState = {
     timer: null,
@@ -346,9 +346,6 @@ function initCurrentPage() {
             break;
         case 'champions.html':
             initChampionsPage();
-            break;
-        case 'hero-detail.html':
-            initHeroDetailPage();
             break;
         case 'guide.html':
             initGuidePage();
