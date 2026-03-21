@@ -123,6 +123,35 @@ export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
         </div>
       </section>
 
+      <section className="guide-section" id="power-spikes">
+        <h2 className="section-title">
+          <span className="title-icon">📈</span>
+          强势期与常见失误
+        </h2>
+        <p className="section-subtitle">先知道什么时候该主动，什么时候最容易送节奏，实战提升会比只背连招更快。</p>
+        <div className="editorial-grid editorial-grid-2">
+          <article className="decision-card">
+            <h3>关键强势期</h3>
+            <ol className="ordered-list">
+              {guide.powerSpikes.map(([title, text]) => (
+                <li key={title}>
+                  <strong>{title}</strong>
+                  <p>{text}</p>
+                </li>
+              ))}
+            </ol>
+          </article>
+          <article className="decision-card">
+            <h3>最常见的 4 个失误</h3>
+            <ul className="checklist">
+              {guide.mistakes.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </section>
+
       <div className="guide-quick-nav">
         <a href="#playstyles" className="quick-nav-item">
           <span className="quick-nav-icon">🎮</span>
