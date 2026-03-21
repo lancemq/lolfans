@@ -11,6 +11,13 @@ export const metadata = buildPageMetadata({
 
 const featuredRoutes = [
   {
+    href: '/meta-report.html',
+    image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_0.jpg',
+    alt: '当前版本强势英雄榜',
+    title: '版本观察',
+    description: '按 2026 年 3 月 21 日的 26.6 版本基准，区分稳分选择、上升观察名单和降优先级英雄。'
+  },
+  {
     href: '/draft.html',
     image: '/images/strategy/draft-banner.svg',
     alt: '阵容搭配思路',

@@ -335,6 +335,30 @@ export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
           对线技巧
         </h2>
         <p className="section-subtitle">对线不是拼勇气，而是比谁更少在错误时间交技能、站错位置、亏错兵线。</p>
+        <div className="editorial-grid editorial-grid-2 matchup-counter-grid">
+          <article className="decision-card matchup-counter-card">
+            <h3>更擅长应对</h3>
+            <ul className="checklist">
+              {guide.counters.strongAgainst.map(([title, text]) => (
+                <li key={title}>
+                  <strong>{title}</strong>
+                  <p>{text}</p>
+                </li>
+              ))}
+            </ul>
+          </article>
+          <article className="decision-card matchup-counter-card">
+            <h3>需要特别警惕</h3>
+            <ul className="checklist">
+              {guide.counters.weakAgainst.map(([title, text]) => (
+                <li key={title}>
+                  <strong>{title}</strong>
+                  <p>{text}</p>
+                </li>
+              ))}
+            </ul>
+          </article>
+        </div>
         <div className="matchups-grid">
           {guide.matchups.map((matchup) => (
             <article className="matchup-card" key={matchup.enemy}>

@@ -811,7 +811,7 @@
 
 .featured-routes-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
     width: 100%;
 }
@@ -2107,4 +2107,3 @@
 /* ==========================================
    游戏模式页面增强样式
    ========================================== */
-

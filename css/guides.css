@@ -624,6 +624,26 @@
     margin-bottom: 24px;
 }
 
+.matchup-counter-grid {
+    margin-bottom: 20px;
+}
+
+.matchup-counter-card .checklist {
+    display: grid;
+    gap: 14px;
+}
+
+.matchup-counter-card .checklist li strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--lol-gold);
+}
+
+.matchup-counter-card .checklist li p {
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
 .matchup-card {
     padding: 16px;
     background: rgba(4, 12, 22, 0.5);
