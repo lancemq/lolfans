@@ -28,7 +28,7 @@
 }
 
 .modes-hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.2rem, 4.4vw, 3.6rem);
     font-weight: 700;
     background: linear-gradient(135deg, #f0e6d2, #c8aa6e, #8a6b33);
     -webkit-background-clip: text;
@@ -38,7 +38,7 @@
 }
 
 .modes-hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
     margin-bottom: 40px;
 }

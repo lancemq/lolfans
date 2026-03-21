@@ -108,13 +108,13 @@
 }
 
 .guide-hero-title {
-    font-size: 3rem;
+    font-size: 2.75rem;
     color: var(--lol-gold);
     margin: 8px 0;
 }
 
 .guide-hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     color: var(--text-secondary);
     margin-bottom: 12px;
 }
@@ -697,6 +697,26 @@
     position: absolute;
     left: 0;
     color: var(--lol-gold);
+}
+
+.matchup-detail-grid {
+    margin-top: 20px;
+}
+
+.synergy-card .checklist {
+    display: grid;
+    gap: 14px;
+}
+
+.synergy-card .checklist li strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--lol-gold);
+}
+
+.synergy-card .checklist li p {
+    color: var(--text-secondary);
+    line-height: 1.65;
 }
 
 /* 出装 */

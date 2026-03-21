@@ -173,6 +173,10 @@ export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
           <span className="quick-nav-icon">⚔️</span>
           <span>对线技巧</span>
         </a>
+        <a href="#synergy" className="quick-nav-item">
+          <span className="quick-nav-icon">🤝</span>
+          <span>阵容适配</span>
+        </a>
         <a href="#combos" className="quick-nav-item">
           <span className="quick-nav-icon">🔥</span>
           <span>连招团战</span>
@@ -380,6 +384,14 @@ export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
             ))}
           </ul>
         </div>
+        <div className="editorial-grid editorial-grid-2 matchup-detail-grid">
+          {guide.matchupDetails.map((item) => (
+            <article className="decision-card matchup-detail-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="guide-section" id="combos">
@@ -424,6 +436,38 @@ export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section className="guide-section" id="synergy">
+        <h2 className="section-title">
+          <span className="title-icon">🤝</span>
+          推荐搭档与阵容适配
+        </h2>
+        <p className="section-subtitle">会不会玩这个英雄是一层，知道它该和谁一起赢、该进什么阵容，是更进一步的一层。</p>
+        <div className="editorial-grid editorial-grid-2">
+          <article className="decision-card synergy-card">
+            <h3>推荐搭档</h3>
+            <ul className="checklist">
+              {guide.synergy.allies.map(([title, text]) => (
+                <li key={title}>
+                  <strong>{title}</strong>
+                  <p>{text}</p>
+                </li>
+              ))}
+            </ul>
+          </article>
+          <article className="decision-card synergy-card">
+            <h3>更适合的阵容</h3>
+            <ul className="checklist">
+              {guide.synergy.comps.map(([title, text]) => (
+                <li key={title}>
+                  <strong>{title}</strong>
+                  <p>{text}</p>
+                </li>
+              ))}
+            </ul>
+          </article>
         </div>
       </section>
 
