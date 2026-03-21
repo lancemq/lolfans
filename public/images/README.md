@@ -66,16 +66,17 @@ https://ddragon.leagueoflegends.com/cdn/14.1.1/img/champion/Aatrox.png
    ...
    ```
 
-3. 修改 `js/app.js` 中的代码：
+3. 在对应的 Next/React 组件中直接引用图片资源：
 
-   从：
-   ```javascript
-   const heroImage = hero.image || '⚔️';
-   ```
-   
-   改为：
-   ```javascript
-   const heroImage = `<img src="images/heroes/${hero.id}.png" alt="${hero.name}" onerror="this.src='images/heroes/default.png'">`;
+   示例：
+   ```jsx
+   <img
+     src={`/images/heroes/${hero.id}.png`}
+     alt={hero.name}
+     onError={(event) => {
+       event.currentTarget.src = '/images/heroes/default.png';
+     }}
+   />
    ```
 
 ### 方法三：使用占位图服务

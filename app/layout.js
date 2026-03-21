@@ -1,5 +1,8 @@
 import { Analytics } from '@vercel/analytics/next';
-import '../css/style.css';
+import '../css/base.css';
+import '../css/surfaces.css';
+import '../css/modes.css';
+import '../css/guides.css';
 import { SeoJsonLd } from '../components/seo-jsonld';
 import { SITE_NAME, SITE_URL } from '../lib/site-config';
 
