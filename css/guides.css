@@ -719,6 +719,21 @@
     line-height: 1.65;
 }
 
+.synergy-case-grid {
+    margin-top: 20px;
+}
+
+.synergy-case-card h3 {
+    color: var(--lol-gold-2);
+    margin-bottom: 10px;
+}
+
+.synergy-case-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
 /* 出装 */
 .builds-section {
     display: flex;
@@ -771,6 +786,69 @@
     color: var(--lol-gold);
     font-weight: 600;
     min-width: 60px;
+}
+
+.build-adjustment-grid {
+    margin-top: 20px;
+}
+
+.build-adjustment-card .checklist li strong {
+    display: block;
+    color: var(--lol-gold-2);
+    margin-bottom: 6px;
+}
+
+.build-adjustment-card .checklist li p {
+    margin: 0;
+}
+
+.summoner-grid {
+    margin-top: 8px;
+}
+
+.summoner-card h3 {
+    color: var(--lol-gold-2);
+    margin-bottom: 8px;
+}
+
+.summoner-usecase {
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.skill-order-grid {
+    margin-top: 8px;
+}
+
+.skill-order-card h3 {
+    color: var(--lol-gold-2);
+    margin-bottom: 10px;
+}
+
+.skill-order-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.early-plan-grid {
+    margin-top: 8px;
+}
+
+.early-plan-card h3,
+.early-mistake-card h3 {
+    color: var(--lol-gold-2);
+    margin-bottom: 10px;
+}
+
+.early-plan-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.early-mistake-card {
+    margin-top: 20px;
 }
 
 /* 团战思路 */

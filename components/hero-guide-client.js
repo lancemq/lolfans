@@ -152,14 +152,47 @@ export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
         </div>
       </section>
 
+      <section className="guide-section" id="early-plan">
+        <h2 className="section-title">
+          <span className="title-icon">⏱️</span>
+          前 10 分钟节奏计划
+        </h2>
+        <p className="section-subtitle">很多对局不是 20 分钟后才分胜负，而是在前 10 分钟就决定了你是顺着英雄节奏打，还是一直在补救前面的亏损。</p>
+        <div className="editorial-grid editorial-grid-3 early-plan-grid">
+          {guide.earlyPlan.map((item) => (
+            <article className="decision-card early-plan-card" key={item.title}>
+              <span className="detail-summary-label">{item.window}</span>
+              <h3>{item.title}</h3>
+              <p>{item.notes}</p>
+            </article>
+          ))}
+        </div>
+        <article className="decision-card early-mistake-card">
+          <h3>前 10 分钟最容易犯的错</h3>
+          <ul className="checklist">
+            {guide.earlyMistakes.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
+      </section>
+
       <div className="guide-quick-nav">
         <a href="#playstyles" className="quick-nav-item">
           <span className="quick-nav-icon">🎮</span>
           <span>打法选择</span>
         </a>
+        <a href="#early-plan" className="quick-nav-item">
+          <span className="quick-nav-icon">⏱️</span>
+          <span>前10分钟</span>
+        </a>
         <a href="#abilities" className="quick-nav-item">
           <span className="quick-nav-icon">⚡</span>
           <span>技能详解</span>
+        </a>
+        <a href="#skill-order" className="quick-nav-item">
+          <span className="quick-nav-icon">🧭</span>
+          <span>技能加点</span>
         </a>
         <a href="#builds" className="quick-nav-item">
           <span className="quick-nav-icon">🎒</span>
@@ -168,6 +201,10 @@ export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
         <a href="#runes" className="quick-nav-item">
           <span className="quick-nav-icon">🔮</span>
           <span>符文搭配</span>
+        </a>
+        <a href="#summoners" className="quick-nav-item">
+          <span className="quick-nav-icon">✨</span>
+          <span>召唤师技能</span>
         </a>
         <a href="#matchups" className="quick-nav-item">
           <span className="quick-nav-icon">⚔️</span>
@@ -275,6 +312,23 @@ export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
         </div>
       </section>
 
+      <section className="guide-section" id="skill-order">
+        <h2 className="section-title">
+          <span className="title-icon">🧭</span>
+          技能加点顺序
+        </h2>
+        <p className="section-subtitle">加点不是死背模板，而是知道这局你更需要清线、爆发、抗压还是更稳定的功能点。</p>
+        <div className="editorial-grid editorial-grid-3 skill-order-grid">
+          {guide.skillOrder.map((item) => (
+            <article className="decision-card skill-order-card" key={item.title}>
+              <span className="detail-summary-label">{item.order}</span>
+              <h3>{item.title}</h3>
+              <p>{item.notes}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="guide-section" id="builds">
         <h2 className="section-title">
           <span className="title-icon">🎒</span>
@@ -311,6 +365,35 @@ export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
             </article>
           ))}
         </div>
+        <div className="editorial-grid editorial-grid-3 build-adjustment-grid">
+          <article className="decision-card build-adjustment-card">
+            <h3>主线思路</h3>
+            <ul className="checklist">
+              {guide.buildAdjustments.core.map(([title, text]) => (
+                <li key={title}>
+                  <strong>{title}</strong>
+                  <p>{text}</p>
+                </li>
+              ))}
+            </ul>
+          </article>
+          <article className="decision-card build-adjustment-card">
+            <h3>顺风怎么变</h3>
+            <ul className="checklist">
+              {guide.buildAdjustments.ahead.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+          <article className="decision-card build-adjustment-card">
+            <h3>逆风怎么变</h3>
+            <ul className="checklist">
+              {guide.buildAdjustments.behind.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+        </div>
       </section>
 
       <section className="guide-section" id="runes">
@@ -328,6 +411,24 @@ export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
               </p>
               <p>副系：{rune.secondary}</p>
               <p>{rune.notes}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="guide-section" id="summoners">
+        <h2 className="section-title">
+          <span className="title-icon">✨</span>
+          召唤师技能选择
+        </h2>
+        <p className="section-subtitle">召唤师技能决定的是这局你更想要对线强度、团战容错，还是针对某类爆发与控制。</p>
+        <div className="editorial-grid editorial-grid-3 summoner-grid">
+          {guide.summonerSpells.map((item) => (
+            <article className="decision-card summoner-card" key={item.title}>
+              <span className="detail-summary-label">{item.spells}</span>
+              <h3>{item.title}</h3>
+              <p className="summoner-usecase">{item.useCase}</p>
+              <p>{item.notes}</p>
             </article>
           ))}
         </div>
@@ -468,6 +569,15 @@ export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
               ))}
             </ul>
           </article>
+        </div>
+        <div className="editorial-grid editorial-grid-2 synergy-case-grid">
+          {guide.synergyCases.map((item) => (
+            <article className="decision-card synergy-case-card" key={item.duo}>
+              <span className="detail-summary-label">{item.window}</span>
+              <h3>{item.duo}</h3>
+              <p>{item.plan}</p>
+            </article>
+          ))}
         </div>
       </section>
 
