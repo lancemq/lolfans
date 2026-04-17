@@ -1,6 +1,7 @@
 {
   "name": "league-of-legends-website",
   "private": true,
+  "type": "module",
   "version": "1.0.0",
   "description": "Static League of Legends fan site with Vercel Analytics support.",
   "scripts": {
