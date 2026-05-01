@@ -392,8 +392,8 @@ main {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(100deg, rgba(2, 9, 18, 0.9) 6%, rgba(2, 9, 18, 0.68) 48%, rgba(2, 9, 18, 0.8) 100%),
-        radial-gradient(circle at 14% 30%, rgba(200, 170, 110, 0.18), transparent 40%);
+        linear-gradient(100deg, rgba(2, 9, 18, 0.75) 6%, rgba(2, 9, 18, 0.45) 48%, rgba(2, 9, 18, 0.65) 100%),
+        radial-gradient(circle at 14% 30%, rgba(200, 170, 110, 0.15), transparent 40%);
 }
 
 .hero-carousel-controls {

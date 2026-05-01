@@ -82,16 +82,13 @@ export function HomeHeroExperience({ heroes = [] }) {
         onBlurCapture={() => setHeroPaused(false)}
       >
         <div className="hero-carousel-track">
-          {carouselSlides.map((hero, index) => {
-            const skinIndex = HERO_BANNER_SKIN_MAP[hero.id] || 0;
-            return (
-              <div
-                className={`hero-carousel-slide ${index === heroSlide ? 'active' : ''}`}
-                key={hero.id}
-                style={{ backgroundImage: `url('${getChampionSplashUrl(DATA_DRAGON_VERSION, hero, skinIndex)}')` }}
-              ></div>
-            );
-          })}
+          {carouselSlides.map((hero, index) => (
+            <div
+              className={`hero-carousel-slide ${index === heroSlide ? 'active' : ''}`}
+              key={hero.id}
+              style={{ backgroundImage: `url('${getChampionSplashUrl(DATA_DRAGON_VERSION, hero, 0)}')` }}
+            ></div>
+          ))}
         </div>
         <div className="hero-carousel-overlay"></div>
         <div className="hero-carousel-controls">
