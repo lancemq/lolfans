@@ -1,6 +1,7 @@
 import { ItemsRunesCatalog, ItemsRunesHeroHeader } from '../../components/items-runes-interactive';
 import { SiteFooter } from '../../components/site-footer';
 import { SiteHeader } from '../../components/site-header';
+import { SectionTitle } from '../../components/shared';
 import { buildPageMetadata } from '../../lib/site-config';
 
 export const metadata = buildPageMetadata({
@@ -246,18 +247,6 @@ const buildTemplates = [
     notes: ['对局拖得越久，主动功能件越值钱', '如果双 C 是主要赢点，优先围绕他们出装']
   }
 ];
-
-function SectionTitle({ icon, title, subtitle }) {
-  return (
-    <>
-      <h2 className="section-title">
-        <span className="title-icon">{icon}</span>
-        {title}
-      </h2>
-      {subtitle ? <p className="section-subtitle">{subtitle}</p> : null}
-    </>
-  );
-}
 
 export default function ItemsRunesPage() {
   return (

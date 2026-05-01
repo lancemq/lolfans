@@ -1,8 +1,9 @@
 import { SiteFooter } from '../components/site-footer';
 import { SiteHeader } from '../components/site-header';
+import { SeoJsonLd } from '../components/seo-jsonld';
 import { HomeFeaturedChampions, HomeHeroExperience, HomeInfoCarousel } from '../components/home-page-client';
 import { getLocalChampions } from '../lib/local-champions';
-import { buildPageMetadata } from '../lib/site-config';
+import { buildPageMetadata, buildWebPageJsonLd, buildBreadcrumbJsonLd } from '../lib/site-config';
 
 export const metadata = buildPageMetadata({
   title: 'LOL攻略、英雄资料大全',
@@ -81,6 +82,14 @@ export default async function HomePage() {
 
   return (
     <>
+      <SeoJsonLd data={buildWebPageJsonLd({
+        title: 'LOL攻略、英雄资料大全',
+        description: '英雄联盟爱好者网站提供最全的英雄资料、攻略技巧、游戏模式介绍。',
+        path: '/'
+      })} />
+      <SeoJsonLd data={buildBreadcrumbJsonLd([
+        { name: '首页', path: '/' }
+      ])} />
       <SiteHeader active="home" />
 
       <header className="hero-section">

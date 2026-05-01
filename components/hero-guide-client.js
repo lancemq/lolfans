@@ -9,15 +9,7 @@ import {
   getChampionSplashUrl,
   resolveChampionPayload
 } from '../lib/champion-data';
-
-function LoadingCard({ title, text }) {
-  return (
-    <section className="knowledge-card hero-empty-state">
-      <h2>{title}</h2>
-      <p>{text}</p>
-    </section>
-  );
-}
+import { LoadingCard } from './shared';
 
 export function HeroGuideClient({ initialHeroes = [], siteMeta = null }) {
   const searchParams = useSearchParams();

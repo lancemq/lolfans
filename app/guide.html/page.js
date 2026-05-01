@@ -1,5 +1,6 @@
 import { SiteFooter } from '../../components/site-footer';
 import { SiteHeader } from '../../components/site-header';
+import { SectionTitle } from '../../components/shared';
 import { buildPageMetadata } from '../../lib/site-config';
 
 export const metadata = buildPageMetadata({
@@ -101,18 +102,6 @@ const faqRows = [
   ['什么时候该参团？', '资源刷新前、队友已经集合、兵线可接受时就该靠拢，而不是一直单带到底。'],
   ['最值得先改掉的坏习惯是什么？', '无视野压线、残血不回城、打赢团不转资源，这三件事最伤胜率。']
 ];
-
-function SectionTitle({ icon, title, subtitle }) {
-  return (
-    <>
-      <h2 className="section-title">
-        <span className="title-icon">{icon}</span>
-        {title}
-      </h2>
-      {subtitle ? <p className="section-subtitle">{subtitle}</p> : null}
-    </>
-  );
-}
 
 export default function GuidePage() {
   return (
