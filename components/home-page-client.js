@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
   getChampionSplashUrl,
+  getChampionLoadingUrl,
   getDifficultyClass,
   getRoleClass,
   summarizeText
@@ -166,33 +167,43 @@ export function HomeFeaturedChampions({ heroes = [] }) {
 
   return (
     <div className="champions-grid">
-      {featured.map((hero) => (
-        <a className="champion-card featured-champion-card" href={`/hero-detail.html?id=${hero.id}`} key={hero.id}>
-          <div className="champion-image">
-            <img
-              className="champion-image-img"
-              src={getChampionSplashUrl(DATA_DRAGON_VERSION, hero, HERO_BANNER_SKIN_MAP[hero.id] || 0)}
-              alt={`${hero.name} 高清立绘`}
-              loading="lazy"
-            />
-            <span className="featured-badge">热门</span>
-          </div>
-          <div className="champion-info">
-            <h3 className="champion-name">{hero.name}</h3>
-            <p className="champion-title">{hero.title}</p>
-            <p className="featured-champion-desc">英雄介绍：{hero.title}</p>
-            <p className="featured-champion-lore">背景故事：{summarizeText(hero.lore, 64)}</p>
-            <div className="champion-roles">
-              {(hero.roles || []).map((role) => (
-                <span className={`role-tag ${getRoleClass(role)}`} key={role}>
-                  {role}
-                </span>
-              ))}
+      {featured.map((hero) => {
+        const skinIndex = HERO_BANNER_SKIN_MAP[hero.id] || 0;
+        const splashUrl = getChampionSplashUrl(DATA_DRAGON_VERSION, hero, skinIndex);
+        const fallbackUrl = getChampionSplashUrl(DATA_DRAGON_VERSION, hero, 0);
+        const loadingFallback = getChampionLoadingUrl(DATA_DRAGON_VERSION, hero, 0);
+        return (
+          <a className="champion-card featured-champion-card" href={`/hero-detail.html?id=${hero.id}`} key={hero.id}>
+            <div className="champion-image">
+              <img
+                className="champion-image-img"
+                src={splashUrl}
+                alt={`${hero.name} 高清立绘`}
+                loading="lazy"
+                onError={(e) => {
+                  if (e.target.src !== fallbackUrl) { e.target.src = fallbackUrl; }
+                  else { e.target.onerror = null; e.target.src = loadingFallback; }
+                }}
+              />
+              <span className="featured-badge">热门</span>
             </div>
-            <span className={`difficulty ${getDifficultyClass(hero.difficulty)}`}>{hero.difficulty}</span>
-          </div>
-        </a>
-      ))}
+            <div className="champion-info">
+              <h3 className="champion-name">{hero.name}</h3>
+              <p className="champion-title">{hero.title}</p>
+              <p className="featured-champion-desc">英雄介绍：{hero.title}</p>
+              <p className="featured-champion-lore">背景故事：{summarizeText(hero.lore, 64)}</p>
+              <div className="champion-roles">
+                {(hero.roles || []).map((role) => (
+                  <span className={`role-tag ${getRoleClass(role)}`} key={role}>
+                    {role}
+                  </span>
+                ))}
+              </div>
+              <span className={`difficulty ${getDifficultyClass(hero.difficulty)}`}>{hero.difficulty}</span>
+            </div>
+          </a>
+        );
+      })}
     </div>
   );
 }
