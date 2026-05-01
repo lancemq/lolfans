@@ -139,7 +139,7 @@ export default function GameModesPage() {
                 </aside>
               </div>
             </div>
-          </section>
+          </header>
 
           <section className="guide-section">
             <div className="detail-section-head">
@@ -183,7 +183,7 @@ export default function GameModesPage() {
                   <li>云顶之弈阵容随版本变化较大</li>
                   <li>建议关注官网每周阵容推荐</li>
                   <li>开局优先确定主C和阵容方向</li>
-                  <li>装备优先级：主C装备 > 坦克装备 > 功能装备</li>
+                  <li>装备优先级：主C装备 &gt; 坦克装备 &gt; 功能装备</li>
                 </ul>
               </article>
             </div>
