@@ -62,6 +62,17 @@ export function HeroDetailClient({ initialHeroes = [], siteMeta = null }) {
       .slice(0, 4);
   }, [hero, state.catalog]);
 
+  function filterMainSkins(skins) {
+    if (!skins || skins.length === 0) return [];
+    const seen = new Set();
+    return skins.filter((skin) => {
+      const base = skin.name.replace(/[\s　][\s\S]*$/, '');
+      if (seen.has(base)) return false;
+      seen.add(base);
+      return true;
+    });
+  }
+
   if (state.loading) {
     return <LoadingCard title="加载英雄详情中" text="正在整理英雄资料、技能与皮肤信息。" />;
   }
@@ -293,8 +304,10 @@ export function HeroDetailClient({ initialHeroes = [], siteMeta = null }) {
                   src={getChampionSplashUrl(version, hero, activeSkinNum)}
                   alt={`${hero.name} ${activeSkin?.name || '默认皮肤'}`}
                   onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = getChampionLoadingUrl(version, hero, activeSkinNum);
+                    if (!e.target.dataset.fallback) {
+                      e.target.dataset.fallback = getChampionLoadingUrl(version, hero, activeSkinNum);
+                      e.target.src = e.target.dataset.fallback;
+                    }
                   }}
                 />
               </div>
@@ -311,12 +324,12 @@ export function HeroDetailClient({ initialHeroes = [], siteMeta = null }) {
             </div>
           </div>
           <div className="skins-gallery">
-            {(hero.skins || []).map((skin, index) => (
+            {(filterMainSkins(hero.skins) || []).map((skin, index) => (
               <button
-                className={`skin-card ${selectedSkinIndex === index ? 'active' : ''}`}
-                data-index={index}
+                className={`skin-card ${hero.skins.indexOf(skin) === selectedSkinIndex ? 'active' : ''}`}
+                data-index={hero.skins.indexOf(skin)}
                 key={skin.id || `${hero.id}-skin-${index}`}
-                onClick={() => setSelectedSkinIndex(index)}
+                onClick={() => setSelectedSkinIndex(hero.skins.indexOf(skin))}
                 type="button"
               >
                 <div className="skin-thumbnail">
@@ -325,8 +338,7 @@ export function HeroDetailClient({ initialHeroes = [], siteMeta = null }) {
                     src={getChampionLoadingUrl(version, hero, skin.imageNum ?? index)}
                     alt={`${hero.name} ${skin.name} 缩略图`}
                     onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = getChampionLoadingUrl(version, hero, 0);
+                      e.target.style.display = 'none';
                     }}
                   />
                 </div>
