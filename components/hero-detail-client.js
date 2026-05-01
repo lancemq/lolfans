@@ -78,6 +78,10 @@ export function HeroDetailClient({ initialHeroes = [], siteMeta = null }) {
             className="champion-avatar-img"
             src={getChampionLoadingUrl(version, hero, 0)}
             alt={`${hero.name} 英雄立绘`}
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = `https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${hero.ddKey || hero.id}.png`;
+            }}
           />
         </div>
         <div className="champion-meta detail-hero-meta">
@@ -288,6 +292,10 @@ export function HeroDetailClient({ initialHeroes = [], siteMeta = null }) {
                   className="skin-image-large-img"
                   src={getChampionSplashUrl(version, hero, activeSkinNum)}
                   alt={`${hero.name} ${activeSkin?.name || '默认皮肤'}`}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = getChampionLoadingUrl(version, hero, activeSkinNum);
+                  }}
                 />
               </div>
             </div>
@@ -316,6 +324,10 @@ export function HeroDetailClient({ initialHeroes = [], siteMeta = null }) {
                     className="skin-thumbnail-img"
                     src={getChampionLoadingUrl(version, hero, skin.imageNum ?? index)}
                     alt={`${hero.name} ${skin.name} 缩略图`}
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = getChampionLoadingUrl(version, hero, 0);
+                    }}
                   />
                 </div>
                 <div className="skin-card-info">
@@ -344,6 +356,10 @@ export function HeroDetailClient({ initialHeroes = [], siteMeta = null }) {
                   className="champion-image-img"
                   src={getChampionLoadingUrl(version, item, 0)}
                   alt={`${item.name} 英雄立绘`}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = `https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${item.ddKey || item.id}.png`;
+                  }}
                 />
               </div>
               <div className="champion-info">
