@@ -58,20 +58,28 @@ export function HomeHeroExperience({ heroes = [] }) {
   const featured = useMemo(() => getFeaturedHeroes(heroes), [heroes]);
   const carouselSlides = featured.slice(0, 6);
   const [heroSlide, setHeroSlide] = useState(0);
+  const [heroPaused, setHeroPaused] = useState(false);
 
   useEffect(() => {
-    if (carouselSlides.length <= 1) return undefined;
+    if (carouselSlides.length <= 1 || heroPaused) return undefined;
     const timer = window.setInterval(() => {
       setHeroSlide((value) => (value + 1) % carouselSlides.length);
     }, 5000);
     return () => window.clearInterval(timer);
-  }, [carouselSlides.length]);
+  }, [carouselSlides, heroPaused]);
 
   const activeHero = carouselSlides[heroSlide];
 
   return (
     <>
-      <div className="hero-carousel" aria-hidden="true">
+      <div
+        className="hero-carousel"
+        aria-hidden="true"
+        onMouseEnter={() => setHeroPaused(true)}
+        onMouseLeave={() => setHeroPaused(false)}
+        onFocusCapture={() => setHeroPaused(true)}
+        onBlurCapture={() => setHeroPaused(false)}
+      >
         <div className="hero-carousel-track">
           {carouselSlides.map((hero, index) => {
             const skinIndex = HERO_BANNER_SKIN_MAP[hero.id] || 0;
@@ -106,17 +114,25 @@ export function HomeHeroExperience({ heroes = [] }) {
 
 export function HomeInfoCarousel() {
   const [infoSlide, setInfoSlide] = useState(0);
+  const [infoPaused, setInfoPaused] = useState(false);
 
   useEffect(() => {
+    if (infoPaused) return undefined;
     const timer = window.setInterval(() => {
       setInfoSlide((value) => (value + 1) % INFO_SLIDES.length);
     }, 4200);
     return () => window.clearInterval(timer);
-  }, []);
+  }, [infoPaused]);
 
   return (
     <>
-      <div className="hero-info-carousel">
+      <div
+        className="hero-info-carousel"
+        onMouseEnter={() => setInfoPaused(true)}
+        onMouseLeave={() => setInfoPaused(false)}
+        onFocusCapture={() => setInfoPaused(true)}
+        onBlurCapture={() => setInfoPaused(false)}
+      >
         <div className="hero-info-track">
           {INFO_SLIDES.map((slide, index) => (
             <article className={`hero-info-slide ${index === infoSlide ? 'active' : ''}`} key={slide.title}>
