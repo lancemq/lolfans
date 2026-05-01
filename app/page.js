@@ -15,7 +15,7 @@ export const metadata = buildPageMetadata({
 const contentCards = [
   {
     topline: 'Data',
-    icon: '/images/intro/strategy.svg',
+    icon: '📚',
     alt: '英雄数据库',
     title: '英雄数据库',
     description: '快速查找英雄定位、技能机制、打法入口，适合先建立整体认知。',
@@ -24,7 +24,7 @@ const contentCards = [
   },
   {
     topline: 'Build',
-    icon: '/images/intro/game-data.svg',
+    icon: '🎒',
     alt: '符文装备库',
     title: '符文装备库',
     description: '查看符文体系、装备分层与对局出装逻辑，建立稳定知识框架。',
@@ -33,7 +33,7 @@ const contentCards = [
   },
   {
     topline: 'Macro',
-    icon: '/images/intro/strategy.svg',
+    icon: '📖',
     alt: '攻略中心',
     title: '攻略中心',
     description: '覆盖五路打法、中期运营、团战模板与复盘清单，形成可执行上分节奏。',
@@ -44,25 +44,25 @@ const contentCards = [
 
 const introCards = [
   {
-    icon: '/images/intro/objective.svg',
+    icon: '🏆',
     alt: '推塔竞技图标',
     title: '推塔竞技',
     description: '摧毁敌方基地水晶，与队友配合，运用策略和技巧取得胜利。'
   },
   {
-    icon: '/images/intro/duel.svg',
+    icon: '⚔️',
     alt: '英雄对战图标',
     title: '英雄对战',
     description: '每位英雄都有独特技能组合，找到适合你的风格，主宰战场。'
   },
   {
-    icon: '/images/intro/teamwork.svg',
+    icon: '🤝',
     alt: '团队协作图标',
     title: '团队协作',
     description: '5v5团队作战，沟通配合是获胜关键，与朋友一起开黑吧！'
   },
   {
-    icon: '/images/intro/ranked.svg',
+    icon: '🏅',
     alt: '排位竞技图标',
     title: '排位竞技',
     description: '从青铜到王者，挑战自我，在排位赛中证明自己的实力。'
@@ -70,11 +70,11 @@ const introCards = [
 ];
 
 const roles = [
-  { id: 'top', icon: '/images/roles/top.svg', alt: '上单图标', title: '上单', en: 'Top Lane', desc: '坦克战士，抗压发育' },
-  { id: 'jungle', icon: '/images/roles/jungle.svg', alt: '打野图标', title: '打野', en: 'Jungle', desc: '游走支援，控制地图' },
-  { id: 'mid', icon: '/images/roles/mid.svg', alt: '中单图标', title: '中单', en: 'Mid Lane', desc: '爆发伤害，carry核心' },
-  { id: 'adc', icon: '/images/roles/adc.svg', alt: '射手图标', title: '射手', en: 'ADC', desc: '持续输出，后排核心' },
-  { id: 'support', icon: '/images/roles/support.svg', alt: '辅助图标', title: '辅助', en: 'Support', desc: '保护团队，控制视野' }
+  { id: 'top', icon: '🗡️', alt: '上单图标', title: '上单', en: 'Top Lane', desc: '坦克战士，抗压发育' },
+  { id: 'jungle', icon: '🌿', alt: '打野图标', title: '打野', en: 'Jungle', desc: '游走支援，控制地图' },
+  { id: 'mid', icon: '✨', alt: '中单图标', title: '中单', en: 'Mid Lane', desc: '爆发伤害，carry核心' },
+  { id: 'adc', icon: '🏹', alt: '射手图标', title: '射手', en: 'ADC', desc: '持续输出，后排核心' },
+  { id: 'support', icon: '💠', alt: '辅助图标', title: '辅助', en: 'Support', desc: '保护团队，控制视野' }
 ];
 
 export default async function HomePage() {
@@ -149,7 +149,7 @@ export default async function HomePage() {
               <article className="intro-card" key={card.title}>
                 <div className="intro-card-topline">{card.topline}</div>
                 <div className="intro-icon">
-                  <img className="intro-icon-img" src={card.icon} alt={card.alt} loading="lazy" />
+                  <span className="intro-icon-emoji">{card.icon}</span>
                 </div>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
@@ -157,6 +157,40 @@ export default async function HomePage() {
                   {card.cta}
                 </a>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="game-intro">
+        <div className="container">
+          <div className="intro-grid">
+            {introCards.map((card) => (
+              <div className="intro-card" key={card.title}>
+                <div className="intro-icon">
+                  <span className="intro-icon-emoji">{card.icon}</span>
+                </div>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="roles-section">
+        <div className="container">
+          <h2 className="section-title">五大位置</h2>
+          <div className="roles-grid">
+            {roles.map((role) => (
+              <div className="role-card" data-role={role.id} key={role.id}>
+                <div className="role-icon">
+                  <span className="role-icon-emoji">{role.icon}</span>
+                </div>
+                <h3>{role.title}</h3>
+                <p>{role.en}</p>
+                <span className="role-desc">{role.desc}</span>
+              </div>
             ))}
           </div>
         </div>

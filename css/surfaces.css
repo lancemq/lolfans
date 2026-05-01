@@ -363,6 +363,36 @@
     transition: transform 0.25s ease;
 }
 
+.intro-icon-emoji {
+    font-size: 2.5rem;
+    line-height: 1;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.25s ease;
+}
+
+.intro-card:hover .intro-icon-emoji {
+    transform: scale(1.1);
+}
+
+.role-icon-img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.25s ease;
+}
+
+.role-icon-emoji {
+    font-size: 2.2rem;
+    line-height: 1;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.25s ease;
+}
+
+.role-card:hover .role-icon-emoji {
+    transform: scale(1.15);
+}
+
 .home-briefing {
     padding-bottom: 56px;
 }
