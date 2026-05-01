@@ -139,105 +139,53 @@ export default function GameModesPage() {
                 </aside>
               </div>
             </div>
-          </header>
-
-          <section className="guide-section">
-            <h2 className="section-title">
-              <span className="title-icon">◎</span>
-              模式选择建议
-            </h2>
-            <p className="section-subtitle">先明确你这局想获得什么，再选模式，比“随机开一个”更有意义。</p>
-            <div className="editorial-grid editorial-grid-3">
-              {modeGuides.map((guide) => (
-                <article className="editorial-card" key={guide.title}>
-                  <span className="editorial-card-index">{guide.title}</span>
-                  <p>{guide.text}</p>
-                </article>
-              ))}
-            </div>
           </section>
 
           <section className="guide-section">
-            <div className="strategy-section-head">
-              <div>
-                <p className="strategy-section-kicker">Mode Catalog</p>
-                <h2 className="section-title">模式目录</h2>
-              </div>
-              <p className="section-subtitle">按竞技、休闲和轮换三类浏览，更快找到适合当下状态的玩法。</p>
+            <div className="detail-section-head">
+              <p className="strategy-section-kicker">Mode Picks</p>
+              <h2 className="section-title">模式推荐英雄</h2>
+              <p className="section-subtitle">不同模式下强势英雄不同，选对英雄事半功倍</p>
             </div>
-            <div className="modes-filter">
-              <button className="filter-btn active" data-filter="all">
-                全部
-              </button>
-              <button className="filter-btn" data-filter="competitive">
-                竞技模式
-              </button>
-              <button className="filter-btn" data-filter="casual">
-                休闲模式
-              </button>
-              <button className="filter-btn" data-filter="rotating">
-                轮换模式
-              </button>
-            </div>
-            <div className="modes-grid-enhanced">
-              {modeCards.map((mode) => (
-                <article className="mode-card-enhanced" data-category={mode.category} key={mode.title}>
-                  <div className="mode-card-header">
-                    <div className="mode-card-badge-wrap">
-                      <div className={`mode-card-badge ${mode.badgeClass}`}>{mode.badge}</div>
-                    </div>
-                  </div>
-                  <div className="mode-card-body">
-                    <h3>{mode.title}</h3>
-                    <p className="mode-card-subtitle">{mode.subtitle}</p>
-                    <p className="mode-card-desc">{mode.desc}</p>
-                    <div className="mode-card-meta">
-                      {mode.meta.map((item) => (
-                        <span key={item}>{item}</span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="mode-card-footer">
-                    <div className="mode-tags">
-                      {mode.tags.map((tag) => (
-                        <span className="mode-tag" key={tag}>
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section className="guide-section">
-            <h2 className="section-title">
-              <span className="title-icon">↔</span>
-              模式对比
-            </h2>
-            <p className="section-subtitle">把节奏、学习价值和适合人群放在一起看，会更容易做决定。</p>
-            <div className="comparison-table-wrap">
-              <table className="comparison-table">
-                <thead>
-                  <tr>
-                    <th>模式</th>
-                    <th>学习价值</th>
-                    <th>团战密度</th>
-                    <th>上手门槛</th>
-                    <th>适合谁</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparisonRows.map((row) => (
-                    <tr key={row[0]}>
-                      {row.map((cell) => (
-                        <td key={cell}>{cell}</td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="knowledge-grid two-col">
+              <article className="knowledge-card">
+                <h3>召唤师峡谷 - 单排上分</h3>
+                <ul className="checklist">
+                  <li><strong>上单：</strong>德莱厄斯、剑魔、奥恩、奎桑提</li>
+                  <li><strong>打野：</strong>李青、螳螂、弗耶戈、赵信</li>
+                  <li><strong>中单：</strong>阿狸、劫、辛德拉、维克托</li>
+                  <li><strong>射手：</strong>卡莎、EZ、金克丝、艾希</li>
+                  <li><strong>辅助：</strong>锤石、露露、娜美、蕾欧娜</li>
+                </ul>
+              </article>
+              <article className="knowledge-card">
+                <h3>极地大乱斗 (ARAM)</h3>
+                <ul className="checklist">
+                  <li><strong>坦克前排：</strong>奥恩、大树、蒙多、扎克</li>
+                  <li><strong>Poke流：</strong>泽拉斯、维鲁斯、杰斯、拉克丝</li>
+                  <li><strong>战士：</strong>剑魔、瑟提、亚索、锐雯</li>
+                  <li><strong>刺客：</strong>卡萨丁、螳螂、奇亚娜、阿卡丽</li>
+                  <li><strong>法师：</strong>维克托、辛德拉、维克兹、吉格斯</li>
+                </ul>
+              </article>
+              <article className="knowledge-card">
+                <h3>无限火力 (URF)</h3>
+                <ul className="checklist">
+                  <li><strong>T0 必选：</strong>伊泽瑞尔、卡莎、卢锡安、霞</li>
+                  <li><strong>刺客：</strong>劫、小鱼人、塞恩、盖伦</li>
+                  <li><strong>法师：</strong>拉克丝、泽拉斯、维克兹、吉格斯</li>
+                  <li><strong>战士：</strong>亚索、锐雯、贾克斯、剑圣</li>
+                </ul>
+              </article>
+              <article className="knowledge-card">
+                <h3>云顶之弈 (TFT)</h3>
+                <ul className="checklist">
+                  <li>云顶之弈阵容随版本变化较大</li>
+                  <li>建议关注官网每周阵容推荐</li>
+                  <li>开局优先确定主C和阵容方向</li>
+                  <li>装备优先级：主C装备 > 坦克装备 > 功能装备</li>
+                </ul>
+              </article>
             </div>
           </section>
         </div>

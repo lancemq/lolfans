@@ -1516,3 +1516,27 @@
         grid-template-columns: 1fr;
     }
 }
+
+.build-template-examples {
+    margin: 12px 0;
+    padding: 10px 14px;
+    background: rgba(10, 200, 185, 0.08);
+    border-left: 3px solid var(--lol-cyan);
+    border-radius: 6px;
+}
+
+.build-template-examples .examples-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--lol-cyan);
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.build-template-examples p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
