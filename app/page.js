@@ -244,22 +244,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="game-intro">
-        <div className="container">
-          <div className="intro-grid">
-            {introCards.map((card) => (
-              <div className="intro-card" key={card.title}>
-                <div className="intro-icon">
-                  <img className="intro-icon-img" src={card.icon} alt={card.alt} loading="lazy" />
-                </div>
-                <h3>{card.title}</h3>
-                <p>{card.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="roles-section">
         <div className="container">
           <h2 className="section-title">五大位置</h2>
